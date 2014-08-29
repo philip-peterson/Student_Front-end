@@ -1,4 +1,4 @@
-Student Frontend
+Student Front-end
 ================
 
 

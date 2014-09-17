@@ -1,0 +1,20 @@
+<section data-ng-controller="HomeController">
+	<div class="jumbotron text-center">
+		<br>
+		<div class="row">
+			<p class="lead">
+				Graduate Admissions: The Student Edition
+			</p>
+		</div>
+		<div class="row" data-ng-show="authentication.user">
+			<p>
+				<a class="btn btn-primary btn-lg" href="/#!/applications">Apply now</a>
+			</p>
+		</div>
+		<div class="row" data-ng-hide="authentication.user">
+			<p>
+				<a class="btn btn-primary btn-lg" href="/#!/signin">Apply now</a>
+			</p>
+		</div>
+	</div>
+</section>

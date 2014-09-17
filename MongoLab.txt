@@ -1,0 +1,15 @@
+MongoLab Information: 
+
+https://mongolab.com/login/
+
+*Username: user_1
+*Password: ssap777 (I don't think I should put this here but w/e)
+
+*Database name: db_1
+
+*uri: 'mongodb://user_1:root@ds049888.mongolab.com:49888/db_1'
+
+*To change the database back to localhost: 
+Go to meanjs_admissions\meanjs-mean-2c319c5\config\env and choose appropriate config file. It is set to development by default, so open meanjs_admissions\meanjs-mean-2c319c5\config\env\development.js. Change line 4: db: 'mongodb://user_1:root@ds049888.mongolab.com:49888/db_1', to db: 'mongodb://localhost/mean-dev'.
+
+*REMINDER: This database is shared. If you don't know what you are doing, don't touch the delete button.

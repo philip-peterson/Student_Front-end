@@ -1,0 +1,31 @@
+<center><h1><u>The Application</u></h1></center>
+<section data-ng-controller="ApplicationsController"> <!--data-ng-init="find()"-->
+     <ul class="nav nav-pills nav-justified" ng-init="tab = 1">
+            <li ng-class="{active:tab===1}"> 
+                <a href ng-click="tab = 1">Personal Information</a>    
+            </li>
+            <li ng-class="{active:tab===2}"> 
+                <a href ng-click="tab = 2">Special Programs Information</a> 
+            </li>
+            <li ng-class="{active:tab===3}"> 
+                <a href ng-click="tab = 3">Degree Programs</a> 
+            </li>
+			<li ng-class="{active:tab===4}"> 
+                <a href ng-click="tab = 4">Education and Activities</a> 
+            </li>
+			<li ng-class="{active:tab===5}"> 
+                <a href ng-click="tab = 5">Residency Affidavit</a> 
+            </li>
+			<li ng-class="{active:tab===6}"> 
+                <a href ng-click="tab = 6">Summary</a> 
+            </li>
+            <br><br>
+            <p ng-show="tab === 1"> WIP  </p>
+            <p ng-show="tab === 2"> WIP Again</p>
+            <p ng-show="tab === 3"> WIP... Again</p>
+			<p ng-show="tab === 4"> ... still WIP</p>
+			<p ng-show="tab === 5"> I predict...WIP.</p>	
+			<p ng-show="tab === 6"> What do you think? WIP.</p>
+			   
+        </ul>  
+</section>

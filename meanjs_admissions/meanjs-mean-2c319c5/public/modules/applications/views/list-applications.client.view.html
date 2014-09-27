@@ -1,5 +1,6 @@
 <center><h1><u>The Application</u></h1></center>
 <section data-ng-controller="ApplicationsController"> <!--data-ng-init="find()"-->
+	
      <ul class="nav nav-pills nav-justified" ng-init="tab = 1">
             <li ng-class="{active:tab===1}"> 
                 <a href ng-click="tab = 1">Personal Information</a>    
@@ -608,7 +609,170 @@
 			</table>
 			</div>
             <p ng-show="tab === 3"> WIP... Again</p>
-			<p ng-show="tab === 4"> ... still WIP</p>
+			<div ng-show="tab === 4"> 
+				<!-- Dale's Elements -->
+				<br>
+			<table class="table">
+				<th colspan="2">
+				<center><h4><u>Special Programs Information</u></h4></center>
+				</th>
+				<tr>
+					<td>
+					<table class="table table-bordered">
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Undergraduate Major:</label>
+							</td>
+							<td>
+Indicate your undergraduate major: <select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+									Indicate your undergraduate specialization: <input type="text" class="form-control" placeholder="Text input">
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">College 1:</label>
+							</td>
+							<td>
+								<p> List all colleges or universities you have attended. Include the University of Florida if you have ever registered for a course. </p>
+									<a href="#" role="button" class="btn popovers" data-toggle="popover" title="" data-content="test content <a href='' title='test add link'>link on content</a>" data-original-title="test title">Select a College</a>
+									
+								</label>
+							</td>
+						</div>
+						</tr>
+						<tr>
+							<div class="form-group">
+								<td>
+									<label class="control-label" for="name">Self Reported GPA Calculation:</label>
+								</td>
+								<td>
+									<p> Place the total amount of junior and senior-level semester or quarter hours earned for each letter grade into the appropriate box below and then click Calculate to compute your junior/senior undergraduate GPA. You should ONLY include courses attempted from the time that you earned 60 semester hours or 90 quarter hours through the awarding of your baccalaureate degree. </p>
+									A <input type="text-mini" placeholder="Text input">
+									A- <input type="text-mini" placeholder="Text input">
+									B+ <input type="text-mini" placeholder="Text input">
+									B <input type="text-mini" placeholder="Text input">
+									B- <input type="text-mini" placeholder="Text input">
+									C+ <input type="text-mini" placeholder="Text input">
+									C <input type="text-mini" placeholder="Text input">
+									C- <input type="text-mini" placeholder="Text input">
+									D+ <input type="text-mini" placeholder="Text input">
+									D <input type="text-mini" placeholder="Text input">
+									D- <input type="text-mini" placeholder="Text input">
+									F or I <input type="text-mini" placeholder="Text input">
+									<button type="submit" class="btn">Calculate</button>
+								</td>
+							</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Test Scores:</label>
+							</td>
+							<td>
+								<p>  	If you have taken or plan to take any of the tests listed below, check the box beside the test name and enter the information requested. </p>
+
+										<p> Official test scores from the testing agency must be submitted to the Office of Admissions, PO Box 114000, 201 Criser Hall, Gainesville, FL 32611-4000. </p>
+
+										<p> If you have taken any test more than once, enter the highest complete set of scores. Do not mix component scores from multiple test administrations. </p>
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Graduate Record Examination (GRE) <p> </p>
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Graduate Management Admission Test (GMAT) <p> </p>
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Miller Analogies Test (MAT) <p> </p>
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Fundamentals of Engineering Exam (FE) <p> </p>
+								  <p> Proficiency in the English language is required of applicants from countries (including Puerto Rico) where English is not the official language. These applicants must submit official scores from one of the tests listed below. This requirement may be waived if you have been enrolled in a degree-seeking program for one academic year (in a country where English is the official language) before your anticipated term of enrollment at UF. </p>
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Test of English as a Foreign Language (TOEFL) <p> </p>
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> International English Language Testing System (IELTS) <p> </p>
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Michigan English Language Assessment Battery (MELAB) <p> </p> 
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> University of Florida English Language Institute Program <p> </p>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name"> <p> Activity1 </p> (most recent) :</label>
+							</td>
+							<td>
+								Activity: <input type="text" placeholder="Text input"> <p> </p>
+								City: <input type="text" placeholder="Text input"> <p> </p>
+								Country: <select class="form-control-small"> <p> </p>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								State <select class="form-control-small"> <p> </p>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								From <select class="form-control-small">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select> <input type="text-mini" placeholder="Text input">
+								To: <select class="form-control-small">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										</select> <input type="text-mini" placeholder="Text input">
+									</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Resume/Other: <br> (optional) </label>
+							</td>
+							<td>
+							<p> If you would like to submit a PDF version of your resume or another supporting document to your department, please click on the Upload Resume or Upload Other button below and follow the directions for uploading a file. We strongly recommend Adobe PDF format (*.pdf) without Adobe document security. Please do not use this function to upload a copy of your transcript. </p>
+								<button type="submit" class="btn">Upload Resume</button> <p> </p>
+								<button type="submit" class="btn">Upload Other</button>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Transcripts <br> (Optional) </label>
+							</td>
+							<td>
+							<p> To submit a copy of your transcript and degree certificate (if applicable) directly to your department, please click on the Upload Transcript button below and follow the directions for uploading a file.
+
+Please note that uploaded documents are for departmental use only and that applicants should arrange to have official copies of their transcripts and degree certificates (if applicable) sent to the Office of Admissions from each post-secondary institution attended. </p>
+								<button type="submit" class="btn">Upload Transcript</button>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+						</div>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			</div>
+				
+				
 			<p ng-show="tab === 5"> I predict...WIP.</p>	
 			<p ng-show="tab === 6"> What do you think? WIP.</p>
 			   

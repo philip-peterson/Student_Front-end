@@ -23,6 +23,15 @@
 						<p ng-show="articleForm.content.$error.required" class="text-danger">Content is required</p>
 					</div>
 				</div>
+				<div class="form-group" ng-class="{ 'has-error' : submitted && articleForm.code.$invalid}">
+					<label class="control-label" for="content">Code</label>
+					<label class="radio-inline">
+					  <input type="radio" name="code" id="inlineRadio1" data-ng-model="article.code" value="1" ng-checked="code"> Applied for funding
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="code" id="inlineRadio2" data-ng-model="article.code" value="0" ng-checked="!code"> Funding approved
+					</label>
+				</div>
 				<div class="form-group">
 					<input type="submit" value="Update" class="btn btn-default">
 				</div>

@@ -1,5 +1,5 @@
 <center><h1><u>The Application</u></h1></center>
-<section data-ng-controller="ApplicationsController"> <!--data-ng-init="find()"-->
+<section data-ng-controller="ApplicationsController" > <!--data-ng-init="find()" data-ng-repeat="article in articles" data-ng-show="authentication.user._id == application.user._id"-->
 	
      <ul class="nav nav-pills nav-justified" ng-init="tab = 1">
             <li ng-class="{active:tab===1}"> 
@@ -371,6 +371,7 @@ Please note that uploaded documents are for departmental use only and that appli
 					</table>
 				</td>
 			</tr>
+			</table>
 			</div>
 				
 				

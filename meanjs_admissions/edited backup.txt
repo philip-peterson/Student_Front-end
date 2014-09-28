@@ -1,6 +1,5 @@
 <center><h1><u>The Application</u></h1></center>
 <section data-ng-controller="ApplicationsController"> <!--data-ng-init="find()"-->
-	
      <ul class="nav nav-pills nav-justified" ng-init="tab = 1">
             <li ng-class="{active:tab===1}"> 
                 <a href ng-click="tab = 1">Personal Information</a>    
@@ -96,320 +95,10 @@
 								<br>
 
 								<strong>Please verify that you have correctly input your Social Security number. An incorrect number can significantly delay the matching of transcripts, test scores and financial aid information to your academic record.</strong>
-
-								<br><br>
-
-								<center><form class="form-inline" role="form">
-
-								  <div class="form-group">
-								    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Social Security Number">
-								  </div>
-
-								</form></center>
-
-								<br><br>
-
-								If you already have a UFID, please provide it below as it will expedite the processing of your application. If you have previously submitted a UF application and do not remember your UFID, you may locate your number by referring to the application summary of your previously submitted application. If you are unable to retrieve your UFID; leave this field blank.
-
-								<br><br>
-								<center><form class="form-inline" role="form">
-
-								  <div class="form-group">
-								    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="UFID">
-								  </div>
-
-								</form></center>
-
-								<br><br>
-								Have you ever submitted an application to the University of Florida? 
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
-							</label>
-
-								<br><br>
-								Have you ever attended the University of Florida?
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1"> Yes
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2"> No
-							</label>
-
-							<tr>
-							<td>
-							 <label class="control-label" for="name">Date of Birth:</label>
-
-							<center><label class="control-label" for="name">Month:</label>
-								<select class="selectpicker">
-									<option>January</option>
-								    <option>February</option>
-								    <option>March</option>
-								   	<option>April</option> 
-								    <option>May</option>
-								    <option>June</option>
-								    <option>July</option>
-								    <option>August</option>
-								    <option>September</option>
-								    <option>October</option>
-								    <option>November</option>
-								    <option>December</option>
-								</select>
-
-							 <label class="control-label" for="name">Day:</label>
-								<select class="selectpicker">
-									<option>1</option>
-								    <option>2</option>
-								    <option>3</option>
-								   	<option>4</option> 
-								    <option>5</option>
-								    <option>6</option>
-								    <option>7</option>
-								    <option>8</option>
-								    <option>9</option>
-								    <option>10</option>
-								    <option>11</option>
-								    <option>12</option>
-								    <option>13</option>
-								    <option>14</option>
-								    <option>15</option>
-								    <option>16</option>
-								    <option>17</option>
-								    <option>18</option>
-								    <option>19</option>
-								    <option>20</option>
-								    <option>21</option>
-								    <option>22</option>
-								    <option>23</option>
-								    <option>24</option>
-								    <option>25</option>
-								    <option>26</option>
-								    <option>27</option>
-								    <option>28</option>
-								    <option>29</option>
-								    <option>30</option>
-								    <option>31</option>
-								</select>
-
-							 	<label class="control-label" for="name">Year:</label>
-								  <input id="date1" class="datepicker" data-date-format="yyyy" placeholder="yyyy" required></center>
-
-								  <br>
-							 </td>
-							</tr>
-
-
-
-							<br>
-							<tr>
-							<td>
-							<label class="control-label" for="name">Gender:</label>
-								<center><select class="selectpicker">
-									<option> </option>
-									<option>Male</option>
-								    <option>Female</option>
-								</select></center>
-								<br>
-							</td>
-							</tr>
-
-							<tr>
-							<td>
-							<label class="control-label" for="name">Nation of Citizenship:</label>
-						<center><country-select data-ng-model="selectedCountry"></country-select></center>
-						<br>
-							</tr>
-							</td>
-
-							<br>
-							<tr>
-							<td>
-							<strong> Ethnicity (voluntary): </strong>
-							<br><br>	
-							Are you Hispanic? 
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> Yes
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> No
-							</label>
-							<br><br>
-
-							How would you describe yourself? Choose one or more:
-							<br><br>
-							<label class="checkbox-inline">
-							  <input type="checkbox" id="inlineCheckbox1" value="option1"> American Indian or Alaska Native
-							</label>
-							<label class="checkbox-inline">
-							  <input type="checkbox" id="inlineCheckbox2" value="option2"> Asian
-							</label>
-							<label class="checkbox-inline">
-							  <input type="checkbox" id="inlineCheckbox3" value="option3"> Black/African American 
-							</label>
-							<label class="checkbox-inline">
-							  <input type="checkbox" id="inlineCheckbox3" value="option4">  Hawaii Native or Other Pacific Islander 
-							</label>
-							<label class="checkbox-inline">
-							  <input type="checkbox" id="inlineCheckbox3" value="option5"> White 
-							</label>
-							<br><br>
-
-
-							</tr>
-							</td>
-
-							<br>
-							<tr>
-							<td>
-
-
-							 <form class="form-inline" role="form">
-							<strong> Please enter your email to expediate the application process: </strong>
-
-								<center> <div class="form-group">
-								   <input type="email" class="form-control" id="exampleInputEmail2" placeholder="email address">
-								 </div>
-
-							</form></center>
-							<br>
-
-							</tr>
-							</td>
-
-
-							<br>
-							<tr>
-							<td>
 							
-							<strong>Telephone Number:</strong>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> U.S.
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> Intl.
-							</label>
-															<center><form class="form-inline" role="form">
+						</tr>
 
-								  <div class="form-group">
-								    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Phone Number">
-								  </div>
-								  </form></center>
-							<br>
-
-														<strong>Cell Phone Number:</strong>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> U.S.
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> Intl.
-							</label>
-															<center><form class="form-inline" role="form">
-
-								  <div class="form-group">
-								    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Cell Phone Number">
-								  </div>
-								  </form></center>
-							<br>
-
-														<strong>Work Phone Number:</strong>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> U.S.
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> Intl.
-							</label>
-															<center><form class="form-inline" role="form">
-
-								  <div class="form-group">
-								    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Work Phone Number">
-								  </div>
-								  </form></center>
-							<br>
-
-
-							<br>
-							<tr>
-							<td>
-
-							 <form class="form-inline" role="form">
-							<strong> Permanent Address Information : </strong>
-
-								<center> <div class="form-group">
-								   <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Number and street">
-								 </div></center>
-								 <br>
-								 <center> <div class="form-group">
-								   <input type="email" class="form-control" id="exampleInputEmail2" placeholder="City">
-								 </div></center>
-								 <br>
-
-								<center> <label class="control-label" for="name">State:</label>
-								 <select>
-								 		<option> </option>
-										<option value="AL">Alabama</option>
-										<option value="AK">Alaska</option>
-										<option value="AZ">Arizona</option>
-										<option value="AR">Arkansas</option>
-										<option value="CA">California</option>
-										<option value="CO">Colorado</option>
-										<option value="CT">Connecticut</option>
-										<option value="DE">Delaware</option>
-										<option value="DC">District Of Columbia</option>
-										<option value="FL">Florida</option>
-										<option value="GA">Georgia</option>
-										<option value="HI">Hawaii</option>
-										<option value="ID">Idaho</option>
-										<option value="IL">Illinois</option>
-										<option value="IN">Indiana</option>
-										<option value="IA">Iowa</option>
-										<option value="KS">Kansas</option>
-										<option value="KY">Kentucky</option>
-										<option value="LA">Louisiana</option>
-										<option value="ME">Maine</option>
-										<option value="MD">Maryland</option>
-										<option value="MA">Massachusetts</option>
-										<option value="MI">Michigan</option>
-										<option value="MN">Minnesota</option>
-										<option value="MS">Mississippi</option>
-										<option value="MO">Missouri</option>
-										<option value="MT">Montana</option>
-										<option value="NE">Nebraska</option>
-										<option value="NV">Nevada</option>
-										<option value="NH">New Hampshire</option>
-										<option value="NJ">New Jersey</option>
-										<option value="NM">New Mexico</option>
-										<option value="NY">New York</option>
-										<option value="NC">North Carolina</option>
-										<option value="ND">North Dakota</option>
-										<option value="OH">Ohio</option>
-										<option value="OK">Oklahoma</option>
-										<option value="OR">Oregon</option>
-										<option value="PA">Pennsylvania</option>
-										<option value="RI">Rhode Island</option>
-										<option value="SC">South Carolina</option>
-										<option value="SD">South Dakota</option>
-										<option value="TN">Tennessee</option>
-										<option value="TX">Texas</option>
-										<option value="UT">Utah</option>
-										<option value="VT">Vermont</option>
-										<option value="VA">Virginia</option>
-										<option value="WA">Washington</option>
-										<option value="WV">West Virginia</option>
-										<option value="WI">Wisconsin</option>
-										<option value="WY">Wyoming</option>
-									</select></center>
-
-									<br>
-
-								<center> <label class="control-label" for="name">Country:</label>
-								 <country-select data-ng-model="selectedCountry2"></country-select></center>
-
-
-							</form>
-
-<tr>
+						<tr>
 						<div class="form-group">
 
 							<td>
@@ -477,12 +166,12 @@
 	<option value="WY">Wyoming</option>
 								</select>
 
-							<label class="control-label" for="eci_country">Country:</label>
-								<country-select data-ng-model="selectedCountry2"></country-select></center>
-
-							<br>
-							<br>
-															
+							<label class="control-label" for="address">Country:</label>
+								<select class="selectpicker">
+									<option>United States</option>
+								    <option>Canada</option>
+								</select>
+							
 							<div class="col-xs-2">
 								 <input type="text" data-ng-model="zip" id="address" class="form-control" placeholder="Zip Code" required>
 								 </div>
@@ -576,14 +265,16 @@
 								</select>
 
 							<label class="control-label" for="eci_country">Country:</label>
-								<country-select data-ng-model="selectedCountry2"></country-select></center>
-
-							<br>
-							<br>
+								<select class="selectpicker">
+									<option>United States</option>
+								    <option>Canada</option>
+								</select>
+							
 							<div class="col-xs-2">
 								 <input type="text" data-ng-model="eci_zip" id="eci_address" class="form-control" placeholder="Zip Code" required>
 								 </div>
-							
+							<br>
+							<br>
 							<div class="col-xs-3">
 								 <input type="number" data-ng-model="eci_tel" id="eci_number" class="form-control" placeholder="Telephone Number" required>
 								 </div>
@@ -656,12 +347,6 @@
 								</label>
 					</table>
 					</td>
-				</tr>
-
-
-
-
-					</table>
 				</tr>
 
 			</table>
@@ -856,170 +541,7 @@
 			</table>
 			</div>
             <p ng-show="tab === 3"> WIP... Again</p>
-			<div ng-show="tab === 4"> 
-				<!-- Dale's Elements -->
-				<br>
-			<table class="table">
-				<th colspan="2">
-				<center><h4><u>Special Programs Information</u></h4></center>
-				</th>
-				<tr>
-					<td>
-					<table class="table table-bordered">
-						<tr>
-						<div class="form-group">
-							<td>
-								<label class="control-label" for="name">Undergraduate Major:</label>
-							</td>
-							<td>
-Indicate your undergraduate major: <select class="form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-									Indicate your undergraduate specialization: <input type="text" class="form-control" placeholder="Text input">
-							</td>
-						</div>
-						</tr>
-						<tr>
-						<div class="form-group">
-							<td>
-								<label class="control-label" for="name">College 1:</label>
-							</td>
-							<td>
-								<p> List all colleges or universities you have attended. Include the University of Florida if you have ever registered for a course. </p>
-									<a href="#" role="button" class="btn popovers" data-toggle="popover" title="" data-content="test content <a href='' title='test add link'>link on content</a>" data-original-title="test title">Select a College</a>
-									
-								</label>
-							</td>
-						</div>
-						</tr>
-						<tr>
-							<div class="form-group">
-								<td>
-									<label class="control-label" for="name">Self Reported GPA Calculation:</label>
-								</td>
-								<td>
-									<p> Place the total amount of junior and senior-level semester or quarter hours earned for each letter grade into the appropriate box below and then click Calculate to compute your junior/senior undergraduate GPA. You should ONLY include courses attempted from the time that you earned 60 semester hours or 90 quarter hours through the awarding of your baccalaureate degree. </p>
-									A <input type="text-mini" placeholder="Text input">
-									A- <input type="text-mini" placeholder="Text input">
-									B+ <input type="text-mini" placeholder="Text input">
-									B <input type="text-mini" placeholder="Text input">
-									B- <input type="text-mini" placeholder="Text input">
-									C+ <input type="text-mini" placeholder="Text input">
-									C <input type="text-mini" placeholder="Text input">
-									C- <input type="text-mini" placeholder="Text input">
-									D+ <input type="text-mini" placeholder="Text input">
-									D <input type="text-mini" placeholder="Text input">
-									D- <input type="text-mini" placeholder="Text input">
-									F or I <input type="text-mini" placeholder="Text input">
-									<button type="submit" class="btn">Calculate</button>
-								</td>
-							</div>
-						</tr>
-						<tr>
-						<div class="form-group">
-							<td>
-								<label class="control-label" for="name">Test Scores:</label>
-							</td>
-							<td>
-								<p>  	If you have taken or plan to take any of the tests listed below, check the box beside the test name and enter the information requested. </p>
-
-										<p> Official test scores from the testing agency must be submitted to the Office of Admissions, PO Box 114000, 201 Criser Hall, Gainesville, FL 32611-4000. </p>
-
-										<p> If you have taken any test more than once, enter the highest complete set of scores. Do not mix component scores from multiple test administrations. </p>
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Graduate Record Examination (GRE) <p> </p>
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Graduate Management Admission Test (GMAT) <p> </p>
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Miller Analogies Test (MAT) <p> </p>
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Fundamentals of Engineering Exam (FE) <p> </p>
-								  <p> Proficiency in the English language is required of applicants from countries (including Puerto Rico) where English is not the official language. These applicants must submit official scores from one of the tests listed below. This requirement may be waived if you have been enrolled in a degree-seeking program for one academic year (in a country where English is the official language) before your anticipated term of enrollment at UF. </p>
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Test of English as a Foreign Language (TOEFL) <p> </p>
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> International English Language Testing System (IELTS) <p> </p>
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Michigan English Language Assessment Battery (MELAB) <p> </p> 
-								  <input type="checkbox" id="inlineCheckbox1" value="option1"> University of Florida English Language Institute Program <p> </p>
-							</td>
-						</div>
-						</tr>
-						<tr>
-						<div class="form-group">
-							<td>
-								<label class="control-label" for="name"> <p> Activity1 </p> (most recent) :</label>
-							</td>
-							<td>
-								Activity: <input type="text" placeholder="Text input"> <p> </p>
-								City: <input type="text" placeholder="Text input"> <p> </p>
-								Country: <select class="form-control-small"> <p> </p>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-								State <select class="form-control-small"> <p> </p>
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
-								From <select class="form-control-small">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select> <input type="text-mini" placeholder="Text input">
-								To: <select class="form-control-small">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										</select> <input type="text-mini" placeholder="Text input">
-									</td>
-						</div>
-						</tr>
-						<tr>
-						<div class="form-group">
-							<td>
-								<label class="control-label" for="name">Resume/Other: <br> (optional) </label>
-							</td>
-							<td>
-							<p> If you would like to submit a PDF version of your resume or another supporting document to your department, please click on the Upload Resume or Upload Other button below and follow the directions for uploading a file. We strongly recommend Adobe PDF format (*.pdf) without Adobe document security. Please do not use this function to upload a copy of your transcript. </p>
-								<button type="submit" class="btn">Upload Resume</button> <p> </p>
-								<button type="submit" class="btn">Upload Other</button>
-							</td>
-						</div>
-						</tr>
-						<tr>
-						<div class="form-group">
-							<td>
-								<label class="control-label" for="name">Transcripts <br> (Optional) </label>
-							</td>
-							<td>
-							<p> To submit a copy of your transcript and degree certificate (if applicable) directly to your department, please click on the Upload Transcript button below and follow the directions for uploading a file.
-
-Please note that uploaded documents are for departmental use only and that applicants should arrange to have official copies of their transcripts and degree certificates (if applicable) sent to the Office of Admissions from each post-secondary institution attended. </p>
-								<button type="submit" class="btn">Upload Transcript</button>
-							</td>
-						</div>
-						</tr>
-						<tr>
-						<div class="form-group">
-						</div>
-						</tr>
-						<tr>
-						<div class="form-group">
-						</div>
-						</tr>
-					</table>
-				</td>
-			</tr>
-			</div>
-				
-				
+			<p ng-show="tab === 4"> ... still WIP</p>
 			<p ng-show="tab === 5"> I predict...WIP.</p>	
 			<p ng-show="tab === 6"> What do you think? WIP.</p>
 			   

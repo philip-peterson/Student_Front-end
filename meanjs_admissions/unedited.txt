@@ -1,0 +1,301 @@
+<center><h1><u>The Application</u></h1></center>
+<section data-ng-controller="ApplicationsController"> <!--data-ng-init="find()"-->
+     <ul class="nav nav-pills nav-justified" ng-init="tab = 1">
+            <li ng-class="{active:tab===1}"> 
+                <a href ng-click="tab = 1">Personal Information</a>    
+            </li>
+            <li ng-class="{active:tab===2}"> 
+                <a href ng-click="tab = 2">Special Programs Information</a> 
+            </li>
+            <li ng-class="{active:tab===3}"> 
+                <a href ng-click="tab = 3">Degree Programs</a> 
+            </li>
+			<li ng-class="{active:tab===4}"> 
+                <a href ng-click="tab = 4">Education and Activities</a> 
+            </li>
+			<li ng-class="{active:tab===5}"> 
+                <a href ng-click="tab = 5">Residency Affidavit</a> 
+            </li>
+			<li ng-class="{active:tab===6}"> 
+                <a href ng-click="tab = 6">Summary</a> 
+            </li>
+            <br><br>
+
+
+            <div ng-show="tab === 1"> 
+			<br>
+			<table class="table">
+
+				<th colspan="2">
+
+				<h4><strong><u>Instructions for Completing the Application</u></strong></h4>
+
+				<p>You can work on any page of the application at any time and in any order, but the pages are presented on the legend above in a standard order of progression. As you complete a page, click Save on bottom right of every page to save your data. When there is a problem, such as an incomplete item on the page, you will receive an error alert. 
+				</p>
+				</th>
+
+				<tr>
+					<td>
+					<table class="table table-bordered">
+						<tr>
+						<div class="form-group">
+
+							<td>
+								 <div class="row">
+
+  								<div class="col-xs-3">
+								 <br>
+								 <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="First Name" required>
+								  <br>
+								  </div>
+
+								<div class="col-xs-3">
+								 <br>
+								 <input type="text" data-ng-model="name2" id="name" class="form-control" placeholder="Middle Name">
+								  <br>
+								  </div>
+
+  								<div class="col-xs-3">
+								 <br>
+								 <input type="text" data-ng-model="name3" id="name" class="form-control" placeholder="Last Name" required>
+								  <br>
+								  </div>
+
+								  <br>
+
+								<label class="control-label" for="name">Suffix:</label>
+								<select class="selectpicker">
+									<option>None</option>
+								    <option>Jr.</option>
+								    <option>Sr.</option>
+								   	<option>II</option> 
+								    <option>III</option>
+								    <option>IV</option>
+								    <option>V</option>
+								</select>
+
+							</td>
+						</div>
+						</tr>
+
+
+						<tr>
+						<div class="form-group">
+
+							<td>
+
+								 <br>
+								<p>The Federal Privacy Act of 1974 and Section 119.071(5)(a)2, 5(a)3 and 5(a)4 of Florida Statutes authorizes the university to require the disclosure of Social Security numbers by applicants and students for the purpose of identification and verification of student records, including registration, financial aid and academic records and for verification of identity in the provision of university services. </p>								 
+								<br>
+								<p>The university does not use your Social Security number for student identification. It is only used to assign your UF student identification number (UFID).</p>		  <br>
+
+								<p>If you do not have a US social security number, check here. 								  
+									<input type="checkbox" id="inlineCheckbox1" value="option1"> 
+								</p>
+								<br>
+
+								<strong>Please verify that you have correctly input your Social Security number. An incorrect number can significantly delay the matching of transcripts, test scores and financial aid information to your academic record.</strong>
+							
+						</tr>
+					</table>
+					</td>
+				</tr>
+
+			</table>
+			</div>
+
+
+            <div ng-show="tab === 2"> 
+			<br>
+			<table class="table">
+				<th colspan="2">
+				<center><h4><u>Special Programs Information</u></h4></center>
+				</th>
+				<tr>
+					<td>
+					<table class="table table-bordered">
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">FAMU Feeder:</label>
+							</td>
+							<td>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
+								</label>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Fulbright Scholar:</label>
+							</td>
+							<td>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
+								</label>
+							</td>
+						</div>
+						</tr>
+						<tr>
+							<div class="form-group">
+								<td>
+									<label class="control-label" for="name">Please Identify Program:</label>
+								</td>
+								<td>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> IIE
+									</label>
+									<br>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> LASPAU
+									</label>
+									<br>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> AMIDEAST
+									</label>
+									<br>
+									<label class="radio-inline">
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2"> KOMMISSION
+									</label>
+								</td>
+							</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">McNair Scholar:</label>
+							</td>
+							<td>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
+								</label>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">McKnight Scholar:</label>
+							</td>
+							<td>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
+								</label>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">National Science <br> Foundation Fellowship:</label>
+							</td>
+							<td>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
+								</label>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">National Institutes of <br>Health Fellowship:</label>
+							</td>
+							<td>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
+								</label>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Other (U.S. or Foreign):</label>
+							</td>
+							<td>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
+								</label>
+								<br><br>
+								 <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Please Explain" required>
+							</td>
+						</div>
+						</tr>
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Check if you are applying <br>for any of the following.</label>
+							</td>
+							<td>
+								<label class="checkbox-inline">
+								  <input type="checkbox" id="inlineCheckbox1" value="option1"> Assistantship
+								</label>
+								<br>
+								<label class="checkbox-inline">
+								  <input type="checkbox" id="inlineCheckbox2" value="option2"> Distance Learning Program
+								</label>
+								<br>
+								<label class="checkbox-inline">
+								  <input type="checkbox" id="inlineCheckbox3" value="option3"> Fellowship
+								</label>
+								<br>
+								<label class="checkbox-inline">
+								  <input type="checkbox" id="inlineCheckbox4" value="option4"> Joint UF Degree
+								</label>
+								<br>
+								<label class="checkbox-inline">
+								  <input type="checkbox" id="inlineCheckbox5" value="option5"> 3/2 Program
+								</label>
+							</td>
+						</div>
+						</tr>
+					</table>
+					<table class="table table-bordered">
+						<tr>
+							<td>
+								<p><b>Supporting Documentation</b></p>
+							</td>
+							<td>
+								<p>Guidelines: Please submit any supporting materials for the special programs listed above (e.g. a funding award letter from an external agency or your home government, McNair Scholar participation letter, etc.) by clicking the Upload Supporting Documentation button below. </p>
+								<div class="form-group">
+									<input type="submit" class="btn btn-default" value="Upload Supporting Documents">
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr><td><p><b>If you are not applying to any program, click Save to continue.</b></p></td></tr>
+			</table>
+			</div>
+            <p ng-show="tab === 3"> WIP... Again</p>
+			<p ng-show="tab === 4"> ... still WIP</p>
+			<p ng-show="tab === 5"> I predict...WIP.</p>	
+			<p ng-show="tab === 6"> What do you think? WIP.</p>
+			   
+        </ul>  
+</section>

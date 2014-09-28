@@ -3,10 +3,10 @@
 /**
 * Module dependencies.
 */
-var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var ApplicationSchema = new Schema({
+var AdmissionsSchema = new Schema({
     personal_info: {
         name: {
             first: String,
@@ -147,11 +147,11 @@ var ApplicationSchema = new Schema({
                 reading: Number,
                 total: Number,
                 internet_date: Date,
-                readingi: Number,
-                listeningi: Number,
-                speakingi: Number,
-                writingi: Number,
-                totali: Number
+                reading2: Number,
+                listening2: Number,
+                speaking: Number,
+                writing2: Number,
+                total2: Number
             },
             ielts: {
                 date: Date,
@@ -201,4 +201,4 @@ var ApplicationSchema = new Schema({
     }
 });
 
-mongoose.model('Application', ApplicationSchema);
+mongoose.model('Admissions', AdmissionsSchema);

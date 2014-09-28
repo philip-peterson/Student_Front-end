@@ -147,33 +147,11 @@ var AdmissionsSchema = new Schema({
                 reading: Number,
                 total: Number,
                 internet_date: Date,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                readingi: Number,
-                listeningi: Number,
-                speakingi: Number,
-                writingi: Number,
-                totali: Number
-=======
                 reading2: Number,
                 listening2: Number,
                 speaking: Number,
                 writing2: Number,
                 total2: Number
->>>>>>> origin/master
-=======
-=======
->>>>>>> parent of 9785f0e... Database Schema Fix
-                reading: Number,
-                listening: Number,
-                speaking: Number,
-                writing: Number,
-                total: Number
-<<<<<<< HEAD
->>>>>>> parent of 9785f0e... Database Schema Fix
-=======
->>>>>>> parent of 9785f0e... Database Schema Fix
             },
             ielts: {
                 date: Date,

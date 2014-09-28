@@ -10,7 +10,7 @@ module.exports = function(app) {
 	// Article Routes
 	app.route('/articles')
 		.get(articles.list)
-		.post(articles.create);
+		.post(users.requiresLogin, articles.create);
 
 	app.route('/articles/:articleId')
 		.get(articles.read)

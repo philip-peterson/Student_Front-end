@@ -3,10 +3,10 @@
 /**
 * Module dependencies.
 */
-var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var ApplicationSchema = new Schema({
+var AdmissionsSchema = new Schema({
     personal_info: {
         name: {
             first: String,
@@ -83,37 +83,15 @@ var ApplicationSchema = new Schema({
             charged_law_violation: Boolean
         }
     },
-	/****************END OF FIRST TAB*******************/
     special_programs_info: {
         special_programs_application: {
-            famu_feeder: {
-				type: Boolean,
-				default: false
-			},
-            fullbright_scholar: {
-				type: Boolean,
-				default: false
-			},
-            mcnair_scholar: {
-				type: Boolean,
-				default: false
-			},
-            mcknight_scholar: {
-				type: Boolean,
-				default: false
-			},
-            national_science_foundation_fellowship: {
-				type: Boolean,
-				default: false
-			},
-            national_institutes_of_health_fellowship: {
-				type: Boolean,
-				default: false
-			},
-            other: {
-				type: String,
-				default: ''
-			}
+            famu_feeder: Boolean,
+            fullbright_scholar: Boolean,
+            mcnair_scholar: Boolean,
+            mcknight_scholar: Boolean,
+            national_science_foundation_fellowship: Boolean,
+            national_institutes_of_health_fellowship: Boolean,
+            other: String
             /* check if you are the following?? */
         },
         supporting_documentation: {
@@ -131,7 +109,6 @@ var ApplicationSchema = new Schema({
         },
         statement_of_purpose: String
     },
-	/****************END OF SECOND TAB*******************/
     education_and_activities: {
         undergraduate: {
             major: String,
@@ -171,6 +148,7 @@ var ApplicationSchema = new Schema({
                 total: Number,
                 internet_date: Date,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 readingi: Number,
                 listeningi: Number,
                 speakingi: Number,
@@ -183,6 +161,13 @@ var ApplicationSchema = new Schema({
                 writing2: Number,
                 total2: Number
 >>>>>>> origin/master
+=======
+                reading: Number,
+                listening: Number,
+                speaking: Number,
+                writing: Number,
+                total: Number
+>>>>>>> parent of 9785f0e... Database Schema Fix
             },
             ielts: {
                 date: Date,
@@ -232,4 +217,4 @@ var ApplicationSchema = new Schema({
     }
 });
 
-mongoose.model('Application', ApplicationSchema);
+mongoose.model('Admissions', AdmissionsSchema);

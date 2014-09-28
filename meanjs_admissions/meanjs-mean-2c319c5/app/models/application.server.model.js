@@ -85,13 +85,34 @@ var ApplicationSchema = new Schema({
     },
     special_programs_info: {
         special_programs_application: {
-            famu_feeder: Boolean,
-            fullbright_scholar: Boolean,
-            mcnair_scholar: Boolean,
-            mcknight_scholar: Boolean,
-            national_science_foundation_fellowship: Boolean,
-            national_institutes_of_health_fellowship: Boolean,
-            other: String
+            famu_feeder: {
+				type: String,
+				default: ''
+			},
+            fullbright_scholar: {
+				type: Boolean,
+				default: false
+			},
+            mcnair_scholar: {
+				type: Boolean,
+				default: false
+			},
+            mcknight_scholar: {
+				type: Boolean,
+				default: false
+			},
+            national_science_foundation_fellowship: {
+				type: Boolean,
+				default: false
+			},
+            national_institutes_of_health_fellowship: {
+				type: Boolean,
+				default: false
+			},
+            other: {
+				type: String,
+				default: ''
+			}
             /* check if you are the following?? */
         },
         supporting_documentation: {

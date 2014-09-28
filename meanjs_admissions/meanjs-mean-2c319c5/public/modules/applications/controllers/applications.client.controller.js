@@ -44,7 +44,7 @@ angular.module('applications').controller('ApplicationsController', ['$scope', '
 			var application = $scope.application ;
 
 			application.$update(function() {
-				$location.path('applications/' + application._id);
+				$location.path('applications/' + application._id + '/edit');
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});
@@ -61,5 +61,14 @@ angular.module('applications').controller('ApplicationsController', ['$scope', '
 				applicationId: $stateParams.applicationId
 			});
 		};
+		//Alerts
+		 $scope.alerts = [];
+		 $scope.addAlert = function() {
+			$scope.alerts.push({type: 'success', msg: 'Updated.'});
+		  };
+
+		  $scope.closeAlert = function(index) {
+			$scope.alerts.splice(index, 1);
+		  };
 	}
 ]);

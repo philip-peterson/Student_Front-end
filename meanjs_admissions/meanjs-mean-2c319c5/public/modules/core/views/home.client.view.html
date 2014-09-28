@@ -7,9 +7,11 @@
 			</p>
 		</div>
 		<div class="row" data-ng-show="authentication.user">
-			<p>
-				<a class="btn btn-primary btn-lg" href="/#!/applications">Apply now</a>
-			</p>
+			<section  data-ng-controller="ApplicationsController" data-ng-init="find()">
+			<div data-ng-repeat="application in applications" data-ng-show="authentication.user._id == application.user._id">
+				<a class="btn btn-primary btn-lg" href="/#!/applications/{{application._id}}/edit">Your Application</a>
+			</div>
+			</section>
 		</div>
 		<div class="row" data-ng-hide="authentication.user">
 			<p>

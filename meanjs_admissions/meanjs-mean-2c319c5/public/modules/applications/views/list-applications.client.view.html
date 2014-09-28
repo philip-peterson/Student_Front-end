@@ -1,5 +1,6 @@
 <center><h1><u>The Application</u></h1></center>
-<section data-ng-controller="ApplicationsController"> <!--data-ng-init="find()"-->
+<section data-ng-controller="ApplicationsController" data-ng-init="find()">
+<div data-ng-repeat="application in applications" data-ng-show="authentication.user._id == application.user._id">
 	
      <ul class="nav nav-pills nav-justified" ng-init="tab = 1">
             <li ng-class="{active:tab===1}"> 
@@ -683,12 +684,14 @@
 								<label class="control-label" for="name">FAMU Feeder:</label>
 							</td>
 							<td>
-								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
-								</label>
+								<select class="form-control">
+								  <option>Applied for funding</option>
+								  <option>Funding approved</option>
+								  <option selected></option>
+								</select>
+								  </select>
+								  <hr/>
+								  <p>{{application.special_programs_info.special_programs_application.famu_feeder}}</p>
 							</td>
 						</div>
 						</tr>
@@ -1017,11 +1020,13 @@ Please note that uploaded documents are for departmental use only and that appli
 					</table>
 				</td>
 			</tr>
+			</table>
 			</div>
 				
 				
 			<p ng-show="tab === 5"> I predict...WIP.</p>	
 			<p ng-show="tab === 6"> What do you think? WIP.</p>
 			   
-        </ul>  
+        </ul> 
+</div>		
 </section>

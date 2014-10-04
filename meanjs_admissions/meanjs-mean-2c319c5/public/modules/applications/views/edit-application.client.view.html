@@ -451,15 +451,16 @@
 								<tr>
 								<div class="form-group">
 									<td>
-										<label class="control-label" for="name">Fulbright Scholar:</label>
+										<label class="control-label" for="name">Fullbright Scholar:</label>
 									</td>
 									<td>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
-										</label>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
-										</label>
+										<div class="controls">
+										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.fullbright_scholar">
+										  <option>Applied for funding</option>
+										  <option>Funding approved</option>
+										  <option></option>
+										</select>
+										</div>
 									</td>
 								</div>
 								</tr>
@@ -469,21 +470,17 @@
 											<label class="control-label" for="name">Please Identify Program:</label>
 										</td>
 										<td>
-											<label class="radio-inline">
-											  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> IIE
-											</label>
-											<br>
-											<label class="radio-inline">
-											  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> LASPAU
-											</label>
-											<br>
-											<label class="radio-inline">
-											  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> AMIDEAST
-											</label>
-											<br>
-											<label class="radio-inline">
-											  <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2"> KOMMISSION
-											</label>
+											<div class="controls">
+										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.please_identify_program">
+										  <option>IIE</option>
+										  <option>LASPAU</option>
+										  <option>AMIDEAST</option>
+										  <option>KOMMISSION</option>
+										  <option></option>
+										</select>
+										</div>
+										</td>
+									</div>
 										</td>
 									</div>
 								</tr>
@@ -493,12 +490,13 @@
 										<label class="control-label" for="name">McNair Scholar:</label>
 									</td>
 									<td>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
-										</label>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
-										</label>
+										<div class="controls">
+										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.mcnair_scholar">
+										  <option>Applied for funding</option>
+										  <option>Funding approved</option>
+										  <option></option>
+										</select>
+										</div>
 									</td>
 								</div>
 								</tr>
@@ -508,12 +506,13 @@
 										<label class="control-label" for="name">McKnight Scholar:</label>
 									</td>
 									<td>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
-										</label>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
-										</label>
+										<div class="controls">
+										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.mcknight_scholar">
+										  <option>Applied for funding</option>
+										  <option>Funding approved</option>
+										  <option></option>
+										</select>
+										</div>
 									</td>
 								</div>
 								</tr>
@@ -523,12 +522,13 @@
 										<label class="control-label" for="name">National Science <br> Foundation Fellowship:</label>
 									</td>
 									<td>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
-										</label>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
-										</label>
+										<div class="controls">
+										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.national_science_foundation_fellowship">
+										  <option>Applied for funding</option>
+										  <option>Funding approved</option>
+										  <option></option>
+										</select>
+										</div>
 									</td>
 								</div>
 								</tr>
@@ -538,12 +538,13 @@
 										<label class="control-label" for="name">National Institutes of <br>Health Fellowship:</label>
 									</td>
 									<td>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
-										</label>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
-										</label>
+										<div class="controls">
+										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.national_institutes_of_health_fellowship">
+										  <option>Applied for funding</option>
+										  <option>Funding approved</option>
+										  <option></option>
+										</select>
+										</div>
 									</td>
 								</div>
 								</tr>
@@ -553,14 +554,13 @@
 										<label class="control-label" for="name">Other (U.S. or Foreign):</label>
 									</td>
 									<td>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Applied for funding
-										</label>
-										<label class="radio-inline">
-										  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Funding approved
-										</label>
+										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.other.scholarship">
+										  <option>Applied for funding</option>
+										  <option>Funding approved</option>
+										  <option></option>
+										</select>
 										<br><br>
-										 <input type="text" id="name" class="form-control" placeholder="Please Explain" required>
+										 <input type="text" id="name" class="form-control"  data-ng-model="application.special_programs_info.special_programs_application.other.explain" placeholder="Please Explain" required>
 									</td>
 								</div>
 								</tr>
@@ -571,23 +571,23 @@
 									</td>
 									<td>
 										<label class="checkbox-inline">
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> Assistantship
+										  <input ng-model="application.special_programs_info.special_programs_application.check_following.assistantship" type="checkbox" id="inlineCheckbox1"> Assistantship
 										</label>
 										<br>
 										<label class="checkbox-inline">
-										  <input type="checkbox" id="inlineCheckbox2" value="option2"> Distance Learning Program
+										  <input type="checkbox" id="inlineCheckbox2" ng-model="application.special_programs_info.special_programs_application.check_following.distance_learning"> Distance Learning Program
 										</label>
 										<br>
 										<label class="checkbox-inline">
-										  <input type="checkbox" id="inlineCheckbox3" value="option3"> Fellowship
+										  <input type="checkbox" id="inlineCheckbox3" ng-model="application.special_programs_info.special_programs_application.check_following.fellowship"> Fellowship
 										</label>
 										<br>
 										<label class="checkbox-inline">
-										  <input type="checkbox" id="inlineCheckbox4" value="option4"> Joint UF Degree
+										  <input type="checkbox" id="inlineCheckbox4" ng-model="application.special_programs_info.special_programs_application.check_following.joint_UF_degree"> Joint UF Degree
 										</label>
 										<br>
 										<label class="checkbox-inline">
-										  <input type="checkbox" id="inlineCheckbox5" value="option5"> 3/2 Program
+										  <input type="checkbox" id="inlineCheckbox5" ng-model="application.special_programs_info.special_programs_application.check_following.joint_UF_degree"> 3/2 Program
 										</label>
 									</td>
 								</div>
@@ -629,14 +629,14 @@
 										<label class="control-label" for="name">Undergraduate Major:</label>
 									</td>
 									<td>
-		Indicate your undergraduate major: <select class="form-control">
+		Indicate your undergraduate major: <select class="form-control" ng-model="application.education_and_activities.undegraduate.major">
 												<option>1</option>
 												<option>2</option>
 												<option>3</option>
 												<option>4</option>
 												<option>5</option>
 											</select>
-											Indicate your undergraduate specialization: <input type="text" class="form-control" placeholder="Text input">
+											Indicate your undergraduate specialization: <input type="text" class="form-control" ng-model="application.education_and_activities.undegraduate.specialization" placeholder="Text input">
 									</td>
 								</div>
 								</tr>
@@ -660,18 +660,18 @@
 										</td>
 										<td>
 											<p> Place the total amount of junior and senior-level semester or quarter hours earned for each letter grade into the appropriate box below and then click Calculate to compute your junior/senior undergraduate GPA. You should ONLY include courses attempted from the time that you earned 60 semester hours or 90 quarter hours through the awarding of your baccalaureate degree. </p>
-											A <input type="text-mini" placeholder="Text input">
-											A- <input type="text-mini" placeholder="Text input">
-											B+ <input type="text-mini" placeholder="Text input">
-											B <input type="text-mini" placeholder="Text input">
-											B- <input type="text-mini" placeholder="Text input">
-											C+ <input type="text-mini" placeholder="Text input">
-											C <input type="text-mini" placeholder="Text input">
-											C- <input type="text-mini" placeholder="Text input">
-											D+ <input type="text-mini" placeholder="Text input">
-											D <input type="text-mini" placeholder="Text input">
-											D- <input type="text-mini" placeholder="Text input">
-											F or I <input type="text-mini" placeholder="Text input">
+											A <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.A" placeholder="Text input">
+											A- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.A_minus" placeholder="Text input">
+											B+ <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B_plus" placeholder="Text input">
+											B <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B" placeholder="Text input">
+											B- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B_minus" placeholder="Text input">
+											C+ <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.C_plus" placeholder="Text input">
+											C <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.C" placeholder="Text input">
+											C- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.C_minus" placeholder="Text input">
+											D+ <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.D_plus" placeholder="Text input">
+											D <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.D" placeholder="Text input">
+											D- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.D_minus" placeholder="Text input">
+											F or I <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.F" placeholder="Text input">
 											<button type="submit" class="btn">Calculate</button>
 										</td>
 									</div>

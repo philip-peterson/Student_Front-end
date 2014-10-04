@@ -90,32 +90,63 @@ var ApplicationSchema = new Schema({
 				default: ''
 			},
             fullbright_scholar: {
-				type: Boolean,
-				default: false
-			},
-            mcnair_scholar: {
-				type: Boolean,
-				default: false
-			},
-            mcknight_scholar: {
-				type: Boolean,
-				default: false
-			},
-            national_science_foundation_fellowship: {
-				type: Boolean,
-				default: false
-			},
-            national_institutes_of_health_fellowship: {
-				type: Boolean,
-				default: false
-			},
-            other: {
 				type: String,
 				default: ''
-			}
-            /* check if you are the following?? */
+			},
+			please_identify_program: {
+				type: String,
+				default: ''
+			},
+            mcnair_scholar: {
+				type: String,
+				default: ''
+			},
+            mcknight_scholar: {
+				type: String,
+				default: ''
+			},
+            national_science_foundation_fellowship: {
+				type: String,
+				default: ''
+			},
+            national_institutes_of_health_fellowship: {
+				type: String,
+				default: ''
+			},
+            other: {
+				scholarship: {
+					type: String,
+					default: ''
+				},
+				explain: {
+					type: String,
+					default: ''
+				}
+			},
+            check_following: {
+				assistantship: {
+					type: Boolean,
+					default: false
+				},
+				distance_learning: {
+					type: Boolean,
+					default: false
+				},
+				fellowship: {
+					type: Boolean,
+					default: false
+				},
+				joint_UF_degree: {
+					type: Boolean,
+					default: false
+				},
+				three_two_program: {
+					type: Boolean,
+					default: false
+				}
+			}/* check if you are the following?? */
         },
-        supporting_documentation: {
+        supporting_documentation: { /* TBD upload files */ 
             name: String,
             file: Buffer
         }
@@ -132,11 +163,66 @@ var ApplicationSchema = new Schema({
     },
     education_and_activities: {
         undergraduate: {
-            major: String,
-            specialization: String
+            major: {
+				type: String,
+				default: ''
+			},
+            specialization: {
+				type: String,
+				default: ''
+			}
         },
-        colleges: [ String ],
-        self_reported_gpa: Number,
+        colleges: [ String ], /* opening another link*/ 
+        self_reported_gpa: {
+			A: {
+				type: Number,
+				default: 0
+			},
+			A_minus: {
+				type: Number,
+				default: 0
+			},
+			B_plus: {
+				type: Number,
+				default: 0
+			},
+			B: {
+				type: Number,
+				default: 0
+			},
+			B_minus: {
+				type: Number,
+				default: 0
+			},
+			C_plus: {
+				type: Number,
+				default: 0
+			},
+			C: {
+				type: Number,
+				default: 0
+			},
+			C_minus: {
+				type: Number,
+				default: 0
+			},
+			D_plus: {
+				type: Number,
+				default: 0
+			},
+			D: {
+				type: Number,
+				default: 0
+			},
+			D_minus: {
+				type: Number,
+				default: 0
+			},
+			F: {
+				type: Number,
+				default: 0
+			}
+		},
         test_scores: {
             gre: {
                 date: Date,

@@ -5,22 +5,22 @@
             <fieldset>
 			<ul class="nav nav-pills nav-justified" ng-init="tab = 1">
 					<li ng-class="{active:tab===1}"> 
-						<a href ng-click="tab = 1">Personal Information</a>    
+						<a href ng-click="tab = 1" id = "tab1">Personal Information</a>    
 					</li>
 					<li ng-class="{active:tab===2}"> 
-						<a href ng-click="tab = 2">Special Programs Information</a> 
+						<a href ng-click="tab = 2" id = "tab2">Special Programs Information</a> 
 					</li>
 					<li ng-class="{active:tab===3}"> 
-						<a href ng-click="tab = 3">Degree Programs</a> 
+						<a href ng-click="tab = 3" id = "tab3">Degree Programs</a> 
 					</li>
 					<li ng-class="{active:tab===4}"> 
-						<a href ng-click="tab = 4">Education and Activities</a> 
+						<a href ng-click="tab = 4" id = "tab4">Education and Activities</a> 
 					</li>
 					<li ng-class="{active:tab===5}"> 
-						<a href ng-click="tab = 5">Residency Affidavit</a> 
+						<a href ng-click="tab = 5" id = "tab5">Residency Affidavit</a> 
 					</li>
 					<li ng-class="{active:tab===6}"> 
-						<a href ng-click="tab = 6">Summary</a> 
+						<a href ng-click="tab = 6" id = "tab6">Summary</a> 
 					</li>
 					<br><br>
 
@@ -784,7 +784,7 @@
 				</ul>
 				<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
                 <div class="form-group">
-                    <input type="submit" value="Update" class="btn btn-default" ng-click="addAlert()">
+                    <input type="submit" value="Update" id = "updatebtn" class="btn btn-default" ng-click="addAlert()">
                 </div>
 				<div data-ng-show="error" class="text-danger">
 					<strong data-ng-bind="error"></strong>

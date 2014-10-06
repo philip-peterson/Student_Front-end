@@ -137,7 +137,7 @@
 			$httpBackend.flush();
 
 			// Test URL location to new object
-			expect($location.path()).toBe('/applications/' + sampleApplicationPutData._id);
+			expect($location.path()).toBe('/applications/' + sampleApplicationPutData._id + '/edit');
 		}));
 
 		it('$scope.remove() should send a DELETE request with a valid applicationId and remove the Application from the scope', inject(function(Applications) {

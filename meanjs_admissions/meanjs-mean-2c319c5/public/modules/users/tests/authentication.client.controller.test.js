@@ -92,6 +92,10 @@
 			// Test expected GET request
 			scope.authentication.user = 'Fred';
 			$httpBackend.when('POST', '/auth/signup').respond(200, 'Fred');
+			
+
+			// Set POST response
+			$httpBackend.expectPOST('applications').respond(200);
 
 			scope.signup();
 			$httpBackend.flush();

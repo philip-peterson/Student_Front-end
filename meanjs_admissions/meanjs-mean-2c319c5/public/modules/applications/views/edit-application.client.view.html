@@ -48,26 +48,26 @@
 
 										<div class="col-xs-3">
 										 <br>
-										 <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="First Name" required>
+										 <input type="text" id="name" class="form-control" data-ng-model="application.personal_info.name.first" placeholder="First Name" required>
 										  <br>
 										  </div>
 
 										<div class="col-xs-3">
 										 <br>
-										 <input type="text" data-ng-model="name2" id="name" class="form-control" placeholder="Middle Name">
+										 <input type="text" id="name" class="form-control" data-ng-model="application.personal_info.name.middle" placeholder="Middle Name">
 										  <br>
 										  </div>
 
 										<div class="col-xs-3">
 										 <br>
-										 <input type="text" data-ng-model="name3" id="name" class="form-control" placeholder="Last Name" required>
+										 <input type="text" id="name" class="form-control" data-ng-model="application.personal_info.name.last" placeholder="Last Name" required>
 										  <br>
 										  </div>
 
 										  <br>
 
-										<label class="control-label" for="name">Suffix:</label>
-										<select class="selectpicker">
+										<label class="control-label"  for="name">Suffix:</label>
+										<select class="selectpicker" data-ng-model="application.personal_info.name.suffix" placeholder = "None">
 											<option>None</option>
 											<option>Jr.</option>
 											<option>Sr.</option>
@@ -93,7 +93,7 @@
 										<p>The university does not use your Social Security number for student identification. It is only used to assign your UF student identification number (UFID).</p>		  <br>
 
 										<p>If you do not have a US social security number, check here. 								  
-											<input type="checkbox" id="inlineCheckbox1" value="option1"> 
+											<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.has_ssn" value="option1"> 
 										</p>
 										<br>
 
@@ -104,7 +104,7 @@
 										<center><form class="form-inline" role="form">
 
 										  <div class="form-group">
-											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Social Security Number">
+											<input type="text" class="form-control" data-ng-model="application.personal_info.ssn" placeholder="Social Security Number">
 										  </div>
 
 										</form></center>
@@ -117,7 +117,7 @@
 										<center><form class="form-inline" role="form">
 
 										  <div class="form-group">
-											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="UFID">
+											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.ufid" placeholder="UFID">
 										  </div>
 
 										</form></center>
@@ -125,27 +125,27 @@
 										<br><br>
 										Have you ever submitted an application to the University of Florida? 
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" data-ng-model="application.personal_info.previous_application.yes" value="option1"> Yes
 									</label>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" data-ng-model="application.personal_info.previous_application.no" value="option2"> No
 									</label>
 
 										<br><br>
 										Have you ever attended the University of Florida?
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1"> Yes
+									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" data-ng-model="application.personal_info.previous_attendance.yes" value="option1"> Yes
 									</label>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2"> No
+									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" data-ng-model="application.personal_info.previous_attendace.no" value="option2"> No
 									</label>
 
 									<tr>
 									<td>
 									 <label class="control-label" for="name">Date of Birth:</label>
 
-									<center><label class="control-label" for="name">Month:</label>
-										<select class="selectpicker">
+									<center><label class="control-label" for="name" value = "January" >Month:</label>
+										<select class="selectpicker" data-ng-model="application.personal_info.bd.month" placeholder = "January">
 											<option>January</option>
 											<option>February</option>
 											<option>March</option>
@@ -160,8 +160,8 @@
 											<option>December</option>
 										</select>
 
-									 <label class="control-label" for="name">Day:</label>
-										<select class="selectpicker">
+									 <label class="control-label" data-ng-model="application.personal_info.bd.day" for="name">Day:</label>
+										<select class="selectpicker" data-ng-model="application.personal_info.bd.day" placeholder = "1">
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
@@ -196,7 +196,7 @@
 										</select>
 
 										<label class="control-label" for="name">Year:</label>
-										  <input id="date1" class="datepicker" data-date-format="yyyy" placeholder="yyyy" required></center>
+										  <input id="date1" class="datepicker" data-date-format="yyyy" data-ng-model="application.personal_info.bd.year" placeholder="yyyy" required></center>
 
 										  <br>
 									 </td>
@@ -207,8 +207,8 @@
 									<br>
 									<tr>
 									<td>
-									<label class="control-label" for="name">Gender:</label>
-										<center><select class="selectpicker">
+									<label class="control-label"  for="name">Gender:</label>
+										<center><select class="selectpicker" data-ng-model="application.personal_info.gender">
 											<option> </option>
 											<option>Male</option>
 											<option>Female</option>
@@ -220,7 +220,7 @@
 									<tr>
 									<td>
 									<label class="control-label" for="name">Nation of Citizenship:</label>
-								<center><country-select data-ng-model="selectedCountry"></country-select></center>
+								<center><country-select data-ng-model="application.personal_info.nationality"></country-select></center>
 								<br>
 									</tr>
 									</td>
@@ -232,7 +232,7 @@
 									<br><br>	
 									Are you Hispanic? 
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> Yes
+									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.ethnicity.hispanic" value="option1"> Yes
 									</label>
 									<label class="radio-inline">
 									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> No
@@ -242,19 +242,19 @@
 									How would you describe yourself? Choose one or more:
 									<br><br>
 									<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox1" value="option1"> American Indian or Alaska Native
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.ethnicity.american_indian" value="option1"> American Indian or Alaska Native
 									</label>
 									<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox2" value="option2"> Asian
+									  <input type="checkbox" id="inlineCheckbox2" data-ng-model="application.personal_info.ethnicity.asian" value="option2"> Asian
 									</label>
 									<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox3" value="option3"> Black/African American 
+									  <input type="checkbox" id="inlineCheckbox3" data-ng-model="application.personal_info.ethnicity.black" value="option3"> Black/African American 
 									</label>
 									<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox3" value="option4">  Hawaii Native or Other Pacific Islander 
+									  <input type="checkbox" id="inlineCheckbox3" data-ng-model="application.personal_info.ethnicity.pacific_islander" value="option4">  Hawaii Native or Other Pacific Islander 
 									</label>
 									<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox3" value="option5"> White 
+									  <input type="checkbox" id="inlineCheckbox3" data-ng-model="application.personal_info.ethnicity.white" value="option5"> White 
 									</label>
 									<br><br>
 
@@ -271,7 +271,7 @@
 									<strong> Please enter your email to expediate the application process: </strong>
 
 										<center> <div class="form-group">
-										   <input type="email" class="form-control" id="exampleInputEmail2" placeholder="email address">
+										   <input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.email" placeholder="email address">
 										 </div>
 
 									</form></center>
@@ -287,45 +287,45 @@
 									
 									<strong>Telephone Number:</strong>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> U.S.
+									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.phone.personal.us" value="option1"> U.S.
 									</label>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> Intl.
+									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" data-ng-model="application.personal_info.phone.personal.intl" value="option2"> Intl.
 									</label>
 																	<center><form class="form-inline" role="form">
 
 										  <div class="form-group">
-											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Phone Number">
+											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.phone.personal.number" placeholder="Phone Number">
 										  </div>
 										  </form></center>
 									<br>
 
 																<strong>Cell Phone Number:</strong>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> U.S.
+									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.phone.cell.us" value="option1"> U.S.
 									</label>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> Intl.
+									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" data-ng-model="application.personal_info.phone.cell.intl" value="option2"> Intl.
 									</label>
 																	<center><form class="form-inline" role="form">
 
 										  <div class="form-group">
-											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Cell Phone Number">
+											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.phone.cell.number" placeholder="Cell Phone Number">
 										  </div>
 										  </form></center>
 									<br>
 
 																<strong>Work Phone Number:</strong>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1"> U.S.
+									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.phone.work.us" value="option1"> U.S.
 									</label>
 									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> Intl.
+									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" data-ng-model="application.personal_info.phone.work.intl" value="option2"> Intl.
 									</label>
 																	<center><form class="form-inline" role="form">
 
 										  <div class="form-group">
-											<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Work Phone Number">
+											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.phone.work.number" placeholder="Work Phone Number">
 										  </div>
 										  </form></center>
 									<br>
@@ -339,16 +339,16 @@
 									<strong> Permanent Address Information : </strong>
 
 										<center> <div class="form-group">
-										   <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Number and street">
+										   <input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.address.permanent.street" placeholder="Number and street">
 										 </div></center>
 										 <br>
 										 <center> <div class="form-group">
-										   <input type="email" class="form-control" id="exampleInputEmail2" placeholder="City">
+										   <input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.address.permanent.city" placeholder="City">
 										 </div></center>
 										 <br>
 
 										<center> <label class="control-label" for="name">State:</label>
-										 <select>
+										 <select data-ng-model="application.personal_info.address.permanent.state">
 												<option> </option>
 												<option value="AL">Alabama</option>
 												<option value="AK">Alaska</option>
@@ -405,8 +405,8 @@
 
 											<br>
 
-										<center> <label class="control-label" for="name">Country:</label>
-										 <country-select data-ng-model="selectedCountry2"></country-select></center>
+										<center> <label class="control-label"  for="name">Country:</label>
+										 <country-select data-ng-model="application.personal_info.address.permanent.country"></country-select></center>
 
 
 									</form>
@@ -707,13 +707,8 @@
 									<td>
 										Activity: <input type="text" placeholder="Text input"> <p> </p>
 										City: <input type="text" placeholder="Text input"> <p> </p>
-										Country: <select class="form-control-small"> <p> </p>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-											</select>
+										Country: <country-select data-ng-model="Country"></country-select>
+												 <undergrad-majors data-ng-model="Majors"></undergrad-majors>
 										State <select class="form-control-small"> <p> </p>
 												<option>1</option>
 												<option>2</option>

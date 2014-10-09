@@ -612,7 +612,330 @@
 					</td></tr>
 					</table>
 					</div>
-					<p ng-show="tab === 3"> WIP... Again</p>
+
+					<!-- Luke is also doing degree programs tab -->
+			<div ng-show="tab === 3"> 
+				<br>
+			<table class="table">
+				<th colspan="1">
+				<center><h4><u>Academic Program Information</u></h4></center>
+				</th>
+				<tr>
+					<td>
+
+						<p>Identify your preferred term of entry and your primary degree goal. Once selected, you will be asked to provide information specific to your program of study. 
+						</p>
+						
+					<table class="table table-bordered">
+						<tr>
+						<div class="form-group">
+							<td>
+								<label class="control-label" for="name">Primary Program:</label>
+							</td>
+							<td>
+
+						<div class="controls">
+						Inteded term and year:	<select class="form-control" data-ng-model="application.degree_programs.primary_program.intended_year_and_term">
+							<OPTION>Summer A/C (May) 2014</option>
+							<OPTION>Summer B (June) 2014 </option>
+							<OPTION>Fall (August) 2014</option>
+							<OPTION>Spring (January) 2015 </option>
+							<OPTION>Summer A/C (May) 2015</option>
+							<OPTION>Summer B (June) 2015 </option>
+							<OPTION>Fall (August) 2015 </option>
+						</select>
+						</div>						
+						<br>
+
+						<div class="controls">
+						Degree Goal:	<select class="form-control" data-ng-model="application.degree_programs.primary_program.degree_goal">
+							<OPTION>Master's</option>
+							<OPTION>Specialist</option>
+							<OPTION>PhD</option>
+							<OPTION>Doctorate</option>
+						</select>
+						</div>			
+
+						<br>
+
+						<div class="controls">
+						Program of study: <select class="form-control" data-ng-model="application.degree_programs.primary_program.program_of_study">
+<option> </option>
+<option value="ACATG      " >Accounting                                        </option>
+<option value="AGAEC      " >Agricultural Education & Communication            </option>
+<option value="EGASE      " >Aerospace Engineering                             </option>
+<option value="EGASD      " >Aerospace Eng. Edge Distance Learning             </option>
+<option value="AGABE      " >Agricultural and Biological Engr-Agric            </option>
+<option value="EGABE      " >Agricultural and Biological Engr-Engr             </option>
+<option value="AGAY       " >Agronomy                                          </option>
+<option value="AGAL       " >Animal Science                                    </option>
+<option value="AGAMC      " >Animal Molecular and Cellular Biology             </option>
+<option value="LSAPY      " >Anthropology                                      </option>
+<option value="HHAPK      " >Applied Physiology and Kinesiology                </option>
+   <optgroup label="Architecture:                                     "> 
+<option value="ARAE       " >--- Architecture                                      </option>
+<option value="ARAEO      " >--- Architecture-Orlando                              </option>
+   </optgroup>  
+<option value="FAART      " >Art                                               </option>
+<option value="FAEAR      " >Art Education                                     </option>
+<option value="FAARD      " >Art Education-Distance Education                  </option>
+<option value="FAHYA      " >Art History                                       </option>
+<option value="FAARM      " >Arts in Medicine                                  </option>
+<option value="LSATY      " >Astronomy                                         </option>
+<option value="MDBCH      " >Biochemistry & Molecular Biology                  </option>
+<option value="LSBOT      " >Biology-Botany                                    </option>
+<option value="LSZY       " >Biology-Zoology                                   </option>
+<option value="EGBME      " >Biomedical Engineering                            </option>
+<option value="HPBIS      " >Biostatistics                                     </option>
+   <optgroup label="Construction Management:                          "> 
+<option value="BCCM       " >--- Construction Management                           </option>
+<option value="BCICM      " >--- International Construction Mgt-Distance Ed        </option>
+<option value="BCFES      " >--- Fire & Emergency Services                         </option>
+   </optgroup>   
+   <optgroup label="Business Administration                           "> 
+<option value="BAMEO      " >--- Entrepreneurship                                  </option>
+<option value="BAFIN      " >--- Finance                                           </option>
+<option value="BAMSS      " >--- Inform Systems-Supply Chain Mgt-Distance Ed       </option>
+<option value="BAMST      " >--- Information Systems And Operations Mgt            </option>
+<option value="BAINS      " >--- Insurance                                         </option>
+<option value="BAMIB      " >--- International Business                            </option>
+<option value="BAMGT      " >--- Management                                        </option>
+<option value="BAREE      " >--- Real Estate & Urban Analysis-Summer Term          </option>
+<option value="BABSK      " >--- Retailing                                         </option>
+   </optgroup> 
+<option value="EGCHE      " >Chemical Engineering                              </option>
+<option value="LSCY       " >Chemistry                                         </option>
+<option value="EGCE       " >Civil Engineering                                 </option>
+<option value="EGCED      " >Civil Eng. Edge Distance Learning                 </option>
+<option value="LSCS       " >Classical Studies                                 </option>
+<option value="EGCOA      " >Coastal and Oceanographic Engineering             </option>
+<option value="HPCMS      " >Communication Sciences and Disorders              </option>
+<option value="LSCSC      " >Computer Science                                  </option>
+<option value="LSCSG      " >Computer Science-Edge Distance Learning           </option>
+<option value="EGCEN      " >Computer Engineering                              </option>
+<option value="EGCID      " >Computer Eng-Edge Distance Learning               </option>
+<option value="EDEDC   CED" >Counselor Education                               </option>
+<option value="EDEDC   MFC" >--- Marriage and Family Counseling                    </option>
+<option value="EDACD   CED" >--- Mental Health Counseling                          </option>
+<option value="EDSCG   CED" >--- School Counseling and Guidance                    </option>
+   </optgroup> 
+<option value="LSCRW      " >Creative Writing                                  </option>
+<option value="LSCLS      " >Criminology, Law and Society                      </option>
+   <optgroup label="Curriculum and Instruction:                       "> 
+<option value="EDCUI      " >--- Curriculum and Instruction                        </option>
+<option value="EDPRE   CAI" >--- Early Childhood Education                         </option>
+<option value="EDECD   CAI" >--- Elementary Education                              </option>
+<option value="EDEED   CAI" >--- English Education                                 </option>
+<option value="EDMAE   CAI" >--- Mathematics Education                             </option>
+<option value="EDRDE   CAI" >--- Reading Education                                 </option>
+<option value="EDSCE   CAI" >--- Science Education                                 </option>
+<option value="EDSSE   CAI" >--- Social Studies Education                          </option>
+   </optgroup>  
+   <optgroup label="Dental Sciences                                   "> 
+<option value="DNEND      " >--- Endodontics                                       </option>
+<option value="DNORT      " >--- Orthodontics                                      </option>
+<option value="DNPER      " >--- Periodontics                                      </option>
+<option value="DNPRO      " >--- Prosthodontics                                    </option>
+   </optgroup>  
+<option value="FADAR      " >Digital Arts and Sciences-Fine Arts               </option>
+<option value="EGDAS      " >Digital Arts and Sciences-Engineering             </option>
+<option value="EDPRE      " >Early Childhood Education                         </option>
+   <optgroup label="Educational Administration and Policy             "> 
+<option value="EDEDA      " >--- Educational Leadership                            </option>
+<option value="EDSPH   EAP" >--- Student Personnel In Higher Education             </option>
+   </optgroup>  
+<option value="EGECE      " >Electrical & Computer Engineering                 </option>
+<option value="EGEEG      " >Electrical & Comp Eng. Dis. Learning              </option>
+<option value="EDECD      " >Elementary Education                              </option>
+<option value="LSEH       " >English                                           </option>
+<option value="EDEED      " >English Language Education                        </option>
+<option value="AGEY       " >Entomology and Nematology                         </option>
+<option value="HPEGH      " >Environmental and Global Health                   </option>
+<option value="EGENE      " >Environmental Engineering Sciences                </option>
+<option value="EGENG      " >Environmental Eng.Edge Distance Learning          </option>
+   <optgroup label="Epidemiology (MS and PhD)                         "> 
+<option value="HPEPI      " >--- Epidemiology                                      </option>
+   </optgroup>
+<option value="AGFYC      " >Family, Youth & Community Sciences                </option>
+<option value="AGFYD      " >Family, Youth & Com Sciences-Dist Learning        </option>
+<option value="AGFAS      " >Fisheries and Aquatic Sciences                    </option>
+<option value="AGFS       " >Food Science and Human Nutrition:                 </option>
+<option value="AGFRE      " >Food and Resource Economics                       </option>
+<option value="AGFRC      " >Forest Resources and Conservation                 </option>
+<option value="LSFFS      " >French                                            </option>
+<option value="LSGPY      " >Geography                                         </option>
+<option value="LSGY       " >Geology                                           </option>
+<option value="LSGN       " >German                                            </option>
+<option value="HPHA       " >Health Administration                             </option>
+<option value="HHHEB      " >Health Education and Behavior                     </option>
+<option value="LSHY       " >History                                           </option>
+<option value="ARHP       " >Historic Preservation                             </option>
+   <optgroup label="Horticultural Sciences:                           "> 
+<option value="AGHSE      " >--- Environmental Horticulture                        </option>
+<option value="AGHS       " >--- Horticultural Sciences                            </option>
+   </optgroup>  
+<option value="IDECL      " >Interdisciplinary Ecology                         </option>
+<option value="ARIR       " >Interior Design                                   </option>
+   <optgroup label="Industrial and Systems Engineering:               "> 
+<option value="EGISE      " >--- Industrial and Systems Engineering                </option>
+<option value="EGISD      " >--- Industrial & Systems Eng. Distance Learning       </option>
+<option value="EGISE   OEM" >--- Outreach Engineering Management Program (OEM)     </option>
+   </optgroup>  
+<option value="ARLAE      " >Landscape Architecture                            </option>
+<option value="LSLN       " >Latin                                             </option>
+<option value="LSLA       " >Latin American Studies                            </option>
+   <optgroup label="Law                                               "> 
+<option value="LWCLW      " >--- Comparative Law                                   </option>
+<option value="LWELU      " >--- Environmental and Land Use Law                    </option>
+<option value="LWTAX      " >--- Taxation                                          </option>
+<option value="LWTXI      " >--- Taxation-International                            </option>
+   </optgroup> 
+<option value="LSLIN      " >Linguistics                                       </option>
+<option value="EDEDC      " >Marriage and Family Counseling                    </option>
+   <optgroup label="Mass Communication:                               "> 
+<option value="JMCOD      " >--- Global Strategic Communication-Distance Ed        </option>
+<option value="JMCOM      " >--- Mass Communication                                </option>
+<option value="JMSMM      " >--- Social Media-Distance Ed                          </option>
+<option value="JMADV      " >--- Advertising                                       </option>
+<option value="JMWDO      " >--- Web Design & Online Communications                </option>
+   </optgroup> 
+<option value="EGMTL      " >Materials Science and Engineering                 </option>
+<option value="EGMTD      " >Materials Sci. & Eng Distance Learning            </option>
+<option value="LSMS       " >Mathematics-Liberal Arts & Sciences               </option>
+<option value="EDMAE      " >Mathematics Education-Education                   </option>
+<option value="EGME       " >Mechanical Engineering                            </option>
+<option value="EGMED      " >Mechanical Eng. Edge Distance Learning            </option>
+<option value="MDMDM      " >Medical Sciences:                                 </option>
+<option value="MDMDM   GEN" >--- Aging & Geriatric Practice-Distance Learning      </option>
+<option value="MDMDM   GEN" >--- Biotechnology                                     </option>
+<option value="MDPAT      " >--- Pathology                                         </option>
+   </optgroup>  
+<option value="EDACD      " >Mental Health Counseling                          </option>
+<option value="AGMCB      " >Microbiology and Cell Science-AG                  </option>
+<option value="FAMUS      " >Museology (Museum Studies)                        </option>
+<option value="FAMSC      " >Music - Performance                               </option>
+<option value="FAMUA      " >Music - Academic                                  </option>
+<option value="FAMUE      " >Music Education                                   </option>
+<option value="FAMME      " >Music Education-Distance Learning                 </option>
+<option value="EGNES      " >Nuclear Engineering Sciences                      </option>
+<option value="NRNSG      " >Nursing Sciences                                  </option>
+<option value="HPOCT      " >Occupational Therapy                              </option>
+<option value="HPOCT   DLR" >Occupational Therapy-Distant Learning             </option>
+<option value="HPOCT   DLM" >--- Distant Learning Masters Program                  </option>
+   </optgroup> 
+<option value="PHPH    SCI" >Pharmaceutical Sciences:                          </option>
+<option value="PHPHD      " >--- Pharmacodynamics                                  </option>
+<option value="PHPH       " >--- Pharmaceutics                                     </option>
+<option value="PHPHO   OUT" >--- Pharmaceutical Outcomes & Policy                  </option>
+   </optgroup>
+   <optgroup label="Pharm Sci-Medicinal Chemistry-Distance Ed         "> 
+<option value="PHCTX      " >--- Clinical Toxicology                               </option>
+<option value="PHPFC      " >--- Forensics                                         </option>
+<option value="PHPCH      " >--- Pharmaceutical Chemistry                          </option>
+   </optgroup>  
+   <optgroup label="Pharm Sci-Outcomes & Policy (US) Distance Ed      "> 
+<option value="PHPHO   ECO" >--- Applied Pharmacoeconomics-US                      </option>
+<option value="PHPHO   SRM" >--- Patient Safety & Medication Use-US                </option>
+<option value="PHPHO   REG" >--- Pharmaceutical Regulation-US                      </option>
+   </optgroup>  
+   <optgroup label="Pharm Sci-Pharmacotherapy (US) Distance Ed        "> 
+<option value="PHMTM      " >--- Medication Therapy Management                     </option>
+   </optgroup> 
+   <optgroup label="Pharm Sci-Pharmacotherapy (Intl) Distance Ed      "> 
+<option value="PHCPD      " >--- Clinical Pharmacy                                 </option>
+   </optgroup>  
+<option value="LSPPY      " >Philosophy                                        </option>
+<option value="LSPS       " >Physics                                           </option>
+<option value="AGPMB      " >Plant Molecular and Cellular Biology              </option>
+<option value="AGPT       " >Plant Pathology                                   </option>
+<option value="LSPCL      " >Political Science                                 </option>
+<option value="LSINR      " >Political Sci-International Relations             </option>
+   <optgroup label="Public Health (MPH)                               "> 
+<option value="HPMPH   BIO" >--- Biostatistics                                     </option>
+<option value="HPMPH   EH " >--- Environmental Health                              </option>
+<option value="HPMPH   EP " >--- Epidemiology                                      </option>
+<option value="HPMPH   HM " >--- Health Management & Policy                        </option>
+<option value="HPMPH   CAM" >--- Public Health Prac-CAMPUS                         </option>
+<option value="HPMPH   ONL" >--- Public Health Prac-ONLINE                         </option>
+<option value="HPMPH   SB " >--- Social & Behavioral Science                       </option>
+   </optgroup>  
+<option value="EDRDE      " >Reading Education                                 </option>
+<option value="HHRPT      " >Recreation, Parks and Tourism                     </option>
+<option value="LSRN       " >Religion                                          </option>
+<option value="EDERT      " >Research and Evaluation Methodology               </option>
+<option value="EDSCG      " >School Counseling and Guidance                    </option>
+<option value="EDSCE      " >Science Education                                 </option>
+<option value="LSSY       " >Sociology                                         </option>
+<option value="AGSLS      " >Soil and Water Science                            </option>
+<option value="LSSH       " >Spanish                                           </option>
+<option value="EDEDH      " >Special Education                                 </option>
+<option value="HHSPM      " >Sport Management                                  </option>
+<option value="HHOSM      " >Sport Management-Distance Learning                </option>
+<option value="LSSTA      " >Statistics                                        </option>
+<option value="FATHE      " >Theatre and Dance                                 </option>
+   <optgroup label="Urban and Regional Planning:                      "> 
+<option value="ARURP      " >--- Urban and Regional Planning                       </option>
+<option value="ARURD      " >--- Urban and Regional Planning-Distance Learning     </option>
+   </optgroup>  
+   <optgroup label="Veterinary Med Science-Distance Learning          "> 
+<option value="VMTOX   TOX" >--- Forensic Toxicology                               </option>
+<option value="VMTOX   VSH" >--- Shelter Medicine                                  </option>
+<option value="VMTOX   VFS" >--- Veterinary Forensic Science                       </option>
+   </optgroup>  
+<option value="VMVMS      " >Veterinary Medical Sciences                       </option>
+<option value="AGWIE      " >Wildlife Ecology and Conservation                 </option>
+<option value="LSWMS      " >Women's Studies                                   </option>
+					</select>
+					</div>
+					<br>
+					Program specialization:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.other.program_specialization" placeholder="Optional">			
+					<br>
+					Department Contact:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.other.department_contact" placeholder="Optional">
+
+							</td>
+								</div>
+								</tr>
+								<tr>
+								<div class="form-group">
+								</div>
+								</tr>
+								<tr>
+								<div class="form-group">
+								</div>
+								</tr>
+							</table>
+
+							</tr>
+							<tr>
+									<div class="form-group">
+									<td>
+										<label class="control-label" for="name">Personal Statement Topic:</label>
+											<br>
+											<p><b>Explain your purpose for graduate study, including your current degree goals and reasons for selecting a particular field of study. </b></p>
+											<p> Guidelines:</p>
+											<p> Submit a 400-500 word essay. The text box accommodates one-and-a-half pages of single-spaced text, so please be mindful of the space remaining in the character counter. The essay cannot exceed the space available in the text box. </p>
+											
+											<p>You can compose the essay in a word processor and then paste it into the text box or you can type directly into the text box. Keep your formatting as simple as possible and avoid using any special formatting; attributes such as bold, italics, underlining and quotation marks can be lost when copied into the textbox. </p>
+											
+											<p>If you paste text that exceeds the character limit, only the allotted number of characters will appear. When you are finished click Update before you conitnue.</p>
+
+											<textarea rows="30" cols="100" maxlength="4985">Enter text here (Limited to 4985 characters)</textarea>
+
+									</td>
+
+
+									<td>
+									</td>
+
+								</div>			
+							</tr>
+							<tr>
+
+						</td>
+					</tr>
+					</table>
+					</div> <!-- end of tab 3, not sure if i have too many headers here but its working -->
+
 					<div ng-show="tab === 4"> 
 						<!-- Dale's Elements -->
 						<br>

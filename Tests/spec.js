@@ -66,8 +66,11 @@ describe('Main', function() {
   it('should update the application', function() {
 	var app_edit = new Application_edit();
 	app_edit.get();
+  //Luke test one dropdown for each tab
+  app_edit.update(1,'application.personal_info.name.suffix','IV');
 	app_edit.update(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-	app_edit.update(4,'application.education_and_activities.undegraduate.major',2);
+  app_edit.update(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
+  app_edit.update(4,'application.education_and_activities.undegraduate.major','2'); //Dale please fix your code so I can test it
   });
   
 });

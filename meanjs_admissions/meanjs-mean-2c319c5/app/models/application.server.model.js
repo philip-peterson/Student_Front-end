@@ -447,8 +447,83 @@ var ApplicationSchema = new Schema({
         }
     },
     residency_affadivit: {
-        florida_residence_categories: {
-            /* fields not defined yet */
+            florida_residence_categories: {
+            A: {
+				type: Boolean,
+				default: false
+			},
+            B: {
+				type: Boolean,
+				default: false
+			},
+			C: {
+				type: Boolean,
+				default: false
+			},
+			D: {
+				type: Boolean,
+				default: false
+			},
+			E: {
+				type: Boolean,
+				default: false
+			},
+			F: {
+				type: Boolean,
+				default: false
+			},
+			G: {
+				type: Boolean,
+				default: false
+			},
+			H: {
+				type: Boolean,
+				default: false
+			},
+			I: {
+				type: Boolean,
+				default: false
+			},
+			J: {
+				type: Boolean,
+				default: false
+			},
+			K: {
+				type: Boolean,
+				default: false
+			},
+			L: {
+				type: Boolean,
+				default: false
+			},
+			M: {
+				type: Boolean,
+				default: false
+			},
+			N: {
+				type: Boolean,
+				default: false
+			},
+			O: {
+				type: Boolean,
+				default: false
+			},
+			P: {
+				type: Boolean,
+				default: false
+			},
+			Q: {
+				type: Boolean,
+				default: false
+			},
+			R: {
+				type: Boolean,
+				default: false
+			},
+			S: {
+				type: Boolean,
+				default: false
+			}
         }
     },
     created: {
@@ -459,6 +534,7 @@ var ApplicationSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User'
     }
+
 });
 
 mongoose.model('Application', ApplicationSchema);

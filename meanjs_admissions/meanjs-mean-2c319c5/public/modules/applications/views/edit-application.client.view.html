@@ -90,7 +90,10 @@
 										 <br>
 										<p>The Federal Privacy Act of 1974 and Section 119.071(5)(a)2, 5(a)3 and 5(a)4 of Florida Statutes authorizes the university to require the disclosure of Social Security numbers by applicants and students for the purpose of identification and verification of student records, including registration, financial aid and academic records and for verification of identity in the provision of university services. </p>								 
 										<br>
-										<p>The university does not use your Social Security number for student identification. It is only used to assign your UF student identification number (UFID).</p>		  <br>
+										<p>The university does not use your Social Security number for student identification. It is only used to assign your UF student identification number (UFID).
+										</p>	
+
+										<br>
 
 										<p>If you do not have a US social security number, check here. 								  
 											<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.has_ssn" value="option1"> 
@@ -412,15 +415,264 @@
 									</form>
 
 
+								 <br> <!--luke's code start-->
+								 <br>
+								 <p><strong>Current Address Information</strong></p>
+								 <input type="text" data-ng-model="street_address" id="address" class="form-control" placeholder="Street Address" required>
+								 <br>
+								 <div class="col-xs-4">
+								 <input type="text" data-ng-model="city" id="address" class="form-control" placeholder="City" required>
+								 </div>
+								 <label class="control-label" for="address">State:</label>
+								<select class="selectpicker">
+									<option value="AL">Alabama</option>
+									<option value="AK">Alaska</option>
+									<option value="AZ">Arizona</option>
+									<option value="AR">Arkansas</option>
+									<option value="CA">California</option>
+									<option value="CO">Colorado</option>
+									<option value="CT">Connecticut</option>
+									<option value="DE">Delaware</option>
+									<option value="DC">District Of Columbia</option>
+									<option value="FL">Florida</option>
+									<option value="GA">Georgia</option>
+									<option value="HI">Hawaii</option>
+									<option value="ID">Idaho</option>
+									<option value="IL">Illinois</option>
+									<option value="IN">Indiana</option>
+									<option value="IA">Iowa</option>
+									<option value="KS">Kansas</option>
+									<option value="KY">Kentucky</option>
+									<option value="LA">Louisiana</option>
+									<option value="ME">Maine</option>
+									<option value="MD">Maryland</option>
+									<option value="MA">Massachusetts</option>
+									<option value="MI">Michigan</option>
+									<option value="MN">Minnesota</option>
+									<option value="MS">Mississippi</option>
+									<option value="MO">Missouri</option>
+									<option value="MT">Montana</option>
+									<option value="NE">Nebraska</option>
+									<option value="NV">Nevada</option>
+									<option value="NH">New Hampshire</option>
+									<option value="NJ">New Jersey</option>
+									<option value="NM">New Mexico</option>
+									<option value="NY">New York</option>
+									<option value="NC">North Carolina</option>
+									<option value="ND">North Dakota</option>
+									<option value="OH">Ohio</option>
+									<option value="OK">Oklahoma</option>
+									<option value="OR">Oregon</option>
+									<option value="PA">Pennsylvania</option>
+									<option value="RI">Rhode Island</option>
+									<option value="SC">South Carolina</option>
+									<option value="SD">South Dakota</option>
+									<option value="TN">Tennessee</option>
+									<option value="TX">Texas</option>
+									<option value="UT">Utah</option>
+									<option value="VT">Vermont</option>
+									<option value="VA">Virginia</option>
+									<option value="WA">Washington</option>
+									<option value="WV">West Virginia</option>
+									<option value="WI">Wisconsin</option>
+									<option value="WY">Wyoming</option>
+								</select>
 
+							<label class="control-label" for="eci_country">Country:</label>
+								<country-select data-ng-model="selectedCountry2"></country-select></center>
 
-
-
-							</table>
+							<br>
+							<br>
+															
+							<div class="col-xs-2">
+								 <input type="text" data-ng-model="zip" id="address" class="form-control" placeholder="Zip Code" required>
+								 </div>
 						</tr>
+						<tr>
+						<div class="form-group">
+
+						<td>
+						<br>
+						<p><strong>Emergencry Contact Information</strong></p>
+								<div class="col-xs-3">
+								 <input type="text" data-ng-model="eci_name" id="name" class="form-control" placeholder="First Name" required>
+								  <br>
+								  </div>
+
+								  <div class="col-xs-3">
+								 <input type="text" data-ng-model="eci_name2" id="name" class="form-control" placeholder="Last Name" required>
+								  <br>
+								  </div>
+
+								  <label class="control-label" for="eci">Relationship:</label>
+								<select class="selectpicker">
+									<option>Other</option>
+									<option>Mother</option>
+								    <option>Father</option>
+								    <option>Wife</option>
+								    <option>Husband</option>
+								    <option>Legal Guardian</option>
+								</select>
+
+								<br>
+								 <input type="text" data-ng-model="eci_street_address" id="address" class="form-control" placeholder="Street Address" required>
+
+								 <br>
+								 <div class="col-xs-4">
+								 <input type="text" data-ng-model="eci_city" id="eci_city" class="form-control" placeholder="City" required>
+								 </div>
+								 <label class="control-label" for="ecit_state">State:</label>
+								<select class="selectpicker">
+									<option value="AL">Alabama</option>
+									<option value="AK">Alaska</option>
+									<option value="AZ">Arizona</option>
+									<option value="AR">Arkansas</option>
+									<option value="CA">California</option>
+									<option value="CO">Colorado</option>
+									<option value="CT">Connecticut</option>
+									<option value="DE">Delaware</option>
+									<option value="DC">District Of Columbia</option>
+									<option value="FL">Florida</option>
+									<option value="GA">Georgia</option>
+									<option value="HI">Hawaii</option>
+									<option value="ID">Idaho</option>
+									<option value="IL">Illinois</option>
+									<option value="IN">Indiana</option>
+									<option value="IA">Iowa</option>
+									<option value="KS">Kansas</option>
+									<option value="KY">Kentucky</option>
+									<option value="LA">Louisiana</option>
+									<option value="ME">Maine</option>
+									<option value="MD">Maryland</option>
+									<option value="MA">Massachusetts</option>
+									<option value="MI">Michigan</option>
+									<option value="MN">Minnesota</option>
+									<option value="MS">Mississippi</option>
+									<option value="MO">Missouri</option>
+									<option value="MT">Montana</option>
+									<option value="NE">Nebraska</option>
+									<option value="NV">Nevada</option>
+									<option value="NH">New Hampshire</option>
+									<option value="NJ">New Jersey</option>
+									<option value="NM">New Mexico</option>
+									<option value="NY">New York</option>
+									<option value="NC">North Carolina</option>
+									<option value="ND">North Dakota</option>
+									<option value="OH">Ohio</option>
+									<option value="OK">Oklahoma</option>
+									<option value="OR">Oregon</option>
+									<option value="PA">Pennsylvania</option>
+									<option value="RI">Rhode Island</option>
+									<option value="SC">South Carolina</option>
+									<option value="SD">South Dakota</option>
+									<option value="TN">Tennessee</option>
+									<option value="TX">Texas</option>
+									<option value="UT">Utah</option>
+									<option value="VT">Vermont</option>
+									<option value="VA">Virginia</option>
+									<option value="WA">Washington</option>
+									<option value="WV">West Virginia</option>
+									<option value="WI">Wisconsin</option>
+									<option value="WY">Wyoming</option>
+								</select>
+
+							<label class="control-label" for="eci_country">Country:</label>
+								<country-select data-ng-model="selectedCountry2"></country-select></center>
+
+							<br>
+							<br>
+							<div class="col-xs-2">
+								 <input type="text" data-ng-model="eci_zip" id="eci_address" class="form-control" placeholder="Zip Code" required>
+								 </div>
+							
+							<div class="col-xs-3">
+								 <input type="number" data-ng-model="eci_tel" id="eci_number" class="form-control" placeholder="Telephone Number" required>
+								 </div>
+							<div class="col-xs-3">
+								 <input type="number" data-ng-model="eci_cell" id="eci_number" class="form-control" placeholder="Cell Phone" required>
+								 </div>
+							<div class="col-xs-3">
+								 <input type="number" data-ng-model="eci_work" id="eci_number" class="form-control" placeholder="Work Phone" required>
+								 </div>
+							<br>
+					</tr>
+						<tr>
+						<div class="form-group">
+						<td>
+						<br>
+						<p><strong>Veteran Status</strong></p>
+						<br>
+							<label class="control-label" for="name">Are you a member or veteran of the U.S. military?</label>
+							
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes: Active Duty
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes: Veteran
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								</label>
+
+							<p>If Yes, check if you served on or after September 11, 2001. 								  
+									<input type="checkbox" id="inlineCheckbox2" value="option2"> 
+								</p>
+							<br>
+							<label class="control-label" for="name">Are you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military?</label>
+							
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								</label>
+					</tr>
+						<tr>
+						<div class="form-group">
+						<td>
+						<br>
+						<p><strong>Disability (Voluntary)</strong></p>
+						<p>To request accommodations for a disability, please contact the graduate coordinator in your department.</p>	
+					</tr>
+						<tr>
+						<div class="form-group">
+						<td>
+						<br>
+						<p><strong>Conduct Disclosure</strong></p>
+						<p>If your records have been expunged, you do not have to answer Yes. However, if you are unsure whether this applies to your situation, you should answer Yes and fully declare the incident(s) to avoid any risk of disciplinary action or revocation of an admission offer.</p>
+						<br>
+						<p>Are you currently or have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution?</p>
+						<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								</label>
+						<p>Have you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?</p>
+						<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								</label>
+					</table>
+					</td>
+				</tr>
+
+				<tr>
+						<div class="form-group">
+
+							<td>
+
+
+
+
 
 					</table>
-					</div>
+				</tr>
+
+			</table>
+			</div>
 
 
 					<div ng-show="tab === 2"> 
@@ -660,231 +912,231 @@
 
 						<div class="controls">
 						Program of study: <select class="form-control" data-ng-model="application.degree_programs.primary_program.program_of_study">
-<option> </option>
-<option value="ACATG      " >Accounting                                        </option>
-<option value="AGAEC      " >Agricultural Education & Communication            </option>
-<option value="EGASE      " >Aerospace Engineering                             </option>
-<option value="EGASD      " >Aerospace Eng. Edge Distance Learning             </option>
-<option value="AGABE      " >Agricultural and Biological Engr-Agric            </option>
-<option value="EGABE      " >Agricultural and Biological Engr-Engr             </option>
-<option value="AGAY       " >Agronomy                                          </option>
-<option value="AGAL       " >Animal Science                                    </option>
-<option value="AGAMC      " >Animal Molecular and Cellular Biology             </option>
-<option value="LSAPY      " >Anthropology                                      </option>
-<option value="HHAPK      " >Applied Physiology and Kinesiology                </option>
-   <optgroup label="Architecture:                                     "> 
-<option value="ARAE       " >--- Architecture                                      </option>
-<option value="ARAEO      " >--- Architecture-Orlando                              </option>
-   </optgroup>  
-<option value="FAART      " >Art                                               </option>
-<option value="FAEAR      " >Art Education                                     </option>
-<option value="FAARD      " >Art Education-Distance Education                  </option>
-<option value="FAHYA      " >Art History                                       </option>
-<option value="FAARM      " >Arts in Medicine                                  </option>
-<option value="LSATY      " >Astronomy                                         </option>
-<option value="MDBCH      " >Biochemistry & Molecular Biology                  </option>
-<option value="LSBOT      " >Biology-Botany                                    </option>
-<option value="LSZY       " >Biology-Zoology                                   </option>
-<option value="EGBME      " >Biomedical Engineering                            </option>
-<option value="HPBIS      " >Biostatistics                                     </option>
-   <optgroup label="Construction Management:                          "> 
-<option value="BCCM       " >--- Construction Management                           </option>
-<option value="BCICM      " >--- International Construction Mgt-Distance Ed        </option>
-<option value="BCFES      " >--- Fire & Emergency Services                         </option>
-   </optgroup>   
-   <optgroup label="Business Administration                           "> 
-<option value="BAMEO      " >--- Entrepreneurship                                  </option>
-<option value="BAFIN      " >--- Finance                                           </option>
-<option value="BAMSS      " >--- Inform Systems-Supply Chain Mgt-Distance Ed       </option>
-<option value="BAMST      " >--- Information Systems And Operations Mgt            </option>
-<option value="BAINS      " >--- Insurance                                         </option>
-<option value="BAMIB      " >--- International Business                            </option>
-<option value="BAMGT      " >--- Management                                        </option>
-<option value="BAREE      " >--- Real Estate & Urban Analysis-Summer Term          </option>
-<option value="BABSK      " >--- Retailing                                         </option>
-   </optgroup> 
-<option value="EGCHE      " >Chemical Engineering                              </option>
-<option value="LSCY       " >Chemistry                                         </option>
-<option value="EGCE       " >Civil Engineering                                 </option>
-<option value="EGCED      " >Civil Eng. Edge Distance Learning                 </option>
-<option value="LSCS       " >Classical Studies                                 </option>
-<option value="EGCOA      " >Coastal and Oceanographic Engineering             </option>
-<option value="HPCMS      " >Communication Sciences and Disorders              </option>
-<option value="LSCSC      " >Computer Science                                  </option>
-<option value="LSCSG      " >Computer Science-Edge Distance Learning           </option>
-<option value="EGCEN      " >Computer Engineering                              </option>
-<option value="EGCID      " >Computer Eng-Edge Distance Learning               </option>
-<option value="EDEDC   CED" >Counselor Education                               </option>
-<option value="EDEDC   MFC" >--- Marriage and Family Counseling                    </option>
-<option value="EDACD   CED" >--- Mental Health Counseling                          </option>
-<option value="EDSCG   CED" >--- School Counseling and Guidance                    </option>
-   </optgroup> 
-<option value="LSCRW      " >Creative Writing                                  </option>
-<option value="LSCLS      " >Criminology, Law and Society                      </option>
-   <optgroup label="Curriculum and Instruction:                       "> 
-<option value="EDCUI      " >--- Curriculum and Instruction                        </option>
-<option value="EDPRE   CAI" >--- Early Childhood Education                         </option>
-<option value="EDECD   CAI" >--- Elementary Education                              </option>
-<option value="EDEED   CAI" >--- English Education                                 </option>
-<option value="EDMAE   CAI" >--- Mathematics Education                             </option>
-<option value="EDRDE   CAI" >--- Reading Education                                 </option>
-<option value="EDSCE   CAI" >--- Science Education                                 </option>
-<option value="EDSSE   CAI" >--- Social Studies Education                          </option>
-   </optgroup>  
-   <optgroup label="Dental Sciences                                   "> 
-<option value="DNEND      " >--- Endodontics                                       </option>
-<option value="DNORT      " >--- Orthodontics                                      </option>
-<option value="DNPER      " >--- Periodontics                                      </option>
-<option value="DNPRO      " >--- Prosthodontics                                    </option>
-   </optgroup>  
-<option value="FADAR      " >Digital Arts and Sciences-Fine Arts               </option>
-<option value="EGDAS      " >Digital Arts and Sciences-Engineering             </option>
-<option value="EDPRE      " >Early Childhood Education                         </option>
-   <optgroup label="Educational Administration and Policy             "> 
-<option value="EDEDA      " >--- Educational Leadership                            </option>
-<option value="EDSPH   EAP" >--- Student Personnel In Higher Education             </option>
-   </optgroup>  
-<option value="EGECE      " >Electrical & Computer Engineering                 </option>
-<option value="EGEEG      " >Electrical & Comp Eng. Dis. Learning              </option>
-<option value="EDECD      " >Elementary Education                              </option>
-<option value="LSEH       " >English                                           </option>
-<option value="EDEED      " >English Language Education                        </option>
-<option value="AGEY       " >Entomology and Nematology                         </option>
-<option value="HPEGH      " >Environmental and Global Health                   </option>
-<option value="EGENE      " >Environmental Engineering Sciences                </option>
-<option value="EGENG      " >Environmental Eng.Edge Distance Learning          </option>
-   <optgroup label="Epidemiology (MS and PhD)                         "> 
-<option value="HPEPI      " >--- Epidemiology                                      </option>
-   </optgroup>
-<option value="AGFYC      " >Family, Youth & Community Sciences                </option>
-<option value="AGFYD      " >Family, Youth & Com Sciences-Dist Learning        </option>
-<option value="AGFAS      " >Fisheries and Aquatic Sciences                    </option>
-<option value="AGFS       " >Food Science and Human Nutrition:                 </option>
-<option value="AGFRE      " >Food and Resource Economics                       </option>
-<option value="AGFRC      " >Forest Resources and Conservation                 </option>
-<option value="LSFFS      " >French                                            </option>
-<option value="LSGPY      " >Geography                                         </option>
-<option value="LSGY       " >Geology                                           </option>
-<option value="LSGN       " >German                                            </option>
-<option value="HPHA       " >Health Administration                             </option>
-<option value="HHHEB      " >Health Education and Behavior                     </option>
-<option value="LSHY       " >History                                           </option>
-<option value="ARHP       " >Historic Preservation                             </option>
-   <optgroup label="Horticultural Sciences:                           "> 
-<option value="AGHSE      " >--- Environmental Horticulture                        </option>
-<option value="AGHS       " >--- Horticultural Sciences                            </option>
-   </optgroup>  
-<option value="IDECL      " >Interdisciplinary Ecology                         </option>
-<option value="ARIR       " >Interior Design                                   </option>
-   <optgroup label="Industrial and Systems Engineering:               "> 
-<option value="EGISE      " >--- Industrial and Systems Engineering                </option>
-<option value="EGISD      " >--- Industrial & Systems Eng. Distance Learning       </option>
-<option value="EGISE   OEM" >--- Outreach Engineering Management Program (OEM)     </option>
-   </optgroup>  
-<option value="ARLAE      " >Landscape Architecture                            </option>
-<option value="LSLN       " >Latin                                             </option>
-<option value="LSLA       " >Latin American Studies                            </option>
-   <optgroup label="Law                                               "> 
-<option value="LWCLW      " >--- Comparative Law                                   </option>
-<option value="LWELU      " >--- Environmental and Land Use Law                    </option>
-<option value="LWTAX      " >--- Taxation                                          </option>
-<option value="LWTXI      " >--- Taxation-International                            </option>
-   </optgroup> 
-<option value="LSLIN      " >Linguistics                                       </option>
-<option value="EDEDC      " >Marriage and Family Counseling                    </option>
-   <optgroup label="Mass Communication:                               "> 
-<option value="JMCOD      " >--- Global Strategic Communication-Distance Ed        </option>
-<option value="JMCOM      " >--- Mass Communication                                </option>
-<option value="JMSMM      " >--- Social Media-Distance Ed                          </option>
-<option value="JMADV      " >--- Advertising                                       </option>
-<option value="JMWDO      " >--- Web Design & Online Communications                </option>
-   </optgroup> 
-<option value="EGMTL      " >Materials Science and Engineering                 </option>
-<option value="EGMTD      " >Materials Sci. & Eng Distance Learning            </option>
-<option value="LSMS       " >Mathematics-Liberal Arts & Sciences               </option>
-<option value="EDMAE      " >Mathematics Education-Education                   </option>
-<option value="EGME       " >Mechanical Engineering                            </option>
-<option value="EGMED      " >Mechanical Eng. Edge Distance Learning            </option>
-<option value="MDMDM      " >Medical Sciences:                                 </option>
-<option value="MDMDM   GEN" >--- Aging & Geriatric Practice-Distance Learning      </option>
-<option value="MDMDM   GEN" >--- Biotechnology                                     </option>
-<option value="MDPAT      " >--- Pathology                                         </option>
-   </optgroup>  
-<option value="EDACD      " >Mental Health Counseling                          </option>
-<option value="AGMCB      " >Microbiology and Cell Science-AG                  </option>
-<option value="FAMUS      " >Museology (Museum Studies)                        </option>
-<option value="FAMSC      " >Music - Performance                               </option>
-<option value="FAMUA      " >Music - Academic                                  </option>
-<option value="FAMUE      " >Music Education                                   </option>
-<option value="FAMME      " >Music Education-Distance Learning                 </option>
-<option value="EGNES      " >Nuclear Engineering Sciences                      </option>
-<option value="NRNSG      " >Nursing Sciences                                  </option>
-<option value="HPOCT      " >Occupational Therapy                              </option>
-<option value="HPOCT   DLR" >Occupational Therapy-Distant Learning             </option>
-<option value="HPOCT   DLM" >--- Distant Learning Masters Program                  </option>
-   </optgroup> 
-<option value="PHPH    SCI" >Pharmaceutical Sciences:                          </option>
-<option value="PHPHD      " >--- Pharmacodynamics                                  </option>
-<option value="PHPH       " >--- Pharmaceutics                                     </option>
-<option value="PHPHO   OUT" >--- Pharmaceutical Outcomes & Policy                  </option>
-   </optgroup>
-   <optgroup label="Pharm Sci-Medicinal Chemistry-Distance Ed         "> 
-<option value="PHCTX      " >--- Clinical Toxicology                               </option>
-<option value="PHPFC      " >--- Forensics                                         </option>
-<option value="PHPCH      " >--- Pharmaceutical Chemistry                          </option>
-   </optgroup>  
-   <optgroup label="Pharm Sci-Outcomes & Policy (US) Distance Ed      "> 
-<option value="PHPHO   ECO" >--- Applied Pharmacoeconomics-US                      </option>
-<option value="PHPHO   SRM" >--- Patient Safety & Medication Use-US                </option>
-<option value="PHPHO   REG" >--- Pharmaceutical Regulation-US                      </option>
-   </optgroup>  
-   <optgroup label="Pharm Sci-Pharmacotherapy (US) Distance Ed        "> 
-<option value="PHMTM      " >--- Medication Therapy Management                     </option>
-   </optgroup> 
-   <optgroup label="Pharm Sci-Pharmacotherapy (Intl) Distance Ed      "> 
-<option value="PHCPD      " >--- Clinical Pharmacy                                 </option>
-   </optgroup>  
-<option value="LSPPY      " >Philosophy                                        </option>
-<option value="LSPS       " >Physics                                           </option>
-<option value="AGPMB      " >Plant Molecular and Cellular Biology              </option>
-<option value="AGPT       " >Plant Pathology                                   </option>
-<option value="LSPCL      " >Political Science                                 </option>
-<option value="LSINR      " >Political Sci-International Relations             </option>
-   <optgroup label="Public Health (MPH)                               "> 
-<option value="HPMPH   BIO" >--- Biostatistics                                     </option>
-<option value="HPMPH   EH " >--- Environmental Health                              </option>
-<option value="HPMPH   EP " >--- Epidemiology                                      </option>
-<option value="HPMPH   HM " >--- Health Management & Policy                        </option>
-<option value="HPMPH   CAM" >--- Public Health Prac-CAMPUS                         </option>
-<option value="HPMPH   ONL" >--- Public Health Prac-ONLINE                         </option>
-<option value="HPMPH   SB " >--- Social & Behavioral Science                       </option>
-   </optgroup>  
-<option value="EDRDE      " >Reading Education                                 </option>
-<option value="HHRPT      " >Recreation, Parks and Tourism                     </option>
-<option value="LSRN       " >Religion                                          </option>
-<option value="EDERT      " >Research and Evaluation Methodology               </option>
-<option value="EDSCG      " >School Counseling and Guidance                    </option>
-<option value="EDSCE      " >Science Education                                 </option>
-<option value="LSSY       " >Sociology                                         </option>
-<option value="AGSLS      " >Soil and Water Science                            </option>
-<option value="LSSH       " >Spanish                                           </option>
-<option value="EDEDH      " >Special Education                                 </option>
-<option value="HHSPM      " >Sport Management                                  </option>
-<option value="HHOSM      " >Sport Management-Distance Learning                </option>
-<option value="LSSTA      " >Statistics                                        </option>
-<option value="FATHE      " >Theatre and Dance                                 </option>
-   <optgroup label="Urban and Regional Planning:                      "> 
-<option value="ARURP      " >--- Urban and Regional Planning                       </option>
-<option value="ARURD      " >--- Urban and Regional Planning-Distance Learning     </option>
-   </optgroup>  
-   <optgroup label="Veterinary Med Science-Distance Learning          "> 
-<option value="VMTOX   TOX" >--- Forensic Toxicology                               </option>
-<option value="VMTOX   VSH" >--- Shelter Medicine                                  </option>
-<option value="VMTOX   VFS" >--- Veterinary Forensic Science                       </option>
-   </optgroup>  
-<option value="VMVMS      " >Veterinary Medical Sciences                       </option>
-<option value="AGWIE      " >Wildlife Ecology and Conservation                 </option>
-<option value="LSWMS      " >Women's Studies                                   </option>
+							<option> </option>
+							<option value="ACATG      " >Accounting                                        </option>
+							<option value="AGAEC      " >Agricultural Education & Communication            </option>
+							<option value="EGASE      " >Aerospace Engineering                             </option>
+							<option value="EGASD      " >Aerospace Eng. Edge Distance Learning             </option>
+							<option value="AGABE      " >Agricultural and Biological Engr-Agric            </option>
+							<option value="EGABE      " >Agricultural and Biological Engr-Engr             </option>
+							<option value="AGAY       " >Agronomy                                          </option>
+							<option value="AGAL       " >Animal Science                                    </option>
+							<option value="AGAMC      " >Animal Molecular and Cellular Biology             </option>
+							<option value="LSAPY      " >Anthropology                                      </option>
+							<option value="HHAPK      " >Applied Physiology and Kinesiology                </option>
+							   <optgroup label="Architecture:                                     "> 
+							<option value="ARAE       " >--- Architecture                                      </option>
+							<option value="ARAEO      " >--- Architecture-Orlando                              </option>
+							   </optgroup>  
+							<option value="FAART      " >Art                                               </option>
+							<option value="FAEAR      " >Art Education                                     </option>
+							<option value="FAARD      " >Art Education-Distance Education                  </option>
+							<option value="FAHYA      " >Art History                                       </option>
+							<option value="FAARM      " >Arts in Medicine                                  </option>
+							<option value="LSATY      " >Astronomy                                         </option>
+							<option value="MDBCH      " >Biochemistry & Molecular Biology                  </option>
+							<option value="LSBOT      " >Biology-Botany                                    </option>
+							<option value="LSZY       " >Biology-Zoology                                   </option>
+							<option value="EGBME      " >Biomedical Engineering                            </option>
+							<option value="HPBIS      " >Biostatistics                                     </option>
+							   <optgroup label="Construction Management:                          "> 
+							<option value="BCCM       " >--- Construction Management                           </option>
+							<option value="BCICM      " >--- International Construction Mgt-Distance Ed        </option>
+							<option value="BCFES      " >--- Fire & Emergency Services                         </option>
+							   </optgroup>   
+							   <optgroup label="Business Administration                           "> 
+							<option value="BAMEO      " >--- Entrepreneurship                                  </option>
+							<option value="BAFIN      " >--- Finance                                           </option>
+							<option value="BAMSS      " >--- Inform Systems-Supply Chain Mgt-Distance Ed       </option>
+							<option value="BAMST      " >--- Information Systems And Operations Mgt            </option>
+							<option value="BAINS      " >--- Insurance                                         </option>
+							<option value="BAMIB      " >--- International Business                            </option>
+							<option value="BAMGT      " >--- Management                                        </option>
+							<option value="BAREE      " >--- Real Estate & Urban Analysis-Summer Term          </option>
+							<option value="BABSK      " >--- Retailing                                         </option>
+							   </optgroup> 
+							<option value="EGCHE      " >Chemical Engineering                              </option>
+							<option value="LSCY       " >Chemistry                                         </option>
+							<option value="EGCE       " >Civil Engineering                                 </option>
+							<option value="EGCED      " >Civil Eng. Edge Distance Learning                 </option>
+							<option value="LSCS       " >Classical Studies                                 </option>
+							<option value="EGCOA      " >Coastal and Oceanographic Engineering             </option>
+							<option value="HPCMS      " >Communication Sciences and Disorders              </option>
+							<option value="LSCSC      " >Computer Science                                  </option>
+							<option value="LSCSG      " >Computer Science-Edge Distance Learning           </option>
+							<option value="EGCEN      " >Computer Engineering                              </option>
+							<option value="EGCID      " >Computer Eng-Edge Distance Learning               </option>
+							<option value="EDEDC   CED" >Counselor Education                               </option>
+							<option value="EDEDC   MFC" >--- Marriage and Family Counseling                    </option>
+							<option value="EDACD   CED" >--- Mental Health Counseling                          </option>
+							<option value="EDSCG   CED" >--- School Counseling and Guidance                    </option>
+							   </optgroup> 
+							<option value="LSCRW      " >Creative Writing                                  </option>
+							<option value="LSCLS      " >Criminology, Law and Society                      </option>
+							   <optgroup label="Curriculum and Instruction:                       "> 
+							<option value="EDCUI      " >--- Curriculum and Instruction                        </option>
+							<option value="EDPRE   CAI" >--- Early Childhood Education                         </option>
+							<option value="EDECD   CAI" >--- Elementary Education                              </option>
+							<option value="EDEED   CAI" >--- English Education                                 </option>
+							<option value="EDMAE   CAI" >--- Mathematics Education                             </option>
+							<option value="EDRDE   CAI" >--- Reading Education                                 </option>
+							<option value="EDSCE   CAI" >--- Science Education                                 </option>
+							<option value="EDSSE   CAI" >--- Social Studies Education                          </option>
+							   </optgroup>  
+							   <optgroup label="Dental Sciences                                   "> 
+							<option value="DNEND      " >--- Endodontics                                       </option>
+							<option value="DNORT      " >--- Orthodontics                                      </option>
+							<option value="DNPER      " >--- Periodontics                                      </option>
+							<option value="DNPRO      " >--- Prosthodontics                                    </option>
+							   </optgroup>  
+							<option value="FADAR      " >Digital Arts and Sciences-Fine Arts               </option>
+							<option value="EGDAS      " >Digital Arts and Sciences-Engineering             </option>
+							<option value="EDPRE      " >Early Childhood Education                         </option>
+							   <optgroup label="Educational Administration and Policy             "> 
+							<option value="EDEDA      " >--- Educational Leadership                            </option>
+							<option value="EDSPH   EAP" >--- Student Personnel In Higher Education             </option>
+							   </optgroup>  
+							<option value="EGECE      " >Electrical & Computer Engineering                 </option>
+							<option value="EGEEG      " >Electrical & Comp Eng. Dis. Learning              </option>
+							<option value="EDECD      " >Elementary Education                              </option>
+							<option value="LSEH       " >English                                           </option>
+							<option value="EDEED      " >English Language Education                        </option>
+							<option value="AGEY       " >Entomology and Nematology                         </option>
+							<option value="HPEGH      " >Environmental and Global Health                   </option>
+							<option value="EGENE      " >Environmental Engineering Sciences                </option>
+							<option value="EGENG      " >Environmental Eng.Edge Distance Learning          </option>
+							   <optgroup label="Epidemiology (MS and PhD)                         "> 
+							<option value="HPEPI      " >--- Epidemiology                                      </option>
+							   </optgroup>
+							<option value="AGFYC      " >Family, Youth & Community Sciences                </option>
+							<option value="AGFYD      " >Family, Youth & Com Sciences-Dist Learning        </option>
+							<option value="AGFAS      " >Fisheries and Aquatic Sciences                    </option>
+							<option value="AGFS       " >Food Science and Human Nutrition:                 </option>
+							<option value="AGFRE      " >Food and Resource Economics                       </option>
+							<option value="AGFRC      " >Forest Resources and Conservation                 </option>
+							<option value="LSFFS      " >French                                            </option>
+							<option value="LSGPY      " >Geography                                         </option>
+							<option value="LSGY       " >Geology                                           </option>
+							<option value="LSGN       " >German                                            </option>
+							<option value="HPHA       " >Health Administration                             </option>
+							<option value="HHHEB      " >Health Education and Behavior                     </option>
+							<option value="LSHY       " >History                                           </option>
+							<option value="ARHP       " >Historic Preservation                             </option>
+							   <optgroup label="Horticultural Sciences:                           "> 
+							<option value="AGHSE      " >--- Environmental Horticulture                        </option>
+							<option value="AGHS       " >--- Horticultural Sciences                            </option>
+							   </optgroup>  
+							<option value="IDECL      " >Interdisciplinary Ecology                         </option>
+							<option value="ARIR       " >Interior Design                                   </option>
+							   <optgroup label="Industrial and Systems Engineering:               "> 
+							<option value="EGISE      " >--- Industrial and Systems Engineering                </option>
+							<option value="EGISD      " >--- Industrial & Systems Eng. Distance Learning       </option>
+							<option value="EGISE   OEM" >--- Outreach Engineering Management Program (OEM)     </option>
+							   </optgroup>  
+							<option value="ARLAE      " >Landscape Architecture                            </option>
+							<option value="LSLN       " >Latin                                             </option>
+							<option value="LSLA       " >Latin American Studies                            </option>
+							   <optgroup label="Law                                               "> 
+							<option value="LWCLW      " >--- Comparative Law                                   </option>
+							<option value="LWELU      " >--- Environmental and Land Use Law                    </option>
+							<option value="LWTAX      " >--- Taxation                                          </option>
+							<option value="LWTXI      " >--- Taxation-International                            </option>
+							   </optgroup> 
+							<option value="LSLIN      " >Linguistics                                       </option>
+							<option value="EDEDC      " >Marriage and Family Counseling                    </option>
+							   <optgroup label="Mass Communication:                               "> 
+							<option value="JMCOD      " >--- Global Strategic Communication-Distance Ed        </option>
+							<option value="JMCOM      " >--- Mass Communication                                </option>
+							<option value="JMSMM      " >--- Social Media-Distance Ed                          </option>
+							<option value="JMADV      " >--- Advertising                                       </option>
+							<option value="JMWDO      " >--- Web Design & Online Communications                </option>
+							   </optgroup> 
+							<option value="EGMTL      " >Materials Science and Engineering                 </option>
+							<option value="EGMTD      " >Materials Sci. & Eng Distance Learning            </option>
+							<option value="LSMS       " >Mathematics-Liberal Arts & Sciences               </option>
+							<option value="EDMAE      " >Mathematics Education-Education                   </option>
+							<option value="EGME       " >Mechanical Engineering                            </option>
+							<option value="EGMED      " >Mechanical Eng. Edge Distance Learning            </option>
+							<option value="MDMDM      " >Medical Sciences:                                 </option>
+							<option value="MDMDM   GEN" >--- Aging & Geriatric Practice-Distance Learning      </option>
+							<option value="MDMDM   GEN" >--- Biotechnology                                     </option>
+							<option value="MDPAT      " >--- Pathology                                         </option>
+							   </optgroup>  
+							<option value="EDACD      " >Mental Health Counseling                          </option>
+							<option value="AGMCB      " >Microbiology and Cell Science-AG                  </option>
+							<option value="FAMUS      " >Museology (Museum Studies)                        </option>
+							<option value="FAMSC      " >Music - Performance                               </option>
+							<option value="FAMUA      " >Music - Academic                                  </option>
+							<option value="FAMUE      " >Music Education                                   </option>
+							<option value="FAMME      " >Music Education-Distance Learning                 </option>
+							<option value="EGNES      " >Nuclear Engineering Sciences                      </option>
+							<option value="NRNSG      " >Nursing Sciences                                  </option>
+							<option value="HPOCT      " >Occupational Therapy                              </option>
+							<option value="HPOCT   DLR" >Occupational Therapy-Distant Learning             </option>
+							<option value="HPOCT   DLM" >--- Distant Learning Masters Program                  </option>
+							   </optgroup> 
+							<option value="PHPH    SCI" >Pharmaceutical Sciences:                          </option>
+							<option value="PHPHD      " >--- Pharmacodynamics                                  </option>
+							<option value="PHPH       " >--- Pharmaceutics                                     </option>
+							<option value="PHPHO   OUT" >--- Pharmaceutical Outcomes & Policy                  </option>
+							   </optgroup>
+							   <optgroup label="Pharm Sci-Medicinal Chemistry-Distance Ed         "> 
+							<option value="PHCTX      " >--- Clinical Toxicology                               </option>
+							<option value="PHPFC      " >--- Forensics                                         </option>
+							<option value="PHPCH      " >--- Pharmaceutical Chemistry                          </option>
+							   </optgroup>  
+							   <optgroup label="Pharm Sci-Outcomes & Policy (US) Distance Ed      "> 
+							<option value="PHPHO   ECO" >--- Applied Pharmacoeconomics-US                      </option>
+							<option value="PHPHO   SRM" >--- Patient Safety & Medication Use-US                </option>
+							<option value="PHPHO   REG" >--- Pharmaceutical Regulation-US                      </option>
+							   </optgroup>  
+							   <optgroup label="Pharm Sci-Pharmacotherapy (US) Distance Ed        "> 
+							<option value="PHMTM      " >--- Medication Therapy Management                     </option>
+							   </optgroup> 
+							   <optgroup label="Pharm Sci-Pharmacotherapy (Intl) Distance Ed      "> 
+							<option value="PHCPD      " >--- Clinical Pharmacy                                 </option>
+							   </optgroup>  
+							<option value="LSPPY      " >Philosophy                                        </option>
+							<option value="LSPS       " >Physics                                           </option>
+							<option value="AGPMB      " >Plant Molecular and Cellular Biology              </option>
+							<option value="AGPT       " >Plant Pathology                                   </option>
+							<option value="LSPCL      " >Political Science                                 </option>
+							<option value="LSINR      " >Political Sci-International Relations             </option>
+							   <optgroup label="Public Health (MPH)                               "> 
+							<option value="HPMPH   BIO" >--- Biostatistics                                     </option>
+							<option value="HPMPH   EH " >--- Environmental Health                              </option>
+							<option value="HPMPH   EP " >--- Epidemiology                                      </option>
+							<option value="HPMPH   HM " >--- Health Management & Policy                        </option>
+							<option value="HPMPH   CAM" >--- Public Health Prac-CAMPUS                         </option>
+							<option value="HPMPH   ONL" >--- Public Health Prac-ONLINE                         </option>
+							<option value="HPMPH   SB " >--- Social & Behavioral Science                       </option>
+							   </optgroup>  
+							<option value="EDRDE      " >Reading Education                                 </option>
+							<option value="HHRPT      " >Recreation, Parks and Tourism                     </option>
+							<option value="LSRN       " >Religion                                          </option>
+							<option value="EDERT      " >Research and Evaluation Methodology               </option>
+							<option value="EDSCG      " >School Counseling and Guidance                    </option>
+							<option value="EDSCE      " >Science Education                                 </option>
+							<option value="LSSY       " >Sociology                                         </option>
+							<option value="AGSLS      " >Soil and Water Science                            </option>
+							<option value="LSSH       " >Spanish                                           </option>
+							<option value="EDEDH      " >Special Education                                 </option>
+							<option value="HHSPM      " >Sport Management                                  </option>
+							<option value="HHOSM      " >Sport Management-Distance Learning                </option>
+							<option value="LSSTA      " >Statistics                                        </option>
+							<option value="FATHE      " >Theatre and Dance                                 </option>
+							   <optgroup label="Urban and Regional Planning:                      "> 
+							<option value="ARURP      " >--- Urban and Regional Planning                       </option>
+							<option value="ARURD      " >--- Urban and Regional Planning-Distance Learning     </option>
+							   </optgroup>  
+							   <optgroup label="Veterinary Med Science-Distance Learning          "> 
+							<option value="VMTOX   TOX" >--- Forensic Toxicology                               </option>
+							<option value="VMTOX   VSH" >--- Shelter Medicine                                  </option>
+							<option value="VMTOX   VFS" >--- Veterinary Forensic Science                       </option>
+							   </optgroup>  
+							<option value="VMVMS      " >Veterinary Medical Sciences                       </option>
+							<option value="AGWIE      " >Wildlife Ecology and Conservation                 </option>
+							<option value="LSWMS      " >Women's Studies                                   </option>
 					</select>
 					</div>
 					<br>
@@ -1092,7 +1344,186 @@
 					</div>
 						
 						
-					<p ng-show="tab === 5"> I predict...WIP.</p>	
+					<div ng-show="tab === 5"> 
+
+						<p><strong> If you are not eligible for any of the Florida residency categories listed below, click Save to continue to the Non-Florida resident certification page.</strong>
+						</p>
+
+
+						<p>	A Florida resident for tuition purposes is a person who has, or a dependent person whose parent or legal guardian has, established and maintained legal residency in Florida 	for at least twelve consecutive months preceding the first day of classes of the term for which Florida residency is sought. Residence in Florida must be a bona fide 		   domicile rather than for the purpose of maintaining a residence incident to enrollment at an institution of higer education. 
+						</p>
+							
+
+						<p>	To qualify as a Florida resident for tuition purposes, you must be a U.S. citizen, permanent resident alien or legal alien granted indefinite stay by the U.S. Citizenship 		and Immigration Services. Other persons not meeting the twelve-month legal residence requirement may be classified as Florida residents for tuition purposes only if they 		fall within one of the special categories authorized by the Florida Legislature and the state Board of Education. All other persons are ineligible for classification as 		Florida residents for tuition purposes. 
+						</p>	
+
+						<p><strong> Living in or attending school in Florida will not, in itself, establish legal residence. Students who depend on out-of-state parents for support are presumed to be 	legal residents of the same state as their parents. </strong> Residence for tuition purposes requires the establishment of legal ties to the state of Florida. Students must 	 verify that they have broken ties to other states if the student or, in the case of dependent students, his or her parent, has moved from another state. 
+
+						</p>	
+
+						<table class="table">	
+						<td>
+						<br>	
+
+						<p><strong><u> Dependent vs. Independent </u></strong></p>
+
+							<p> Dependent: A person, whether or not living with his or her parent, who is eligible to be claimed by his or her parent as a dependent under the federal income tax code. 
+							</p>
+
+							<p> Independent: A person who is at least 24 years old, married, a graduate or professional student, a veteran, a member of the armed forces, an orphan, a ward of the 			court, or someone with legal dependents other than a spouse, per the U.S. Department of Education for the purposes of federal financial aid eligibility. There may be 		limited cases where a person under the age of 24 years old may qualify as an independent student. Such students will be required to verify independence. 
+							</p>
+
+							<p> A copy of your and/or your parents' most recent tax return or other documentation may be requested to establish dependent/independent status. A copy of the marriage 		certificate will be required in all cases of a spouse claiming a partner's residency.
+							</p>
+
+						</td>
+
+						<br>
+
+						</table>
+
+						<table class="table">	
+
+						<td>
+						<br>
+
+
+						<p> Carefully review each of the residency categories below to determine whether you might qualify for in-state status as a Florida resident for tuition purposes. Check all that apply. 
+						</p>	
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.A" value="option1"> (A) I am an <strong>independent person</strong> and have maintained legal residence in Florida for at least the past 12 consecutive months.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.B" value="option1"> (B) I am a <strong>dependent person</strong> and my parent or legal guardian has maintained legal residence in Florida for at least the past 12 consecutive months.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.C" value="option1"> (C) I am a <strong>dependent person who has resided for five years</strong> with an adult relative other than my parent or legal guardian and my relative has maintained legal residence in Florida for at least the past 12 consecutive months. 
+						(<strong>Required:</strong> Copy of most recent tax return on which you were claimed as a dependent or other proof of dependency.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.D" value="option1"> (D) I am <strong>married to a person</strong> who has maintained legal residence in Florida for at least the past 12 consecutive months. I have now established legal residence and intend to make Florida my permanent home. 
+						(<strong>Required:</strong> Copy of marriage certificate and other documents required to establish residency.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.E" value="option1"> (E) I was <strong>previously enrolled at a Florida state institution</strong> and was classified as a Florida resident for tuition purposes. I abandoned my Florida domicile less than 12 months ago and am now re-establishing Florida legal residence.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.F" value="option1"> (F) According to U.S. Citizenship and Immigration Services, I am a <strong>permanent resident alien or other legal alien</strong> granted indefinite stay and have maintained a domicile in Florida for at least the past 12 consecutive months. 
+						(<strong>Required:</strong> USCIS documentation and proof of Florida residency status.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.G" value="option1"> (G) I am a <strong>member</strong> (or the spouse/dependent child of) of the <strong>armed services of the United States</strong> and I am currently stationed in Florida on active military duty pursuant to military orders, or whose home of record is Florida. 
+						(<strong>Required:</strong> Copy of military orders or DD2058 showing home of record.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.H" value="option1"> (H) I am a full-time instructional or admininstrative employee (or the spouse/dependent child of) <strong>employed by a Florida public school, community college or institution of higher education</strong>. 
+						(<strong>Required: </strong> Copy of employment verification.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.I" value="option1"> (I) I am part of the <strong>Latin American/Caribbean Scholarship Program</strong>. 
+						(<strong>Required:</strong> Copy of scholarship papers.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.J" value="option1"> (J) I am a qualified beneficiary under the terms of the <strong>Florida Prepaid College Program</strong> (s.1009.98, F.S.). 
+						(<strong>Required:</strong> Copy of Florida prepaid recipient card.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.K" value="option1"> (K) I am a U.S. citizen (or the spouse/dependent child of) <strong>living on the Isthmus of Panama</strong> and have completed 12 consecutive months of college work at the FSU Panama Canal Branch. 
+						(<strong>Required:</strong> Copy of marriage certificate or proof of dependency.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.L" value="option1"> (L) I am a <strong>Southern Regional Education Board</strong> Academic Common Market graduate student. 
+						(<strong>Required:</strong> Certification letter from state coordinator.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.M" value="option1"> (M) I am a full-time <strong>employee of a state agency</strong> or political subdivision of the state whose student fees are paid by the state agency or political subdivision for the purpose of job-related law enforcement or corrections training.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.N" value="option1"> (N) I am a <strong>McKnight Fellowship recipient</strong>. 
+						(<strong>Required:</strong> Verification from graduate studies.)
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.O" value="option1"> (O) I am an active member of the <strong>Florida National Guard</strong> who qualifies under s.250.10 (7) for the tuition assistance program.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.P" value="option1"> (P) I am an <strong>active duty member</strong> (or the spouse/dependent child of) of the <strong>Armed Services of the United States</strong> attending a public college or university within 50 miles of the military establishment where the member is stationed, if such a military establishment is within a county contiguous to Florida.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.Q" value="option1"> (Q) I am an <strong>active duty member</strong> (or the spouse/dependent child of) of the <strong>Canadian military</strong> residing or stationed in this state under the North American Air Defense (NORAD) Agreement, attending a public college or university within 50 miles of the military establishment where the active duty member is stationed.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.R" value="option1"> (R) I am a U.S. citizen living outside the U.S. who is <strong>teaching at a Department of Defense Dependent School or in an American International School</strong> and who has enrolled in a graduate-level education program which leads to a Florida teaching certificate.
+						</label>
+						<br>
+
+						<br>
+						<label class="checkbox-inline">
+						<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.residency_affadivit.florida_residence_categories.S" value="option1">  (S) I am an <strong>active duty member</strong> (or spouse/dependent child of) of a <strong>foreign nation's military who is serving as a liaison officer</strong>. I am residing or stationed in Florida and attending a public college or university within 50 miles of the military establishment where I am stationed.
+						</label>
+						<br>
+						</td>
+
+						</table>
+						
+
+
+
+
+
+					</div>		
 					<p ng-show="tab === 6"> What do you think? WIP.</p>
 					   
 				</ul>

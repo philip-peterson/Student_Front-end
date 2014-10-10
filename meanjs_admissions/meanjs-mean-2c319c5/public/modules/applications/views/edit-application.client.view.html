@@ -664,7 +664,7 @@
 				</tr>
 
 				<tr>
-						<div class="form-group">
+					
 
 							<td>
 
@@ -1190,6 +1190,7 @@
 						</td>
 					</tr>
 					</table>
+					
 					</div> <!-- end of tab 3, not sure if i have too many headers here but its working -->
 
 					<div ng-show="tab === 4"> 
@@ -1541,19 +1542,18 @@
 
 
 
-
-
+					
+					</table>
 					</div>		
-					<p ng-show="tab === 6"> What do you think? WIP.</p>
-					   
+					<p ng-show="tab === 6"> What do you think? WIP.</p>				   
 				</ul>
 				<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-                <div class="form-group">
-                    <input type="submit" value="Update" id = "updatebtn" class="btn btn-default" ng-click="addAlert()">
-                </div>
-				<div data-ng-show="error" class="text-danger">
-					<strong data-ng-bind="error"></strong>
-				</div>
+					<div class="form-group">
+						<input type="submit" value="Update" id = "updatebtn" class="btn btn-default" ng-click="addAlert()">
+					</div>
+					<div data-ng-show="error" class="text-danger">
+						<strong data-ng-bind="error"></strong>
+					</div>
             </fieldset>
         </form>
     </div>

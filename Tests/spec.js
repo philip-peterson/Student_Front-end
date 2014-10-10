@@ -7,13 +7,14 @@ var Signin_page = function() {
   this.get = function() {
     browser.get('http://localhost:3000/#!/signin');
   };
-  this.login = function(username,password) {
+  this.login = function(username,password,display) {
     this.user.sendKeys(username);
 	this.pass.sendKeys(password);
 	this.signinbtn.click();
 	browser.getLocationAbsUrl().then(function(url) {
         expect(url.split('!')[1]).toBe('/');
     });
+	expect(element(by.id('user_display')).getText()).toBe(display);
   };
 };
 
@@ -22,7 +23,7 @@ var Application_edit = function() {
   this.updatebtn = element(by.id('updatebtn'));
 
   this.get = function() {
-    browser.get('http://localhost:3000/#!/applications/5427854421976ae81de0ffc7/edit');
+    browser.get('http://localhost:3000/#!/applications/543756a259b39a6c26b8b7bc/edit');
   };
   this.click_tab = function(tab) {
     switch(tab){
@@ -37,10 +38,19 @@ var Application_edit = function() {
 	this.click_tab(tab);
 	
   };
-  this.update = function(tab,form,value) {
+  this.update_dropdown = function(tab,form,value) {
 	this.click_tab(tab);
 	var elm = element(by.model(form));
 	elm.element(by.cssContainingText('option', value)).click();
+	this.updatebtn.click();
+	this.refresh(tab);
+	expect(elm.getAttribute('value')).toBe(value);
+  };
+  this.update_text = function(tab,form,value) {
+	this.click_tab(tab);
+	var elm = element(by.model(form));
+	elm.clear();
+	elm.sendKeys(value);
 	this.updatebtn.click();
 	this.refresh(tab);
 	expect(elm.getAttribute('value')).toBe(value);
@@ -60,17 +70,21 @@ describe('Main', function() {
     });
 	
 	var signin_page = new Signin_page();
-	signin_page.login('test','testtest');
+	signin_page.login('test','testtest','test test');
+	
+	
+	
   });
   
   it('should update the application', function() {
 	var app_edit = new Application_edit();
 	app_edit.get();
   //Luke test one dropdown for each tab
-  app_edit.update(1,'application.personal_info.name.suffix','IV');
-	app_edit.update(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-  app_edit.update(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
-  app_edit.update(4,'application.education_and_activities.undegraduate.major','2'); //Dale please fix your code so I can test it
+  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
+  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
+	app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
+  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
+  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
   });
   
 });

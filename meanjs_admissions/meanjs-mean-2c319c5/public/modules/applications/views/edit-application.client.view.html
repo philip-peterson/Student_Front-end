@@ -71,7 +71,7 @@
 										  <br>
 
 										<label class="control-label"  for="name">Suffix:</label>
-										<select class="selectpicker" data-ng-model="application.personal_info.name.suffix" placeholder = "None">
+										<select class="select" data-ng-model="application.personal_info.name.suffix" placeholder = "None">
 											<option>None</option>
 											<option>Jr.</option>
 											<option>Sr.</option>
@@ -1208,10 +1208,11 @@
 										<label class="control-label" for="name">Undergraduate Major:</label>
 									</td>
 									<td>
-		Indicate your undergraduate major: <select class="form-control" ng-model="application.education_and_activities.undegraduate.major">
+		Indicate your undergraduate major: <select class="form-control" ng-model="application.education_and_activities.undergraduate.major">
 												<option ng-repeat="major in majors | orderBy:'type'">{{major.type}}</option>
 											</select>
-											Indicate your undergraduate specialization: <input type="text" class="form-control" ng-model="application.education_and_activities.undegraduate.specialization" placeholder="Text input">
+											<br>
+											<input type="text" class="form-control" ng-model="application.education_and_activities.undergraduate.specialization" placeholder="Indicate your undergraduate specialization:">
 									</td>
 								</div>
 								</tr>
@@ -1235,7 +1236,7 @@
 										</td>
 										<td>
 											<p> Place the total amount of junior and senior-level semester or quarter hours earned for each letter grade into the appropriate box below and then click Calculate to compute your junior/senior undergraduate GPA. You should ONLY include courses attempted from the time that you earned 60 semester hours or 90 quarter hours through the awarding of your baccalaureate degree. </p>
-											A <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.A" placeholder="Text input">
+											<span>A </span> <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.A" placeholder="Text input">
 											A- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.A_minus" placeholder="Text input">
 											B+ <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B_plus" placeholder="Text input">
 											B <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B" placeholder="Text input">

@@ -630,11 +630,7 @@
 									</td>
 									<td>
 		Indicate your undergraduate major: <select class="form-control" ng-model="application.education_and_activities.undegraduate.major">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
+												<option ng-repeat="major in majors | orderBy:'type'">{{major.type}}</option>
 											</select>
 											Indicate your undergraduate specialization: <input type="text" class="form-control" ng-model="application.education_and_activities.undegraduate.specialization" placeholder="Text input">
 									</td>

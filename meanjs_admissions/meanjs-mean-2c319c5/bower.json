@@ -12,7 +12,8 @@
     "angular-ui-utils": "~0.1.1",
     "angular-ui-router": "~0.2.10",
     "jquery": "~2.1.1",
-	"angularjs-country-select": "*"
-
+    "angularjs-country-select": "*",
+    "angular-ui-select2": "~0.0.5",
+    "angular-ui-select": "~0.8.1"
   }
 }

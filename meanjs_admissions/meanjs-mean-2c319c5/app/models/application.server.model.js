@@ -9,43 +9,175 @@ var mongoose = require('mongoose'),
 var ApplicationSchema = new Schema({
     personal_info: {
         name: {
-            first: String,
-            middle: String,
-            last: String,
-            suffix: String,
-            other_names: String
+            first: {
+				type: String,
+				default: ''
+			},
+            middle: {
+				type: String,
+				default: ''
+			},
+            last: {
+				type: String,
+				default: ''
+			},
+            suffix: {
+				type: String,
+				default: ''
+			},
+            other_names: {
+				type: String,
+				default: ''
+			}
         },
-        ssn: Number,
-        ufid: Number,
-        previous_application: Boolean,
-        previous_attendance: Boolean,
-	application_started: Boolean,
-	application_complete: Boolean,
+		has_ssn: {
+			type: Boolean,
+			default: false
+		},
+        ssn: {
+			type: Number,
+		},
+        ufid: {
+			type: Number,
+		},
+        previous_application: {
+			yes: { 
+				type: Boolean,
+				default: false
+			},
+			no: {
+				type: Boolean,
+				default: false
+			}
+		},
+        previous_attendance: {
+			yes: { 
+				type: Boolean,
+				default: false
+			},
+			no: {
+				type: Boolean,
+				default: false
+			}
+		},
+		application_started: {
+			type: Boolean,
+			default: false
+		},
+		application_complete: {
+			type: Boolean,
+			default: false
+		},
         dob: Date,
-        gender: String,
-        nationality: String,
+		bd: {
+			month: {
+				type: String,
+				default: ''
+			},
+			day: {
+				type: String,
+				default: ''
+			},
+			year: {
+				type: Number
+			},
+		},
+        gender: {
+			type: String,
+			default: ''
+		},
+        nationality: {
+			type: String,
+			default: ''
+		},
         ethnicity: {
-            hispanic: Boolean,
-            ethnicity: Number
+            hispanic: {
+				type: Boolean,
+				default: false
+			},
+            american_indian: {
+				type: Boolean,
+				default: false
+			},
+			asian: {
+				type: Boolean,
+				default: false
+			},
+			black: {
+				type: Boolean,
+				default: false
+			},
+			pacific_islander: {
+				type: Boolean,
+				default: false
+			},
+			white: {
+				type: Boolean,
+				default: false
+			}
         },
-        email: String,
+        email: {
+			type: String,
+			default: ''
+		},
         phone: {
             personal: {
-                number: Number,
-                us: Boolean
+                number: {
+					type: Number
+				},
+                us: {
+					type: String,
+					default: ''
+				},
+				intl: {
+					type: String,
+					default: ''
+				},
             },
             work: {
-                number: Number,
-                us: Boolean
+                number: {
+					type: Number,
+				},
+                us: {
+					type: Boolean,
+					default: false
+				},
             },
             cell: {
-                number: Number,
-                us: Boolean
+                number: {
+					type: Number
+				},
+                us: {
+					type: Boolean,
+					default: false
+				},
             }
         },
         address: {
-            permanent: [ String ],
-            current: [ String ],
+            permanent: {
+				street: {
+					type: String,
+					default: ''
+				},
+				city: {
+					type: String,
+					default: ''
+				},
+				state: {
+					type: String,
+					default: ''
+				},
+				country: {
+					type: String,
+					default: ''
+				}
+			},
+            current: {
+				street: String,
+				city: String,
+				state: String,
+				country: String
+			},
             valid_until: Date
         },
         emergency_contact: {
@@ -61,15 +193,36 @@ var ApplicationSchema = new Schema({
             phone: {
                 personal: {
                     number: Number,
-                    us: Boolean
+                    us: {
+						type: Boolean,
+						default: false
+					},
+					intl: {
+						type: Boolean,
+						default: false
+					},
                 },
                 work: {
                     number: Number,
-                    us: Boolean
+                    us: {
+						type: Boolean,
+						default: false
+					},
+					intl: {
+						type: Boolean,
+						default: false
+					}
                 },
                 cell: {
                     number: Number,
-                    us: Boolean
+                    us: {
+						type: Boolean,
+						default: false
+					},
+					intl: {
+						type: Boolean,
+						default: false
+					}
                 }
             }
         },

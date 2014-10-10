@@ -176,7 +176,8 @@ var ApplicationSchema = new Schema({
 				street: String,
 				city: String,
 				state: String,
-				country: String
+				country: String,
+				zip: String
 			},
             valid_until: Date
         },
@@ -186,10 +187,16 @@ var ApplicationSchema = new Schema({
                 middle: String,
                 last: String,
                 suffix: String,
-                other_names: String
+                other_names: String,
+                relationship: String
             },
-            relationship: String,
-            address: [ String ],
+            address: {
+				street: String,
+				city: String,
+				state: String,
+				country: String,
+				zip: String
+            },
             phone: {
                 personal: {
                     number: Number,
@@ -227,7 +234,7 @@ var ApplicationSchema = new Schema({
             }
         },
         veteran_status: {
-            active_veteran_no: Number,
+            active_veteran_: Boolean,
             post_sep11: Boolean,
             eligible_va_benefits: Boolean
         },

@@ -29,17 +29,21 @@
 					<br>
 					<table class="table">
 
-						<th colspan="2">
 
-						<h4><strong><u>Instructions for Completing the Application</u></strong></h4>
+						<th>
+												
+						<center><h4><u>Personal Information</u></h4></center>
 
-						<p>You can work on any page of the application at any time and in any order, but the pages are presented on the legend above in a standard order of progression. As you complete a page, click Save on bottom right of every page to save your data. When there is a problem, such as an incomplete item on the page, you will receive an error alert. 
-						</p>
 						</th>
 
 						<tr>
 							<td>
 							<table class="table table-bordered">
+
+							<h4><strong><u>Instructions for Completing the Application</u></strong></h4>
+
+						<p>You can work on any page of the application at any time and in any order, but the pages are presented on the legend above in a standard order of progression. As you complete a page, click Save on bottom right of every page to save your data. When there is a problem, such as an incomplete item on the page, you will receive an error alert. 
+						</p>
 								<tr>
 								<div class="form-group">
 
@@ -100,23 +104,21 @@
 										</p>
 										<br>
 
-										<strong>Please verify that you have correctly input your Social Security number. An incorrect number can significantly delay the matching of transcripts, test scores and financial aid information to your academic record.</strong>
+										<p><strong>Please verify that you have correctly input your Social Security number. An incorrect number can significantly delay the matching of transcripts, test scores and financial aid information to your academic record.</strong></p>
 
-										<br><br>
+										<br>
 
 										<center><form class="form-inline" role="form">
 
 										  <div class="form-group">
-											<input type="text" class="form-control" data-ng-model="application.personal_info.ssn" placeholder="Social Security Number">
+											<input type="text" class="form-control" id="exampleInputEmail1" data-ng-model="application.personal_info.ssn" placeholder="Social Security Number">
 										  </div>
 
 										</form></center>
+										<br>
 
-										<br><br>
+										<p>If you already have a UFID, please provide it below as it will expedite the processing of your application. If you have previously submitted a UF application and do not remember your UFID, you may locate your number by referring to the application summary of your previously submitted application. If you are unable to retrieve your UFID; leave this field blank.</p>
 
-										If you already have a UFID, please provide it below as it will expedite the processing of your application. If you have previously submitted a UF application and do not remember your UFID, you may locate your number by referring to the application summary of your previously submitted application. If you are unable to retrieve your UFID; leave this field blank.
-
-										<br><br>
 										<center><form class="form-inline" role="form">
 
 										  <div class="form-group">
@@ -418,74 +420,76 @@
 								 <br> <!--luke's code start-->
 								 <br>
 								 <p><strong>Current Address Information</strong></p>
-								 <input type="text" data-ng-model="street_address" id="address" class="form-control" placeholder="Street Address" required>
+								 <input type="text" data-ng-model="application.personal_info.address.current.street" id="address" class="form-control" placeholder="Street Address" required>
 								 <br>
 								 <div class="col-xs-4">
-								 <input type="text" data-ng-model="city" id="address" class="form-control" placeholder="City" required>
+								 <input type="text" data-ng-model="application.personal_info.address.current.city" id="address" class="form-control" placeholder="City" required>
 								 </div>
 								 <label class="control-label" for="address">State:</label>
-								<select class="selectpicker">
-									<option value="AL">Alabama</option>
-									<option value="AK">Alaska</option>
-									<option value="AZ">Arizona</option>
-									<option value="AR">Arkansas</option>
-									<option value="CA">California</option>
-									<option value="CO">Colorado</option>
-									<option value="CT">Connecticut</option>
-									<option value="DE">Delaware</option>
-									<option value="DC">District Of Columbia</option>
-									<option value="FL">Florida</option>
-									<option value="GA">Georgia</option>
-									<option value="HI">Hawaii</option>
-									<option value="ID">Idaho</option>
-									<option value="IL">Illinois</option>
-									<option value="IN">Indiana</option>
-									<option value="IA">Iowa</option>
-									<option value="KS">Kansas</option>
-									<option value="KY">Kentucky</option>
-									<option value="LA">Louisiana</option>
-									<option value="ME">Maine</option>
-									<option value="MD">Maryland</option>
-									<option value="MA">Massachusetts</option>
-									<option value="MI">Michigan</option>
-									<option value="MN">Minnesota</option>
-									<option value="MS">Mississippi</option>
-									<option value="MO">Missouri</option>
-									<option value="MT">Montana</option>
-									<option value="NE">Nebraska</option>
-									<option value="NV">Nevada</option>
-									<option value="NH">New Hampshire</option>
-									<option value="NJ">New Jersey</option>
-									<option value="NM">New Mexico</option>
-									<option value="NY">New York</option>
-									<option value="NC">North Carolina</option>
-									<option value="ND">North Dakota</option>
-									<option value="OH">Ohio</option>
-									<option value="OK">Oklahoma</option>
-									<option value="OR">Oregon</option>
-									<option value="PA">Pennsylvania</option>
-									<option value="RI">Rhode Island</option>
-									<option value="SC">South Carolina</option>
-									<option value="SD">South Dakota</option>
-									<option value="TN">Tennessee</option>
-									<option value="TX">Texas</option>
-									<option value="UT">Utah</option>
-									<option value="VT">Vermont</option>
-									<option value="VA">Virginia</option>
-									<option value="WA">Washington</option>
-									<option value="WV">West Virginia</option>
-									<option value="WI">Wisconsin</option>
-									<option value="WY">Wyoming</option>
-								</select>
+								<select data-ng-model="application.personal_info.address.current.state">
+												<option> </option>
+												<option value="AL">Alabama</option>
+												<option value="AK">Alaska</option>
+												<option value="AZ">Arizona</option>
+												<option value="AR">Arkansas</option>
+												<option value="CA">California</option>
+												<option value="CO">Colorado</option>
+												<option value="CT">Connecticut</option>
+												<option value="DE">Delaware</option>
+												<option value="DC">District Of Columbia</option>
+												<option value="FL">Florida</option>
+												<option value="GA">Georgia</option>
+												<option value="HI">Hawaii</option>
+												<option value="ID">Idaho</option>
+												<option value="IL">Illinois</option>
+												<option value="IN">Indiana</option>
+												<option value="IA">Iowa</option>
+												<option value="KS">Kansas</option>
+												<option value="KY">Kentucky</option>
+												<option value="LA">Louisiana</option>
+												<option value="ME">Maine</option>
+												<option value="MD">Maryland</option>
+												<option value="MA">Massachusetts</option>
+												<option value="MI">Michigan</option>
+												<option value="MN">Minnesota</option>
+												<option value="MS">Mississippi</option>
+												<option value="MO">Missouri</option>
+												<option value="MT">Montana</option>
+												<option value="NE">Nebraska</option>
+												<option value="NV">Nevada</option>
+												<option value="NH">New Hampshire</option>
+												<option value="NJ">New Jersey</option>
+												<option value="NM">New Mexico</option>
+												<option value="NY">New York</option>
+												<option value="NC">North Carolina</option>
+												<option value="ND">North Dakota</option>
+												<option value="OH">Ohio</option>
+												<option value="OK">Oklahoma</option>
+												<option value="OR">Oregon</option>
+												<option value="PA">Pennsylvania</option>
+												<option value="RI">Rhode Island</option>
+												<option value="SC">South Carolina</option>
+												<option value="SD">South Dakota</option>
+												<option value="TN">Tennessee</option>
+												<option value="TX">Texas</option>
+												<option value="UT">Utah</option>
+												<option value="VT">Vermont</option>
+												<option value="VA">Virginia</option>
+												<option value="WA">Washington</option>
+												<option value="WV">West Virginia</option>
+												<option value="WI">Wisconsin</option>
+												<option value="WY">Wyoming</option>
+											</select></center>
+
 
 							<label class="control-label" for="eci_country">Country:</label>
-								<country-select data-ng-model="selectedCountry2"></country-select></center>
+								<country-select data-ng-model="application.personal_info.address.current.country"></country-select></center>
 
 							<br>
 							<br>
 															
 							<div class="col-xs-2">
-								 <input type="text" data-ng-model="zip" id="address" class="form-control" placeholder="Zip Code" required>
+								 <input type="text" data-ng-model="application.personal_info.address.current.zip" id="address" class="form-control" placeholder="Zip Code" required>
 								 </div>
 						</tr>
 						<tr>
@@ -495,16 +499,16 @@
 						<br>
 						<p><strong>Emergencry Contact Information</strong></p>
 								<div class="col-xs-3">
-								 <input type="text" data-ng-model="eci_name" id="name" class="form-control" placeholder="First Name" required>
+								 <input type="text" data-ng-model="application.personal_info.emergency_contact.name.first" id="name" class="form-control" placeholder="First Name" required>
 								  <br>
 								  </div>
 
 								  <div class="col-xs-3">
-								 <input type="text" data-ng-model="eci_name2" id="name" class="form-control" placeholder="Last Name" required>
+								 <input type="text" data-ng-model="application.personal_info.emergency_contact.name.last" id="name" class="form-control" placeholder="Last Name" required>
 								  <br>
 								  </div>
 
-								  <label class="control-label" for="eci">Relationship:</label>
+								  <label class="control-label" data-ng-model= "application.personal_info.emergency_contact.name.relationship" for="eci">Relationship:</label>
 								<select class="selectpicker">
 									<option>Other</option>
 									<option>Mother</option>
@@ -515,14 +519,14 @@
 								</select>
 
 								<br>
-								 <input type="text" data-ng-model="eci_street_address" id="address" class="form-control" placeholder="Street Address" required>
+								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.street" id="address" class="form-control" placeholder="Street Address" required>
 
 								 <br>
 								 <div class="col-xs-4">
-								 <input type="text" data-ng-model="eci_city" id="eci_city" class="form-control" placeholder="City" required>
+								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.city" id="eci_city" class="form-control" placeholder="City" required>
 								 </div>
 								 <label class="control-label" for="ecit_state">State:</label>
-								<select class="selectpicker">
+								<select data-ng-model="application.personal_info.emergency_contact.address.state">
 									<option value="AL">Alabama</option>
 									<option value="AK">Alaska</option>
 									<option value="AZ">Arizona</option>
@@ -577,22 +581,22 @@
 								</select>
 
 							<label class="control-label" for="eci_country">Country:</label>
-								<country-select data-ng-model="selectedCountry2"></country-select></center>
+								<country-select data-ng-model="application.personal_info.emergency_contact.address.country"></country-select></center>
 
 							<br>
 							<br>
 							<div class="col-xs-2">
-								 <input type="text" data-ng-model="eci_zip" id="eci_address" class="form-control" placeholder="Zip Code" required>
+								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.zip" id="eci_address" class="form-control" placeholder="Zip Code" required>
 								 </div>
 							
 							<div class="col-xs-3">
-								 <input type="number" data-ng-model="eci_tel" id="eci_number" class="form-control" placeholder="Telephone Number" required>
+								 <input type="number" data-ng-model="application.personal_info.emergency_contact.phone.personal.number" id="eci_number" class="form-control" placeholder="Telephone Number" required>
 								 </div>
 							<div class="col-xs-3">
-								 <input type="number" data-ng-model="eci_cell" id="eci_number" class="form-control" placeholder="Cell Phone" required>
+								 <input type="number" data-ng-model="application.personal_info.emergency_contact.phone.cell.number" id="eci_number" class="form-control" placeholder="Cell Phone" required>
 								 </div>
 							<div class="col-xs-3">
-								 <input type="number" data-ng-model="eci_work" id="eci_number" class="form-control" placeholder="Work Phone" required>
+								 <input type="number" data-ng-model="application.personal_info.emergency_contact.phone.work.number" id="eci_number" class="form-control" placeholder="Work Phone" required>
 								 </div>
 							<br>
 					</tr>
@@ -605,26 +609,26 @@
 							<label class="control-label" for="name">Are you a member or veteran of the U.S. military?</label>
 							
 								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes: Active Duty
+								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes: Active Duty
 								</label>
 								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes: Veteran
+								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes: Veteran
 								</label>
 								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
 								</label>
 
 							<p>If Yes, check if you served on or after September 11, 2001. 								  
-									<input type="checkbox" id="inlineCheckbox2" value="option2"> 
+									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> 
 								</p>
 							<br>
 							<label class="control-label" for="name">Are you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military?</label>
 							
 								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
 								</label>
 								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
 								</label>
 					</tr>
 						<tr>
@@ -643,17 +647,17 @@
 						<br>
 						<p>Are you currently or have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution?</p>
 						<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
+								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
 								</label>
 								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
 								</label>
 						<p>Have you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?</p>
 						<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
+								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
 								</label>
 								<label class="radio-inline">
-								  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
 								</label>
 					</table>
 					</td>
@@ -870,12 +874,12 @@
 				<br>
 			<table class="table">
 				<th colspan="1">
-				<center><h4><u>Academic Program Information</u></h4></center>
+				<center><h4><u>Degree Programs</u></h4></center>
 				</th>
 				<tr>
 					<td>
 
-						<p>Identify your preferred term of entry and your primary degree goal. Once selected, you will be asked to provide information specific to your program of study. 
+						<p><strong>Academic Program Information: </strong> Identify your preferred term of entry and your primary degree goal. Once selected, you will be asked to provide information specific to your program of study. 
 						</p>
 						
 					<table class="table table-bordered">
@@ -1193,7 +1197,7 @@
 						<br>
 					<table class="table">
 						<th colspan="2">
-						<center><h4><u>Special Programs Information</u></h4></center>
+						<center><h4><u>Education and Activities</u></h4></center>
 						</th>
 						<tr>
 							<td>
@@ -1345,6 +1349,21 @@
 						
 						
 					<div ng-show="tab === 5"> 
+						<br>
+					<table class="table">
+
+
+						<th>
+												
+						<center><h4><u>Residency Affidavit</u></h4></center>
+
+						</th>
+
+						<tr>
+							<td>
+							<table class="table table-bordered">
+					
+						<br>		
 
 						<p><strong> If you are not eligible for any of the Florida residency categories listed below, click Save to continue to the Non-Florida resident certification page.</strong>
 						</p>
@@ -1360,7 +1379,7 @@
 						<p><strong> Living in or attending school in Florida will not, in itself, establish legal residence. Students who depend on out-of-state parents for support are presumed to be 	legal residents of the same state as their parents. </strong> Residence for tuition purposes requires the establishment of legal ties to the state of Florida. Students must 	 verify that they have broken ties to other states if the student or, in the case of dependent students, his or her parent, has moved from another state. 
 
 						</p>	
-
+						</table>
 						<table class="table">	
 						<td>
 						<br>	

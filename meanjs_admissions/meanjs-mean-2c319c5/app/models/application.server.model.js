@@ -437,13 +437,16 @@ var ApplicationSchema = new Schema({
             },
             uf_lang_institute_program: Boolean
         },
-        activities: [ {
-            activity: String,
+        activities: {
+            activity: {
+				type: String,
+				default: ''
+			},
             city: String,
             country: String,
             state: String,
             from: String
-        } ],
+        },
         resume: {
             name: String,
             file: Buffer

@@ -843,9 +843,9 @@
 									</td>
 									<td>
 										<p>Guidelines: Please submit any supporting materials for the special programs listed above (e.g. a funding award letter from an external agency or your home government, McNair Scholar participation letter, etc.) by clicking the Upload Supporting Documentation button below. </p>
-										<div class="form-group">
-											<input type="submit" class="btn btn-default" value="Upload Supporting Documents">
-										</div>
+										<form name="myWebForm" action="http://localhost:3000/#!/applications/" method="post">
+										<input type="file" name="uploadField" />
+										</form>
 									</td>
 								</tr>
 							</table>
@@ -1162,7 +1162,7 @@
 											
 											<p>If you paste text that exceeds the character limit, only the allotted number of characters will appear. When you are finished click Update before you conitnue.</p>
 
-											<textarea rows="30" cols="100" maxlength="4985">Enter text here (Limited to 4985 characters)</textarea>
+											<textarea class="form-control" placeholder="Enter text here (Limited to 4985 characters)" rows="30" cols="100" maxlength="4985"></textarea>
 
 									</td>
 
@@ -1269,7 +1269,7 @@
 										<label class="control-label" for="name"> <p> Activity1 </p> (most recent) :</label>
 									</td>
 									<td>
-										Activity: <input type="text" placeholder="Text input"> <p> </p>
+										<input type="text" class="form-control" ng-model="application.education_and_activities.activities.activity" placeholder="Activity">
 										City: <input type="text" placeholder="Text input"> <p> </p>
 										Country: <country-select data-ng-model="Country"></country-select>
 												 <undergrad-majors data-ng-model="Majors"></undergrad-majors>

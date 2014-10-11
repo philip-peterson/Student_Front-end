@@ -55,6 +55,15 @@ var Application_edit = function() {
 	this.refresh(tab);
 	expect(elm.getAttribute('value')).toBe(value);
   };
+  
+  this.update_check = function(tab,form,value) {
+	this.click_tab(tab);
+	var elm = element(by.model(form));
+	elm.click();
+	this.updatebtn.click();
+	this.refresh(tab);
+	expect(elm.getAttribute('checked')).toBe(value);
+  };
 };
 
 describe('Main', function() {
@@ -80,11 +89,49 @@ describe('Main', function() {
 	var app_edit = new Application_edit();
 	app_edit.get();
   //Luke test one dropdown for each tab
+  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
   app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
   app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
-	app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
+  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
   app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
   app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
+  
+  });
+  it('should update the application', function() {
+	var app_edit = new Application_edit();
+	app_edit.get();
+  //Luke test one dropdown for each tab
+  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
+  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
+  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
+  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
+  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
+  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
+  
+  });
+  it('should update the application', function() {
+	var app_edit = new Application_edit();
+	app_edit.get();
+  //Luke test one dropdown for each tab
+  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
+  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
+  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
+  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
+  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
+  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
+  
+  });
+  it('should update the application', function() {
+	var app_edit = new Application_edit();
+	app_edit.get();
+  //Luke test one dropdown for each tab
+  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
+  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
+  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
+  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
+  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
+  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
+  
   });
   
 });

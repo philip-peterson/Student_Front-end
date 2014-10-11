@@ -385,15 +385,22 @@ var ApplicationSchema = new Schema({
 		},
         test_scores: {
             gre: {
-            	type: Boolean,
-                date: Date,
-                verbal: Number,
+            	taken: {
+            		type:Boolean,
+                	default: false
+            	},
+            	date:Date,
+            	verbal: Number,
                 quantitative: Number,
                 analytical_writing: Number,
                 total: Number
             },
+           
             gmat: {
-            	type: Boolean,
+            	taken: {
+            		type:Boolean,
+                	default: false
+            	},
                 date: Date,
                 verbal: Number,
                 quantitative: Number,
@@ -402,17 +409,26 @@ var ApplicationSchema = new Schema({
                 total: Number
             },
             mat: {
-            	type: Boolean,
+            	taken: {
+            		type:Boolean,
+                	default: false
+            	},
                 date: Date,
-                score: String /* String? */
+                score: Number /* String? */
             },
             fe: {
-            	type: Boolean,
+            	taken: {
+            		type:Boolean,
+                	default: false
+            	},
                 date: Date,
-                score: String /* String? */
+                score: Number /* String? */
             },
             toefl: {
-            	type: Boolean,
+            	taken: {
+            		type:Boolean,
+                	default: false
+            	},
                 paper_date: Date,
                 listening: Number,
                 writing: Number,
@@ -426,7 +442,10 @@ var ApplicationSchema = new Schema({
                 totali: Number
             },
             ielts: {
-            	type: Boolean,
+            	taken: {
+            		type:Boolean,
+                	default: false
+            	},
                 date: Date,
                 listening: Number,
                 writing: Number,
@@ -435,7 +454,10 @@ var ApplicationSchema = new Schema({
                 total: Number
             },
             melab: {
-            	type: Boolean,
+            	taken: {
+            		type:Boolean,
+                	default: false
+            	},
                 date: Date,
                 composition: Number,
                 listening: Number,

@@ -1027,15 +1027,230 @@
 												<p> Official test scores from the testing agency must be submitted to the Office of Admissions, PO Box 114000, 201 Criser Hall, Gainesville, FL 32611-4000. </p>
 
 												<p> If you have taken any test more than once, enter the highest complete set of scores. Do not mix component scores from multiple test administrations. </p>
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.gre" id="inlineCheckbox1" value="option1"> Graduate Record Examination (GRE) <p> </p>
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.gmat" id="inlineCheckbox1" value="option1"> Graduate Management Admission Test (GMAT) <p> </p>
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.mat" id="inlineCheckbox1" value="option1"> Miller Analogies Test (MAT) <p> </p>
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.fe" id="inlineCheckbox1" value="option1"> Fundamentals of Engineering Exam (FE) <p> </p>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.gre.taken" id="inlineCheckbox1" value="option1"> Graduate Record Examination (GRE) <br>
+										  <div data-ng-show = "application.education_and_activities.test_scores.gre.taken">
+										    <div class="row">
+										        <div class="col-md-4">
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Test Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.gre.date" is-open="opened_gre" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_gre($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Verbal Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gre.verbal">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Quantitative Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gre.quantitative">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Analytical Writing Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gre.analytical_writing">
+										            </p>
+										             <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Total Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gre.total">
+										            </p>
+										        </div>
+										    </div>
+										  </div>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.gmat.taken" id="inlineCheckbox1" value="option1"> Graduate Management Admission Test (GMAT) <br>
+										  <div data-ng-show = "application.education_and_activities.test_scores.gmat.taken">
+										    <div class="row">
+										        <div class="col-md-4">
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Test Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.gmat.date" is-open="opened_gmat" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_gmat($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Verbal Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gmat.verbal">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Quantitative Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gmat.quantitative">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Integrated Reasoning Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gmat.integrated_reasoning">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Analytical Writing Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gmat.analytical_writing">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Total Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.gmat.total">
+										            </p>
+										        </div>
+										    </div>
+										  </div>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.mat.taken" id="inlineCheckbox1" value="option1"> Miller Analogies Test (MAT) <br>
+										  <div data-ng-show = "application.education_and_activities.test_scores.mat.taken">
+										    <div class="row">
+										        <div class="col-md-4">
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Test Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.mat.date" is-open="opened_mat" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_mat($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.mat.score">
+										            </p>
+										       </div>
+										    </div>
+										  </div>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.fe.taken" id="inlineCheckbox1" value="option1"> Fundamentals of Engineering Exam (FE) <br>
+										  <div data-ng-show = "application.education_and_activities.test_scores.fe.taken">
+										    <div class="row">
+										        <div class="col-md-4">
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Test Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.fe.date" is-open="opened_fe" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_fe($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.fe.score">
+										            </p>
+										       </div>
+										    </div>
+										  </div>
 										  <p> Proficiency in the English language is required of applicants from countries (including Puerto Rico) where English is not the official language. These applicants must submit official scores from one of the tests listed below. This requirement may be waived if you have been enrolled in a degree-seeking program for one academic year (in a country where English is the official language) before your anticipated term of enrollment at UF. </p>
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.toefl" id="inlineCheckbox1" value="option1"> Test of English as a Foreign Language (TOEFL) <p> </p>
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.ielts" id="inlineCheckbox1" value="option1"> International English Language Testing System (IELTS) <p> </p>
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.melab" id="inlineCheckbox1" value="option1"> Michigan English Language Assessment Battery (MELAB) <p> </p> 
-										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.uf_lang_institute_program" id="inlineCheckbox1" value="option1"> University of Florida English Language Institute Program <p> </p>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.toefl.taken" id="inlineCheckbox1" value="option1"> Test of English as a Foreign Language (TOEFL) <br>
+										  <div data-ng-show = "application.education_and_activities.test_scores.toefl.taken">
+										    <div class="row">
+										        <div class="col-md-4">
+										        	 <p>Paper Exam Information</p>
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Paper Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.toefl.paper_date" is-open="opened_toeflp" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_toeflp($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Listening Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.listening">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Writing Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.writing">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Reading Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.reading">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Total Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.total">
+										            </p>
+										            <p>Internet Exam Information</p>
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Internet Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.toefl.internet_date" is-open="opened_toefli" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_toefli($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										             <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Listening Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.listeningi">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Writing Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.writingi">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Reading Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.readingi">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Total Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.toefl.totali">
+										            </p>
+										        </div>
+										    </div>
+										  </div>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.ielts.taken" id="inlineCheckbox1" value="option1"> International English Language Testing System (IELTS) <br>
+										  <div data-ng-show = "application.education_and_activities.test_scores.ielts.taken">
+										    <div class="row">
+										        <div class="col-md-4">
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Test Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.ielts.date" is-open="opened_ielts" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_ielts($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										             <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Listening Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.ielts.listening">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Writing Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.ielts.writing">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Reading Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.ielts.reading">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Speaking Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.ielts.speaking">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Total Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.ielts.total">
+										            </p>
+										       </div>
+										    </div>
+										  </div>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.melab.taken" id="inlineCheckbox1" value="option1"> Michigan English Language Assessment Battery (MELAB) <br> 
+										  <div data-ng-show = "application.education_and_activities.test_scores.melab.taken">
+										    <div class="row">
+										        <div class="col-md-4">
+										            <p class="input-group input-group-sm">
+										            <span class="input-group-addon">Test Date:</span>
+										              <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="application.education_and_activities.test_scores.melab.date" is-open="opened_melab" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+										              <span class="input-group-btn">
+										                <button type="button" class="btn btn-default" ng-click="open_melab($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										              </span>
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Composition Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.melab.composition">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Listening Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.melab.listening">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">GCRV Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.melab.gcvr">
+										            </p>
+										            <p class="input-group input-group-sm">
+										            	<span class="input-group-addon">Total Score:</span>
+										            	<input type="number" class="form-control" ng-model="application.education_and_activities.test_scores.melab.total">
+										            </p>
+										       </div>
+										    </div>
+										  </div>
+										  <input type="checkbox" data-ng-model="application.education_and_activities.test_scores.uf_lang_institute_program.taken" id="inlineCheckbox1" value="option1"> University of Florida English Language Institute Program <br>
+										  <div data-ng-show = "application.education_and_activities.test_scores.uf_lang_institute_program.taken">
+										     <p>Send verification from UF English Language Institute.</p>
+										  </div>										 
 									</td>
 								</div>
 								</tr>
@@ -1377,7 +1592,7 @@
 				</ul>
 				<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
 					<div class="form-group">
-						<input type="submit" value="Update" id = "updatebtn" class="btn btn-default" ng-click="addAlert()">
+						<input type="submit" value="Update" tooltip="Your Application has been saved"  tooltip-trigger="focus" tooltip-placement="right" id = "updatebtn" class="btn btn-default">
 					</div>
 					<div data-ng-show="error" class="text-danger">
 						<strong data-ng-bind="error"></strong>

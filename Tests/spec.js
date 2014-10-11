@@ -62,7 +62,26 @@ var Application_edit = function() {
 	elm.click();
 	this.updatebtn.click();
 	this.refresh(tab);
-	expect(elm.getAttribute('checked')).toBe(value);
+	if(value == 0){
+		expect(elm.isSelected()).toBeFalsy();
+	}
+	else{
+		expect(elm.isSelected()).toBeTruthy();
+	}
+};
+
+	this.update_block = function() {
+	this.click_tab(2);
+	var elm = element(by.model('application.special_programs_info.special_programs_application.famu_feeder'));
+	elm.element(by.cssContainingText('option', 'Applied for funding')).click();
+	elm = element(by.model('application.special_programs_info.special_programs_application.fullbright_scholar'));
+	elm.element(by.cssContainingText('option', 'Applied for funding')).click();
+	this.updatebtn.click();
+	this.refresh(2);
+	elm = element(by.model('application.special_programs_info.special_programs_application.famu_feeder'));
+	expect(elm.getAttribute('value')).toBe('Applied for funding');
+	elm = element(by.model('application.special_programs_info.special_programs_application.fullbright_scholar'));
+	expect(elm.getAttribute('value')).toBe('Applied for funding');
   };
 };
 
@@ -89,49 +108,14 @@ describe('Main', function() {
 	var app_edit = new Application_edit();
 	app_edit.get();
   //Luke test one dropdown for each tab
-  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
-  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
-  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
-  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
-  
-  });
-  it('should update the application', function() {
-	var app_edit = new Application_edit();
-	app_edit.get();
-  //Luke test one dropdown for each tab
-  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
-  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
-  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
-  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
-  
-  });
-  it('should update the application', function() {
-	var app_edit = new Application_edit();
-	app_edit.get();
-  //Luke test one dropdown for each tab
-  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
-  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
-  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
-  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
-  
-  });
-  it('should update the application', function() {
-	var app_edit = new Application_edit();
-	app_edit.get();
-  //Luke test one dropdown for each tab
-  //app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',true);
-  app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
-  app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-  app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
-  app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); //Dale please fix your code so I can test it
-  
+  //app_edit.update_check(4,'application.education_and_activities.test_scores.gre.taken',1);
+  //app_edit.update_text(4,'application.education_and_activities.test_scores.gre.date','15-October-2014');
+  // app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
+  // app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
+  // app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
+  // app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
+  // app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); 
+  app_edit.update_block();
   });
   
 });

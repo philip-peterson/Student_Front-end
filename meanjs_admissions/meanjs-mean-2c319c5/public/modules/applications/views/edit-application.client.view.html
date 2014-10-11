@@ -128,21 +128,15 @@
 										</form></center>
 
 										<br><br>
-										Have you ever submitted an application to the University of Florida? 
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" data-ng-model="application.personal_info.previous_application.yes" value="option1"> Yes
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" data-ng-model="application.personal_info.previous_application.no" value="option2"> No
+										
+										<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_application" value="option1"> Check if you have ever submitted an application to the University of Florida 
 									</label>
 
 										<br><br>
-										Have you ever attended the University of Florida?
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" data-ng-model="application.personal_info.previous_attendance.yes" value="option1"> Yes
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" data-ng-model="application.personal_info.previous_attendace.no" value="option2"> No
+									
+										<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_attendance" value="option1"> Check if you have ever attended the University of Florida 
 									</label>
 
 									<tr>
@@ -235,17 +229,13 @@
 									<td>
 									<strong> Ethnicity (voluntary): </strong>
 									<br><br>	
-									Are you Hispanic? 
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.ethnicity.hispanic" value="option1"> Yes
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> No
-									</label>
-									<br><br>
+									
 
 									How would you describe yourself? Choose one or more:
 									<br><br>
+									<label class="checkbox-inline">
+										<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.ethnicity.hispanic" value="option1"> Hispanic
+									</label>
 									<label class="checkbox-inline">
 									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.ethnicity.american_indian" value="option1"> American Indian or Alaska Native
 									</label>
@@ -355,57 +345,57 @@
 										<center> <label class="control-label" for="name">State:</label>
 										 <select data-ng-model="application.personal_info.address.permanent.state">
 												<option> </option>
-												<option value="AL">Alabama</option>
-												<option value="AK">Alaska</option>
-												<option value="AZ">Arizona</option>
-												<option value="AR">Arkansas</option>
-												<option value="CA">California</option>
-												<option value="CO">Colorado</option>
-												<option value="CT">Connecticut</option>
-												<option value="DE">Delaware</option>
-												<option value="DC">District Of Columbia</option>
-												<option value="FL">Florida</option>
-												<option value="GA">Georgia</option>
-												<option value="HI">Hawaii</option>
-												<option value="ID">Idaho</option>
-												<option value="IL">Illinois</option>
-												<option value="IN">Indiana</option>
-												<option value="IA">Iowa</option>
-												<option value="KS">Kansas</option>
-												<option value="KY">Kentucky</option>
-												<option value="LA">Louisiana</option>
-												<option value="ME">Maine</option>
-												<option value="MD">Maryland</option>
-												<option value="MA">Massachusetts</option>
-												<option value="MI">Michigan</option>
-												<option value="MN">Minnesota</option>
-												<option value="MS">Mississippi</option>
-												<option value="MO">Missouri</option>
-												<option value="MT">Montana</option>
-												<option value="NE">Nebraska</option>
-												<option value="NV">Nevada</option>
-												<option value="NH">New Hampshire</option>
-												<option value="NJ">New Jersey</option>
-												<option value="NM">New Mexico</option>
-												<option value="NY">New York</option>
-												<option value="NC">North Carolina</option>
-												<option value="ND">North Dakota</option>
-												<option value="OH">Ohio</option>
-												<option value="OK">Oklahoma</option>
-												<option value="OR">Oregon</option>
-												<option value="PA">Pennsylvania</option>
-												<option value="RI">Rhode Island</option>
-												<option value="SC">South Carolina</option>
-												<option value="SD">South Dakota</option>
-												<option value="TN">Tennessee</option>
-												<option value="TX">Texas</option>
-												<option value="UT">Utah</option>
-												<option value="VT">Vermont</option>
-												<option value="VA">Virginia</option>
-												<option value="WA">Washington</option>
-												<option value="WV">West Virginia</option>
-												<option value="WI">Wisconsin</option>
-												<option value="WY">Wyoming</option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 											</select></center>
 
 											<br>
@@ -428,57 +418,57 @@
 								 <label class="control-label" for="address">State:</label>
 								<select data-ng-model="application.personal_info.address.current.state">
 												<option> </option>
-												<option value="AL">Alabama</option>
-												<option value="AK">Alaska</option>
-												<option value="AZ">Arizona</option>
-												<option value="AR">Arkansas</option>
-												<option value="CA">California</option>
-												<option value="CO">Colorado</option>
-												<option value="CT">Connecticut</option>
-												<option value="DE">Delaware</option>
-												<option value="DC">District Of Columbia</option>
-												<option value="FL">Florida</option>
-												<option value="GA">Georgia</option>
-												<option value="HI">Hawaii</option>
-												<option value="ID">Idaho</option>
-												<option value="IL">Illinois</option>
-												<option value="IN">Indiana</option>
-												<option value="IA">Iowa</option>
-												<option value="KS">Kansas</option>
-												<option value="KY">Kentucky</option>
-												<option value="LA">Louisiana</option>
-												<option value="ME">Maine</option>
-												<option value="MD">Maryland</option>
-												<option value="MA">Massachusetts</option>
-												<option value="MI">Michigan</option>
-												<option value="MN">Minnesota</option>
-												<option value="MS">Mississippi</option>
-												<option value="MO">Missouri</option>
-												<option value="MT">Montana</option>
-												<option value="NE">Nebraska</option>
-												<option value="NV">Nevada</option>
-												<option value="NH">New Hampshire</option>
-												<option value="NJ">New Jersey</option>
-												<option value="NM">New Mexico</option>
-												<option value="NY">New York</option>
-												<option value="NC">North Carolina</option>
-												<option value="ND">North Dakota</option>
-												<option value="OH">Ohio</option>
-												<option value="OK">Oklahoma</option>
-												<option value="OR">Oregon</option>
-												<option value="PA">Pennsylvania</option>
-												<option value="RI">Rhode Island</option>
-												<option value="SC">South Carolina</option>
-												<option value="SD">South Dakota</option>
-												<option value="TN">Tennessee</option>
-												<option value="TX">Texas</option>
-												<option value="UT">Utah</option>
-												<option value="VT">Vermont</option>
-												<option value="VA">Virginia</option>
-												<option value="WA">Washington</option>
-												<option value="WV">West Virginia</option>
-												<option value="WI">Wisconsin</option>
-												<option value="WY">Wyoming</option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 											</select></center>
 
 
@@ -508,15 +498,16 @@
 								  <br>
 								  </div>
 
-								  <label class="control-label" data-ng-model= "application.personal_info.emergency_contact.name.relationship" for="eci">Relationship:</label>
-								<select class="selectpicker">
-									<option>Other</option>
-									<option>Mother</option>
-								    <option>Father</option>
-								    <option>Wife</option>
-								    <option>Husband</option>
-								    <option>Legal Guardian</option>
-								</select>
+								 
+								           <label class="control-label"  for="eci">Relationship:</label>
+        <select class="selectpicker" data-ng-model= "application.personal_info.emergency_contact.name.relationship">
+         <option>Other</option>
+         <option>Mother</option>
+            <option>Father</option>
+            <option>Wife</option>
+            <option>Husband</option>
+            <option>Legal Guardian</option>
+        </select>
 
 								<br>
 								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.street" id="address" class="form-control" placeholder="Street Address" required>
@@ -527,57 +518,58 @@
 								 </div>
 								 <label class="control-label" for="ecit_state">State:</label>
 								<select data-ng-model="application.personal_info.emergency_contact.address.state">
-									<option value="AL">Alabama</option>
-									<option value="AK">Alaska</option>
-									<option value="AZ">Arizona</option>
-									<option value="AR">Arkansas</option>
-									<option value="CA">California</option>
-									<option value="CO">Colorado</option>
-									<option value="CT">Connecticut</option>
-									<option value="DE">Delaware</option>
-									<option value="DC">District Of Columbia</option>
-									<option value="FL">Florida</option>
-									<option value="GA">Georgia</option>
-									<option value="HI">Hawaii</option>
-									<option value="ID">Idaho</option>
-									<option value="IL">Illinois</option>
-									<option value="IN">Indiana</option>
-									<option value="IA">Iowa</option>
-									<option value="KS">Kansas</option>
-									<option value="KY">Kentucky</option>
-									<option value="LA">Louisiana</option>
-									<option value="ME">Maine</option>
-									<option value="MD">Maryland</option>
-									<option value="MA">Massachusetts</option>
-									<option value="MI">Michigan</option>
-									<option value="MN">Minnesota</option>
-									<option value="MS">Mississippi</option>
-									<option value="MO">Missouri</option>
-									<option value="MT">Montana</option>
-									<option value="NE">Nebraska</option>
-									<option value="NV">Nevada</option>
-									<option value="NH">New Hampshire</option>
-									<option value="NJ">New Jersey</option>
-									<option value="NM">New Mexico</option>
-									<option value="NY">New York</option>
-									<option value="NC">North Carolina</option>
-									<option value="ND">North Dakota</option>
-									<option value="OH">Ohio</option>
-									<option value="OK">Oklahoma</option>
-									<option value="OR">Oregon</option>
-									<option value="PA">Pennsylvania</option>
-									<option value="RI">Rhode Island</option>
-									<option value="SC">South Carolina</option>
-									<option value="SD">South Dakota</option>
-									<option value="TN">Tennessee</option>
-									<option value="TX">Texas</option>
-									<option value="UT">Utah</option>
-									<option value="VT">Vermont</option>
-									<option value="VA">Virginia</option>
-									<option value="WA">Washington</option>
-									<option value="WV">West Virginia</option>
-									<option value="WI">Wisconsin</option>
-									<option value="WY">Wyoming</option>
+									<option> </option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 								</select>
 
 							<label class="control-label" for="eci_country">Country:</label>
@@ -606,30 +598,22 @@
 						<br>
 						<p><strong>Veteran Status</strong></p>
 						<br>
-							<label class="control-label" for="name">Are you a member or veteran of the U.S. military?</label>
 							
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes: Active Duty
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes: Veteran
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio3" value="option2"> No
+
+							<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.veteran_status.active_veteran" value="option1"> Check if you are a member or veteran of the U.S. military
+									</label>
+
+							<br>
+								<label class="checkbox-inline">						  
+									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> Check if you served on or after September , 2001
 								</label>
 
-							<p>If Yes, check if you served on or after September 11, 2001. 								  
-									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> 
-								</p>
 							<br>
-							<label class="control-label" for="name">Are you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military?</label>
 							
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio4" value="option1"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio5" value="option2"> No
-								</label>
+							<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.veteran_status.eligible_va_benefits" value="option1"> Check if you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military
+									</label>
 					</tr>
 						<tr>
 						<div class="form-group">
@@ -645,20 +629,18 @@
 						<p><strong>Conduct Disclosure</strong></p>
 						<p>If your records have been expunged, you do not have to answer Yes. However, if you are unsure whether this applies to your situation, you should answer Yes and fully declare the incident(s) to avoid any risk of disciplinary action or revocation of an admission offer.</p>
 						<br>
-						<p>Are you currently or have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution?</p>
-						<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
-								</label>
-						<p>Have you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?</p>
-						<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
-								</label>
+						
+
+						<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_or_disciplined" value="option1"> Check if you have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution
+									</label>
+						<br>
+						<br>
+
+						<p></p>
+									<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_law_violation" value="option1"> Check if you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?
+									</label>
 					</table>
 					</td>
 				</tr>
@@ -843,9 +825,9 @@
 									</td>
 									<td>
 										<p>Guidelines: Please submit any supporting materials for the special programs listed above (e.g. a funding award letter from an external agency or your home government, McNair Scholar participation letter, etc.) by clicking the Upload Supporting Documentation button below. </p>
-										<div class="form-group">
-											<input type="submit" class="btn btn-default" value="Upload Supporting Documents">
-										</div>
+										<form name="myWebForm" action="http://localhost:3000/#!/applications/" method="post">
+										<input type="file" name="uploadField" />
+										</form>
 									</td>
 								</tr>
 							</table>
@@ -903,237 +885,13 @@
 
 						<div class="controls">
 						Program of study: <select class="form-control" data-ng-model="application.degree_programs.primary_program.program_of_study">
-							<option> </option>
-							<option value="ACATG      " >Accounting                                        </option>
-							<option value="AGAEC      " >Agricultural Education & Communication            </option>
-							<option value="EGASE      " >Aerospace Engineering                             </option>
-							<option value="EGASD      " >Aerospace Eng. Edge Distance Learning             </option>
-							<option value="AGABE      " >Agricultural and Biological Engr-Agric            </option>
-							<option value="EGABE      " >Agricultural and Biological Engr-Engr             </option>
-							<option value="AGAY       " >Agronomy                                          </option>
-							<option value="AGAL       " >Animal Science                                    </option>
-							<option value="AGAMC      " >Animal Molecular and Cellular Biology             </option>
-							<option value="LSAPY      " >Anthropology                                      </option>
-							<option value="HHAPK      " >Applied Physiology and Kinesiology                </option>
-							   <optgroup label="Architecture:                                     "> 
-							<option value="ARAE       " >--- Architecture                                      </option>
-							<option value="ARAEO      " >--- Architecture-Orlando                              </option>
-							   </optgroup>  
-							<option value="FAART      " >Art                                               </option>
-							<option value="FAEAR      " >Art Education                                     </option>
-							<option value="FAARD      " >Art Education-Distance Education                  </option>
-							<option value="FAHYA      " >Art History                                       </option>
-							<option value="FAARM      " >Arts in Medicine                                  </option>
-							<option value="LSATY      " >Astronomy                                         </option>
-							<option value="MDBCH      " >Biochemistry & Molecular Biology                  </option>
-							<option value="LSBOT      " >Biology-Botany                                    </option>
-							<option value="LSZY       " >Biology-Zoology                                   </option>
-							<option value="EGBME      " >Biomedical Engineering                            </option>
-							<option value="HPBIS      " >Biostatistics                                     </option>
-							   <optgroup label="Construction Management:                          "> 
-							<option value="BCCM       " >--- Construction Management                           </option>
-							<option value="BCICM      " >--- International Construction Mgt-Distance Ed        </option>
-							<option value="BCFES      " >--- Fire & Emergency Services                         </option>
-							   </optgroup>   
-							   <optgroup label="Business Administration                           "> 
-							<option value="BAMEO      " >--- Entrepreneurship                                  </option>
-							<option value="BAFIN      " >--- Finance                                           </option>
-							<option value="BAMSS      " >--- Inform Systems-Supply Chain Mgt-Distance Ed       </option>
-							<option value="BAMST      " >--- Information Systems And Operations Mgt            </option>
-							<option value="BAINS      " >--- Insurance                                         </option>
-							<option value="BAMIB      " >--- International Business                            </option>
-							<option value="BAMGT      " >--- Management                                        </option>
-							<option value="BAREE      " >--- Real Estate & Urban Analysis-Summer Term          </option>
-							<option value="BABSK      " >--- Retailing                                         </option>
-							   </optgroup> 
-							<option value="EGCHE      " >Chemical Engineering                              </option>
-							<option value="LSCY       " >Chemistry                                         </option>
-							<option value="EGCE       " >Civil Engineering                                 </option>
-							<option value="EGCED      " >Civil Eng. Edge Distance Learning                 </option>
-							<option value="LSCS       " >Classical Studies                                 </option>
-							<option value="EGCOA      " >Coastal and Oceanographic Engineering             </option>
-							<option value="HPCMS      " >Communication Sciences and Disorders              </option>
-							<option value="LSCSC      " >Computer Science                                  </option>
-							<option value="LSCSG      " >Computer Science-Edge Distance Learning           </option>
-							<option value="EGCEN      " >Computer Engineering                              </option>
-							<option value="EGCID      " >Computer Eng-Edge Distance Learning               </option>
-							<option value="EDEDC   CED" >Counselor Education                               </option>
-							<option value="EDEDC   MFC" >--- Marriage and Family Counseling                    </option>
-							<option value="EDACD   CED" >--- Mental Health Counseling                          </option>
-							<option value="EDSCG   CED" >--- School Counseling and Guidance                    </option>
-							   </optgroup> 
-							<option value="LSCRW      " >Creative Writing                                  </option>
-							<option value="LSCLS      " >Criminology, Law and Society                      </option>
-							   <optgroup label="Curriculum and Instruction:                       "> 
-							<option value="EDCUI      " >--- Curriculum and Instruction                        </option>
-							<option value="EDPRE   CAI" >--- Early Childhood Education                         </option>
-							<option value="EDECD   CAI" >--- Elementary Education                              </option>
-							<option value="EDEED   CAI" >--- English Education                                 </option>
-							<option value="EDMAE   CAI" >--- Mathematics Education                             </option>
-							<option value="EDRDE   CAI" >--- Reading Education                                 </option>
-							<option value="EDSCE   CAI" >--- Science Education                                 </option>
-							<option value="EDSSE   CAI" >--- Social Studies Education                          </option>
-							   </optgroup>  
-							   <optgroup label="Dental Sciences                                   "> 
-							<option value="DNEND      " >--- Endodontics                                       </option>
-							<option value="DNORT      " >--- Orthodontics                                      </option>
-							<option value="DNPER      " >--- Periodontics                                      </option>
-							<option value="DNPRO      " >--- Prosthodontics                                    </option>
-							   </optgroup>  
-							<option value="FADAR      " >Digital Arts and Sciences-Fine Arts               </option>
-							<option value="EGDAS      " >Digital Arts and Sciences-Engineering             </option>
-							<option value="EDPRE      " >Early Childhood Education                         </option>
-							   <optgroup label="Educational Administration and Policy             "> 
-							<option value="EDEDA      " >--- Educational Leadership                            </option>
-							<option value="EDSPH   EAP" >--- Student Personnel In Higher Education             </option>
-							   </optgroup>  
-							<option value="EGECE      " >Electrical & Computer Engineering                 </option>
-							<option value="EGEEG      " >Electrical & Comp Eng. Dis. Learning              </option>
-							<option value="EDECD      " >Elementary Education                              </option>
-							<option value="LSEH       " >English                                           </option>
-							<option value="EDEED      " >English Language Education                        </option>
-							<option value="AGEY       " >Entomology and Nematology                         </option>
-							<option value="HPEGH      " >Environmental and Global Health                   </option>
-							<option value="EGENE      " >Environmental Engineering Sciences                </option>
-							<option value="EGENG      " >Environmental Eng.Edge Distance Learning          </option>
-							   <optgroup label="Epidemiology (MS and PhD)                         "> 
-							<option value="HPEPI      " >--- Epidemiology                                      </option>
-							   </optgroup>
-							<option value="AGFYC      " >Family, Youth & Community Sciences                </option>
-							<option value="AGFYD      " >Family, Youth & Com Sciences-Dist Learning        </option>
-							<option value="AGFAS      " >Fisheries and Aquatic Sciences                    </option>
-							<option value="AGFS       " >Food Science and Human Nutrition:                 </option>
-							<option value="AGFRE      " >Food and Resource Economics                       </option>
-							<option value="AGFRC      " >Forest Resources and Conservation                 </option>
-							<option value="LSFFS      " >French                                            </option>
-							<option value="LSGPY      " >Geography                                         </option>
-							<option value="LSGY       " >Geology                                           </option>
-							<option value="LSGN       " >German                                            </option>
-							<option value="HPHA       " >Health Administration                             </option>
-							<option value="HHHEB      " >Health Education and Behavior                     </option>
-							<option value="LSHY       " >History                                           </option>
-							<option value="ARHP       " >Historic Preservation                             </option>
-							   <optgroup label="Horticultural Sciences:                           "> 
-							<option value="AGHSE      " >--- Environmental Horticulture                        </option>
-							<option value="AGHS       " >--- Horticultural Sciences                            </option>
-							   </optgroup>  
-							<option value="IDECL      " >Interdisciplinary Ecology                         </option>
-							<option value="ARIR       " >Interior Design                                   </option>
-							   <optgroup label="Industrial and Systems Engineering:               "> 
-							<option value="EGISE      " >--- Industrial and Systems Engineering                </option>
-							<option value="EGISD      " >--- Industrial & Systems Eng. Distance Learning       </option>
-							<option value="EGISE   OEM" >--- Outreach Engineering Management Program (OEM)     </option>
-							   </optgroup>  
-							<option value="ARLAE      " >Landscape Architecture                            </option>
-							<option value="LSLN       " >Latin                                             </option>
-							<option value="LSLA       " >Latin American Studies                            </option>
-							   <optgroup label="Law                                               "> 
-							<option value="LWCLW      " >--- Comparative Law                                   </option>
-							<option value="LWELU      " >--- Environmental and Land Use Law                    </option>
-							<option value="LWTAX      " >--- Taxation                                          </option>
-							<option value="LWTXI      " >--- Taxation-International                            </option>
-							   </optgroup> 
-							<option value="LSLIN      " >Linguistics                                       </option>
-							<option value="EDEDC      " >Marriage and Family Counseling                    </option>
-							   <optgroup label="Mass Communication:                               "> 
-							<option value="JMCOD      " >--- Global Strategic Communication-Distance Ed        </option>
-							<option value="JMCOM      " >--- Mass Communication                                </option>
-							<option value="JMSMM      " >--- Social Media-Distance Ed                          </option>
-							<option value="JMADV      " >--- Advertising                                       </option>
-							<option value="JMWDO      " >--- Web Design & Online Communications                </option>
-							   </optgroup> 
-							<option value="EGMTL      " >Materials Science and Engineering                 </option>
-							<option value="EGMTD      " >Materials Sci. & Eng Distance Learning            </option>
-							<option value="LSMS       " >Mathematics-Liberal Arts & Sciences               </option>
-							<option value="EDMAE      " >Mathematics Education-Education                   </option>
-							<option value="EGME       " >Mechanical Engineering                            </option>
-							<option value="EGMED      " >Mechanical Eng. Edge Distance Learning            </option>
-							<option value="MDMDM      " >Medical Sciences:                                 </option>
-							<option value="MDMDM   GEN" >--- Aging & Geriatric Practice-Distance Learning      </option>
-							<option value="MDMDM   GEN" >--- Biotechnology                                     </option>
-							<option value="MDPAT      " >--- Pathology                                         </option>
-							   </optgroup>  
-							<option value="EDACD      " >Mental Health Counseling                          </option>
-							<option value="AGMCB      " >Microbiology and Cell Science-AG                  </option>
-							<option value="FAMUS      " >Museology (Museum Studies)                        </option>
-							<option value="FAMSC      " >Music - Performance                               </option>
-							<option value="FAMUA      " >Music - Academic                                  </option>
-							<option value="FAMUE      " >Music Education                                   </option>
-							<option value="FAMME      " >Music Education-Distance Learning                 </option>
-							<option value="EGNES      " >Nuclear Engineering Sciences                      </option>
-							<option value="NRNSG      " >Nursing Sciences                                  </option>
-							<option value="HPOCT      " >Occupational Therapy                              </option>
-							<option value="HPOCT   DLR" >Occupational Therapy-Distant Learning             </option>
-							<option value="HPOCT   DLM" >--- Distant Learning Masters Program                  </option>
-							   </optgroup> 
-							<option value="PHPH    SCI" >Pharmaceutical Sciences:                          </option>
-							<option value="PHPHD      " >--- Pharmacodynamics                                  </option>
-							<option value="PHPH       " >--- Pharmaceutics                                     </option>
-							<option value="PHPHO   OUT" >--- Pharmaceutical Outcomes & Policy                  </option>
-							   </optgroup>
-							   <optgroup label="Pharm Sci-Medicinal Chemistry-Distance Ed         "> 
-							<option value="PHCTX      " >--- Clinical Toxicology                               </option>
-							<option value="PHPFC      " >--- Forensics                                         </option>
-							<option value="PHPCH      " >--- Pharmaceutical Chemistry                          </option>
-							   </optgroup>  
-							   <optgroup label="Pharm Sci-Outcomes & Policy (US) Distance Ed      "> 
-							<option value="PHPHO   ECO" >--- Applied Pharmacoeconomics-US                      </option>
-							<option value="PHPHO   SRM" >--- Patient Safety & Medication Use-US                </option>
-							<option value="PHPHO   REG" >--- Pharmaceutical Regulation-US                      </option>
-							   </optgroup>  
-							   <optgroup label="Pharm Sci-Pharmacotherapy (US) Distance Ed        "> 
-							<option value="PHMTM      " >--- Medication Therapy Management                     </option>
-							   </optgroup> 
-							   <optgroup label="Pharm Sci-Pharmacotherapy (Intl) Distance Ed      "> 
-							<option value="PHCPD      " >--- Clinical Pharmacy                                 </option>
-							   </optgroup>  
-							<option value="LSPPY      " >Philosophy                                        </option>
-							<option value="LSPS       " >Physics                                           </option>
-							<option value="AGPMB      " >Plant Molecular and Cellular Biology              </option>
-							<option value="AGPT       " >Plant Pathology                                   </option>
-							<option value="LSPCL      " >Political Science                                 </option>
-							<option value="LSINR      " >Political Sci-International Relations             </option>
-							   <optgroup label="Public Health (MPH)                               "> 
-							<option value="HPMPH   BIO" >--- Biostatistics                                     </option>
-							<option value="HPMPH   EH " >--- Environmental Health                              </option>
-							<option value="HPMPH   EP " >--- Epidemiology                                      </option>
-							<option value="HPMPH   HM " >--- Health Management & Policy                        </option>
-							<option value="HPMPH   CAM" >--- Public Health Prac-CAMPUS                         </option>
-							<option value="HPMPH   ONL" >--- Public Health Prac-ONLINE                         </option>
-							<option value="HPMPH   SB " >--- Social & Behavioral Science                       </option>
-							   </optgroup>  
-							<option value="EDRDE      " >Reading Education                                 </option>
-							<option value="HHRPT      " >Recreation, Parks and Tourism                     </option>
-							<option value="LSRN       " >Religion                                          </option>
-							<option value="EDERT      " >Research and Evaluation Methodology               </option>
-							<option value="EDSCG      " >School Counseling and Guidance                    </option>
-							<option value="EDSCE      " >Science Education                                 </option>
-							<option value="LSSY       " >Sociology                                         </option>
-							<option value="AGSLS      " >Soil and Water Science                            </option>
-							<option value="LSSH       " >Spanish                                           </option>
-							<option value="EDEDH      " >Special Education                                 </option>
-							<option value="HHSPM      " >Sport Management                                  </option>
-							<option value="HHOSM      " >Sport Management-Distance Learning                </option>
-							<option value="LSSTA      " >Statistics                                        </option>
-							<option value="FATHE      " >Theatre and Dance                                 </option>
-							   <optgroup label="Urban and Regional Planning:                      "> 
-							<option value="ARURP      " >--- Urban and Regional Planning                       </option>
-							<option value="ARURD      " >--- Urban and Regional Planning-Distance Learning     </option>
-							   </optgroup>  
-							   <optgroup label="Veterinary Med Science-Distance Learning          "> 
-							<option value="VMTOX   TOX" >--- Forensic Toxicology                               </option>
-							<option value="VMTOX   VSH" >--- Shelter Medicine                                  </option>
-							<option value="VMTOX   VFS" >--- Veterinary Forensic Science                       </option>
-							   </optgroup>  
-							<option value="VMVMS      " >Veterinary Medical Sciences                       </option>
-							<option value="AGWIE      " >Wildlife Ecology and Conservation                 </option>
-							<option value="LSWMS      " >Women's Studies                                   </option>
+						<option ng-repeat="major in majors | orderBy:'type'">{{major.type}}</option>
 					</select>
 					</div>
 					<br>
-					Program specialization:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.other.program_specialization" placeholder="Optional">			
+					Program specialization:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.program_specialization" placeholder="Optional">			
 					<br>
-					Department Contact:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.other.department_contact" placeholder="Optional">
+					Department Contact:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.department_contact" placeholder="Optional">
 
 							</td>
 								</div>
@@ -1152,7 +910,7 @@
 							<tr>
 									<div class="form-group">
 									<td>
-										<label class="control-label" for="name">Personal Statement Topic:</label>
+										<label class="control-label"  for="name">Personal Statement Topic:</label>
 											<br>
 											<p><b>Explain your purpose for graduate study, including your current degree goals and reasons for selecting a particular field of study. </b></p>
 											<p> Guidelines:</p>
@@ -1162,7 +920,7 @@
 											
 											<p>If you paste text that exceeds the character limit, only the allotted number of characters will appear. When you are finished click Update before you conitnue.</p>
 
-											<textarea rows="30" cols="100" maxlength="4985">Enter text here (Limited to 4985 characters)</textarea>
+											<textarea rows="30" cols="100" data-ng-model="application.degree_programs.statement_of_purpose" maxlength="4985" class="form-control" placeholder="Enter text here (Limited to 4985 characters)"></textarea>
 
 									</td>
 
@@ -1251,49 +1009,114 @@
 												<p> Official test scores from the testing agency must be submitted to the Office of Admissions, PO Box 114000, 201 Criser Hall, Gainesville, FL 32611-4000. </p>
 
 												<p> If you have taken any test more than once, enter the highest complete set of scores. Do not mix component scores from multiple test administrations. </p>
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> Graduate Record Examination (GRE) <p> </p>
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> Graduate Management Admission Test (GMAT) <p> </p>
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> Miller Analogies Test (MAT) <p> </p>
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> Fundamentals of Engineering Exam (FE) <p> </p>
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.gre" id="inlineCheckbox1" value="option1"> Graduate Record Examination (GRE) <p> </p>
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.gmat" id="inlineCheckbox1" value="option1"> Graduate Management Admission Test (GMAT) <p> </p>
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.mat" id="inlineCheckbox1" value="option1"> Miller Analogies Test (MAT) <p> </p>
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.fe" id="inlineCheckbox1" value="option1"> Fundamentals of Engineering Exam (FE) <p> </p>
 										  <p> Proficiency in the English language is required of applicants from countries (including Puerto Rico) where English is not the official language. These applicants must submit official scores from one of the tests listed below. This requirement may be waived if you have been enrolled in a degree-seeking program for one academic year (in a country where English is the official language) before your anticipated term of enrollment at UF. </p>
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> Test of English as a Foreign Language (TOEFL) <p> </p>
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> International English Language Testing System (IELTS) <p> </p>
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> Michigan English Language Assessment Battery (MELAB) <p> </p> 
-										  <input type="checkbox" id="inlineCheckbox1" value="option1"> University of Florida English Language Institute Program <p> </p>
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.toefl" id="inlineCheckbox1" value="option1"> Test of English as a Foreign Language (TOEFL) <p> </p>
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.ielts" id="inlineCheckbox1" value="option1"> International English Language Testing System (IELTS) <p> </p>
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.melab" id="inlineCheckbox1" value="option1"> Michigan English Language Assessment Battery (MELAB) <p> </p> 
+										  <input type="checkbox" ng-model="application.education_and_activities.test_scores.uf_lang_institute_program" id="inlineCheckbox1" value="option1"> University of Florida English Language Institute Program <p> </p>
 									</td>
 								</div>
 								</tr>
 								<tr>
 								<div class="form-group">
+
 									<td>
 										<label class="control-label" for="name"> <p> Activity1 </p> (most recent) :</label>
 									</td>
 									<td>
-										Activity: <input type="text" placeholder="Text input"> <p> </p>
-										City: <input type="text" placeholder="Text input"> <p> </p>
-										Country: <country-select data-ng-model="Country"></country-select>
-												 <undergrad-majors data-ng-model="Majors"></undergrad-majors>
-										State <select class="form-control-small"> <p> </p>
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
+										<input type="text" class="form-control" ng-model="application.education_and_activities.activities.activity" placeholder="Activity">
+										<input type="text" data-ng-model="application.education_and_activities.activities.city" placeholder="City"> 
+										Country: <country-select data-ng-model= "application.education_and_activities.activities.country"></country-select>
+												 <label class="control-label" for="address">State:</label>												 
+												 <select data-ng-model="application.education_and_activities.activities.state">
+												<option> </option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 											</select>
-										From <select class="form-control-small">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-											</select> <input type="text-mini" placeholder="Text input">
-										To: <select class="form-control-small">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-												<option>4</option>
-												<option>5</option>
-												</select> <input type="text-mini" placeholder="Text input">
+										From Month: <select class="selectpicker" data-ng-model="application.education_and_activities.activities.from" placeholder = "January">
+											<option>January</option>
+											<option>February</option>
+											<option>March</option>
+											<option>April</option> 
+											<option>May</option>
+											<option>June</option>
+											<option>July</option>
+											<option>August</option>
+											<option>September</option>
+											<option>October</option>
+											<option>November</option>
+											<option>December</option>
+											</select> 
+										<input type="text-mini" data-ng-model="application.education_and_activities.activities.day1" placeholder="Day">
+										<br>
+										To Month: <select class="selectpicker" data-ng-model="application.education_and_activities.activities.to" placeholder = "January">
+											<option>January</option>
+											<option>February</option>
+											<option>March</option>
+											<option>April</option> 
+											<option>May</option>
+											<option>June</option>
+											<option>July</option>
+											<option>August</option>
+											<option>September</option>
+											<option>October</option>
+											<option>November</option>
+											<option>December</option>
+											</select>
+											<input type="text-mini" data-ng-model="application.education_and_activities.activities.day2" placeholder="Day">
 											</td>
 								</div>
 								</tr>

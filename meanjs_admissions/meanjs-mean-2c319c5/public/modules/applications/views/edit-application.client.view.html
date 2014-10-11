@@ -128,21 +128,15 @@
 										</form></center>
 
 										<br><br>
-										Have you ever submitted an application to the University of Florida? 
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" data-ng-model="application.personal_info.previous_application.yes" value="option1"> Yes
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" data-ng-model="application.personal_info.previous_application.no" value="option2"> No
+										
+										<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_application" value="option1"> Check if you have ever submitted an application to the University of Florida 
 									</label>
 
 										<br><br>
-										Have you ever attended the University of Florida?
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" data-ng-model="application.personal_info.previous_attendance.yes" value="option1"> Yes
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" data-ng-model="application.personal_info.previous_attendace.no" value="option2"> No
+									
+										<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_attendance" value="option1"> Check if you have ever attended the University of Florida 
 									</label>
 
 									<tr>
@@ -235,17 +229,13 @@
 									<td>
 									<strong> Ethnicity (voluntary): </strong>
 									<br><br>	
-									Are you Hispanic? 
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.ethnicity.hispanic" value="option1"> Yes
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" data-ng-model="application.personal_info.ethnicity.hispanic" value="option2"> No
-									</label>
-									<br><br>
+									
 
 									How would you describe yourself? Choose one or more:
 									<br><br>
+									<label class="checkbox-inline">
+										<input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.ethnicity.hispanic" value="option1"> Hispanic
+									</label>
 									<label class="checkbox-inline">
 									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.ethnicity.american_indian" value="option1"> American Indian or Alaska Native
 									</label>
@@ -355,57 +345,57 @@
 										<center> <label class="control-label" for="name">State:</label>
 										 <select data-ng-model="application.personal_info.address.permanent.state">
 												<option> </option>
-												<option value="AL">Alabama</option>
-												<option value="AK">Alaska</option>
-												<option value="AZ">Arizona</option>
-												<option value="AR">Arkansas</option>
-												<option value="CA">California</option>
-												<option value="CO">Colorado</option>
-												<option value="CT">Connecticut</option>
-												<option value="DE">Delaware</option>
-												<option value="DC">District Of Columbia</option>
-												<option value="FL">Florida</option>
-												<option value="GA">Georgia</option>
-												<option value="HI">Hawaii</option>
-												<option value="ID">Idaho</option>
-												<option value="IL">Illinois</option>
-												<option value="IN">Indiana</option>
-												<option value="IA">Iowa</option>
-												<option value="KS">Kansas</option>
-												<option value="KY">Kentucky</option>
-												<option value="LA">Louisiana</option>
-												<option value="ME">Maine</option>
-												<option value="MD">Maryland</option>
-												<option value="MA">Massachusetts</option>
-												<option value="MI">Michigan</option>
-												<option value="MN">Minnesota</option>
-												<option value="MS">Mississippi</option>
-												<option value="MO">Missouri</option>
-												<option value="MT">Montana</option>
-												<option value="NE">Nebraska</option>
-												<option value="NV">Nevada</option>
-												<option value="NH">New Hampshire</option>
-												<option value="NJ">New Jersey</option>
-												<option value="NM">New Mexico</option>
-												<option value="NY">New York</option>
-												<option value="NC">North Carolina</option>
-												<option value="ND">North Dakota</option>
-												<option value="OH">Ohio</option>
-												<option value="OK">Oklahoma</option>
-												<option value="OR">Oregon</option>
-												<option value="PA">Pennsylvania</option>
-												<option value="RI">Rhode Island</option>
-												<option value="SC">South Carolina</option>
-												<option value="SD">South Dakota</option>
-												<option value="TN">Tennessee</option>
-												<option value="TX">Texas</option>
-												<option value="UT">Utah</option>
-												<option value="VT">Vermont</option>
-												<option value="VA">Virginia</option>
-												<option value="WA">Washington</option>
-												<option value="WV">West Virginia</option>
-												<option value="WI">Wisconsin</option>
-												<option value="WY">Wyoming</option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 											</select></center>
 
 											<br>
@@ -428,57 +418,57 @@
 								 <label class="control-label" for="address">State:</label>
 								<select data-ng-model="application.personal_info.address.current.state">
 												<option> </option>
-												<option value="AL">Alabama</option>
-												<option value="AK">Alaska</option>
-												<option value="AZ">Arizona</option>
-												<option value="AR">Arkansas</option>
-												<option value="CA">California</option>
-												<option value="CO">Colorado</option>
-												<option value="CT">Connecticut</option>
-												<option value="DE">Delaware</option>
-												<option value="DC">District Of Columbia</option>
-												<option value="FL">Florida</option>
-												<option value="GA">Georgia</option>
-												<option value="HI">Hawaii</option>
-												<option value="ID">Idaho</option>
-												<option value="IL">Illinois</option>
-												<option value="IN">Indiana</option>
-												<option value="IA">Iowa</option>
-												<option value="KS">Kansas</option>
-												<option value="KY">Kentucky</option>
-												<option value="LA">Louisiana</option>
-												<option value="ME">Maine</option>
-												<option value="MD">Maryland</option>
-												<option value="MA">Massachusetts</option>
-												<option value="MI">Michigan</option>
-												<option value="MN">Minnesota</option>
-												<option value="MS">Mississippi</option>
-												<option value="MO">Missouri</option>
-												<option value="MT">Montana</option>
-												<option value="NE">Nebraska</option>
-												<option value="NV">Nevada</option>
-												<option value="NH">New Hampshire</option>
-												<option value="NJ">New Jersey</option>
-												<option value="NM">New Mexico</option>
-												<option value="NY">New York</option>
-												<option value="NC">North Carolina</option>
-												<option value="ND">North Dakota</option>
-												<option value="OH">Ohio</option>
-												<option value="OK">Oklahoma</option>
-												<option value="OR">Oregon</option>
-												<option value="PA">Pennsylvania</option>
-												<option value="RI">Rhode Island</option>
-												<option value="SC">South Carolina</option>
-												<option value="SD">South Dakota</option>
-												<option value="TN">Tennessee</option>
-												<option value="TX">Texas</option>
-												<option value="UT">Utah</option>
-												<option value="VT">Vermont</option>
-												<option value="VA">Virginia</option>
-												<option value="WA">Washington</option>
-												<option value="WV">West Virginia</option>
-												<option value="WI">Wisconsin</option>
-												<option value="WY">Wyoming</option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 											</select></center>
 
 
@@ -508,15 +498,16 @@
 								  <br>
 								  </div>
 
-								  <label class="control-label" data-ng-model= "application.personal_info.emergency_contact.name.relationship" for="eci">Relationship:</label>
-								<select class="selectpicker">
-									<option>Other</option>
-									<option>Mother</option>
-								    <option>Father</option>
-								    <option>Wife</option>
-								    <option>Husband</option>
-								    <option>Legal Guardian</option>
-								</select>
+								 
+								           <label class="control-label"  for="eci">Relationship:</label>
+        <select class="selectpicker" data-ng-model= "application.personal_info.emergency_contact.name.relationship">
+         <option>Other</option>
+         <option>Mother</option>
+            <option>Father</option>
+            <option>Wife</option>
+            <option>Husband</option>
+            <option>Legal Guardian</option>
+        </select>
 
 								<br>
 								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.street" id="address" class="form-control" placeholder="Street Address" required>
@@ -527,57 +518,58 @@
 								 </div>
 								 <label class="control-label" for="ecit_state">State:</label>
 								<select data-ng-model="application.personal_info.emergency_contact.address.state">
-									<option value="AL">Alabama</option>
-									<option value="AK">Alaska</option>
-									<option value="AZ">Arizona</option>
-									<option value="AR">Arkansas</option>
-									<option value="CA">California</option>
-									<option value="CO">Colorado</option>
-									<option value="CT">Connecticut</option>
-									<option value="DE">Delaware</option>
-									<option value="DC">District Of Columbia</option>
-									<option value="FL">Florida</option>
-									<option value="GA">Georgia</option>
-									<option value="HI">Hawaii</option>
-									<option value="ID">Idaho</option>
-									<option value="IL">Illinois</option>
-									<option value="IN">Indiana</option>
-									<option value="IA">Iowa</option>
-									<option value="KS">Kansas</option>
-									<option value="KY">Kentucky</option>
-									<option value="LA">Louisiana</option>
-									<option value="ME">Maine</option>
-									<option value="MD">Maryland</option>
-									<option value="MA">Massachusetts</option>
-									<option value="MI">Michigan</option>
-									<option value="MN">Minnesota</option>
-									<option value="MS">Mississippi</option>
-									<option value="MO">Missouri</option>
-									<option value="MT">Montana</option>
-									<option value="NE">Nebraska</option>
-									<option value="NV">Nevada</option>
-									<option value="NH">New Hampshire</option>
-									<option value="NJ">New Jersey</option>
-									<option value="NM">New Mexico</option>
-									<option value="NY">New York</option>
-									<option value="NC">North Carolina</option>
-									<option value="ND">North Dakota</option>
-									<option value="OH">Ohio</option>
-									<option value="OK">Oklahoma</option>
-									<option value="OR">Oregon</option>
-									<option value="PA">Pennsylvania</option>
-									<option value="RI">Rhode Island</option>
-									<option value="SC">South Carolina</option>
-									<option value="SD">South Dakota</option>
-									<option value="TN">Tennessee</option>
-									<option value="TX">Texas</option>
-									<option value="UT">Utah</option>
-									<option value="VT">Vermont</option>
-									<option value="VA">Virginia</option>
-									<option value="WA">Washington</option>
-									<option value="WV">West Virginia</option>
-									<option value="WI">Wisconsin</option>
-									<option value="WY">Wyoming</option>
+									<option> </option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 								</select>
 
 							<label class="control-label" for="eci_country">Country:</label>
@@ -606,30 +598,22 @@
 						<br>
 						<p><strong>Veteran Status</strong></p>
 						<br>
-							<label class="control-label" for="name">Are you a member or veteran of the U.S. military?</label>
 							
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes: Active Duty
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes: Veteran
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio3" value="option2"> No
+
+							<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.veteran_status.active_veteran" value="option1"> Check if you are a member or veteran of the U.S. military
+									</label>
+
+							<br>
+								<label class="checkbox-inline">						  
+									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> Check if you served on or after September , 2001
 								</label>
 
-							<p>If Yes, check if you served on or after September 11, 2001. 								  
-									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> 
-								</p>
 							<br>
-							<label class="control-label" for="name">Are you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military?</label>
 							
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio4" value="option1"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio5" value="option2"> No
-								</label>
+							<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.veteran_status.eligible_va_benefits" value="option1"> Check if you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military
+									</label>
 					</tr>
 						<tr>
 						<div class="form-group">
@@ -645,20 +629,18 @@
 						<p><strong>Conduct Disclosure</strong></p>
 						<p>If your records have been expunged, you do not have to answer Yes. However, if you are unsure whether this applies to your situation, you should answer Yes and fully declare the incident(s) to avoid any risk of disciplinary action or revocation of an admission offer.</p>
 						<br>
-						<p>Are you currently or have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution?</p>
-						<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
-								</label>
-						<p>Have you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?</p>
-						<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
-								</label>
+						
+
+						<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_or_disciplined" value="option1"> Check if you have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution
+									</label>
+						<br>
+						<br>
+
+						<p></p>
+									<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_law_violation" value="option1"> Check if you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?
+									</label>
 					</table>
 					</td>
 				</tr>
@@ -1267,57 +1249,57 @@
 												 <label class="control-label" for="address">State:</label>												 
 												 <select data-ng-model="application.education_and_activities.activities.state">
 												<option> </option>
-												<option value="AL">Alabama</option>
-												<option value="AK">Alaska</option>
-												<option value="AZ">Arizona</option>
-												<option value="AR">Arkansas</option>
-												<option value="CA">California</option>
-												<option value="CO">Colorado</option>
-												<option value="CT">Connecticut</option>
-												<option value="DE">Delaware</option>
-												<option value="DC">District Of Columbia</option>
-												<option value="FL">Florida</option>
-												<option value="GA">Georgia</option>
-												<option value="HI">Hawaii</option>
-												<option value="ID">Idaho</option>
-												<option value="IL">Illinois</option>
-												<option value="IN">Indiana</option>
-												<option value="IA">Iowa</option>
-												<option value="KS">Kansas</option>
-												<option value="KY">Kentucky</option>
-												<option value="LA">Louisiana</option>
-												<option value="ME">Maine</option>
-												<option value="MD">Maryland</option>
-												<option value="MA">Massachusetts</option>
-												<option value="MI">Michigan</option>
-												<option value="MN">Minnesota</option>
-												<option value="MS">Mississippi</option>
-												<option value="MO">Missouri</option>
-												<option value="MT">Montana</option>
-												<option value="NE">Nebraska</option>
-												<option value="NV">Nevada</option>
-												<option value="NH">New Hampshire</option>
-												<option value="NJ">New Jersey</option>
-												<option value="NM">New Mexico</option>
-												<option value="NY">New York</option>
-												<option value="NC">North Carolina</option>
-												<option value="ND">North Dakota</option>
-												<option value="OH">Ohio</option>
-												<option value="OK">Oklahoma</option>
-												<option value="OR">Oregon</option>
-												<option value="PA">Pennsylvania</option>
-												<option value="RI">Rhode Island</option>
-												<option value="SC">South Carolina</option>
-												<option value="SD">South Dakota</option>
-												<option value="TN">Tennessee</option>
-												<option value="TX">Texas</option>
-												<option value="UT">Utah</option>
-												<option value="VT">Vermont</option>
-												<option value="VA">Virginia</option>
-												<option value="WA">Washington</option>
-												<option value="WV">West Virginia</option>
-												<option value="WI">Wisconsin</option>
-												<option value="WY">Wyoming</option>
+												<option>Alabama</option>
+												<option>Alaska</option>
+												<option>Arizona</option>
+												<option>Arkansas</option>
+												<option>California</option>
+												<option>Colorado</option>
+												<option>Connecticut</option>
+												<option>Delaware</option>
+												<option>District Of Columbia</option>
+												<option>Florida</option>
+												<option>Georgia</option>
+												<option>Hawaii</option>
+												<option>Idaho</option>
+												<option>Illinois</option>
+												<option>Indiana</option>
+												<option>Iowa</option>
+												<option>Kansas</option>
+												<option>Kentucky</option>
+												<option>Louisiana</option>
+												<option>Maine</option>
+												<option>Maryland</option>
+												<option>Massachusetts</option>
+												<option>Michigan</option>
+												<option>Minnesota</option>
+												<option>Mississippi</option>
+												<option>Missouri</option>
+												<option>Montana</option>
+												<option>Nebraska</option>
+												<option>Nevada</option>
+												<option>New Hampshire</option>
+												<option>New Jersey</option>
+												<option>New Mexico</option>
+												<option>New York</option>
+												<option>North Carolina</option>
+												<option>North Dakota</option>
+												<option>Ohio</option>
+												<option>Oklahoma</option>
+												<option>Oregon</option>
+												<option>Pennsylvania</option>
+												<option>Rhode Island</option>
+												<option>South Carolina</option>
+												<option>South Dakota</option>
+												<option>Tennessee</option>
+												<option>Texas</option>
+												<option>Utah</option>
+												<option>Vermont</option>
+												<option>Virginia</option>
+												<option>Washington</option>
+												<option>West Virginia</option>
+												<option>Wisconsin</option>
+												<option>Wyoming</option>
 											</select>
 										From Month: <select class="selectpicker" data-ng-model="application.education_and_activities.activities.from" placeholder = "January">
 											<option>January</option>

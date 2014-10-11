@@ -41,33 +41,25 @@ var ApplicationSchema = new Schema({
 			type: Number,
 		},
         previous_application: {
-			yes: { 
 				type: Boolean,
-				default: false
-			},
-			no: {
-				type: Boolean,
-				default: false
-			}
+				default: false		
 		},
+
         previous_attendance: {
-			yes: { 
 				type: Boolean,
 				default: false
-			},
-			no: {
-				type: Boolean,
-				default: false
-			}
 		},
+
 		application_started: {
 			type: Boolean,
 			default: false
 		},
+
 		application_complete: {
 			type: Boolean,
 			default: false
 		},
+
         dob: Date,
 		bd: {
 			month: {

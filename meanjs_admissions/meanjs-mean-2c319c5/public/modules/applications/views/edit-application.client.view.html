@@ -128,22 +128,16 @@
 										</form></center>
 
 										<br><br>
-										Have you ever submitted an application to the University of Florida? 
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" data-ng-model="application.personal_info.previous_application.yes" value="option1"> Yes
+										
+									<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_application" value="option1"> Check if you have ever submitted an application to the University of Florida 
 									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" data-ng-model="application.personal_info.previous_application.no" value="option2"> No
-									</label>
-
 										<br><br>
-										Have you ever attended the University of Florida?
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio1" data-ng-model="application.personal_info.previous_attendance.yes" value="option1"> Yes
+
+									<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_attendance" value="option1"> Check if you have ever attended the University of Florida 
 									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions2" id="inlineRadio2" data-ng-model="application.personal_info.previous_attendace.no" value="option2"> No
-									</label>
+										
 
 									<tr>
 									<td>
@@ -235,17 +229,16 @@
 									<td>
 									<strong> Ethnicity (voluntary): </strong>
 									<br><br>	
-									Are you Hispanic? 
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.ethnicity.hispanic" value="option1"> Yes
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option2"> No
-									</label>
-									<br><br>
+									
+									
+
+									
 
 									How would you describe yourself? Choose one or more:
 									<br><br>
+									<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.ethnicity.hispanic" value="option1"> Hispanic
+									</label>
 									<label class="checkbox-inline">
 									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.ethnicity.american_indian" value="option1"> American Indian or Alaska Native
 									</label>
@@ -606,30 +599,21 @@
 						<br>
 						<p><strong>Veteran Status</strong></p>
 						<br>
-							<label class="control-label" for="name">Are you a member or veteran of the U.S. military?</label>
 							
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes: Active Duty
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes: Veteran
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.active_veteran" name="inlineRadioOptions" id="inlineRadio3" value="option2"> No
-								</label>
+								<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.veteran_status.active_veteran" value="option1"> Check if you are a member or veteran of the U.S. military
+									</label>
 
-							<p>If Yes, check if you served on or after September 11, 2001. 								  
-									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> 
-								</p>
+								<br>
+								<label class="checkbox-inline">						  
+									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> Check if you served on or after September , 2001
+								</label>
 							<br>
-							<label class="control-label" for="name">Are you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military?</label>
 							
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio4" value="option1"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" name="inlineRadioOptions" id="inlineRadio5" value="option2"> No
-								</label>
+							
+								<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.veteran_status.eligible_va_benefits" value="option1"> Check if you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military
+									</label>
 					</tr>
 						<tr>
 						<div class="form-group">
@@ -645,20 +629,19 @@
 						<p><strong>Conduct Disclosure</strong></p>
 						<p>If your records have been expunged, you do not have to answer Yes. However, if you are unsure whether this applies to your situation, you should answer Yes and fully declare the incident(s) to avoid any risk of disciplinary action or revocation of an admission offer.</p>
 						<br>
-						<p>Are you currently or have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution?</p>
-						<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
-								</label>
-						<p>Have you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?</p>
-						<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Yes
-								</label>
-								<label class="radio-inline">
-								  <input type="radio" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
-								</label>
+
+						
+									<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_or_disciplined" value="option1"> Check if you have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution
+									</label>
+						<br>
+						<br>
+
+						<p></p>
+									<label class="checkbox-inline">
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_law_violation" value="option1"> Check if you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?
+									</label>
+
 					</table>
 					</td>
 				</tr>
@@ -1131,9 +1114,9 @@
 					</select>
 					</div>
 					<br>
-					Program specialization:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.other.program_specialization" placeholder="Optional">			
+					Program specialization:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.program_specialization" placeholder="Optional">			
 					<br>
-					Department Contact:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.other.department_contact" placeholder="Optional">
+					Department Contact:	<input type="text" id="name" class="form-control"  data-ng-model="application.degree_programs.primary_program.department_contact" placeholder="Optional">
 
 							</td>
 								</div>

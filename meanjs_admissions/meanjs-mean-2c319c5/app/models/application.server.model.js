@@ -385,6 +385,7 @@ var ApplicationSchema = new Schema({
 		},
         test_scores: {
             gre: {
+            	type: Boolean,
                 date: Date,
                 verbal: Number,
                 quantitative: Number,
@@ -392,6 +393,7 @@ var ApplicationSchema = new Schema({
                 total: Number
             },
             gmat: {
+            	type: Boolean,
                 date: Date,
                 verbal: Number,
                 quantitative: Number,
@@ -400,14 +402,17 @@ var ApplicationSchema = new Schema({
                 total: Number
             },
             mat: {
+            	type: Boolean,
                 date: Date,
                 score: String /* String? */
             },
             fe: {
+            	type: Boolean,
                 date: Date,
                 score: String /* String? */
             },
             toefl: {
+            	type: Boolean,
                 paper_date: Date,
                 listening: Number,
                 writing: Number,
@@ -421,6 +426,7 @@ var ApplicationSchema = new Schema({
                 totali: Number
             },
             ielts: {
+            	type: Boolean,
                 date: Date,
                 listening: Number,
                 writing: Number,
@@ -429,6 +435,7 @@ var ApplicationSchema = new Schema({
                 total: Number
             },
             melab: {
+            	type: Boolean,
                 date: Date,
                 composition: Number,
                 listening: Number,
@@ -445,7 +452,10 @@ var ApplicationSchema = new Schema({
             city: String,
             country: String,
             state: String,
-            from: String
+            from: String,
+            day1: String,
+            to: String,
+            day2: String
         },
         resume: {
             name: String,

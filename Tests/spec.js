@@ -104,7 +104,6 @@ describe('Main', function() {
 
 
   it('should update the application', function() {
-<<<<<<< HEAD
 	var app_edit = new Application_edit();
 	app_edit.get();
   //Luke test one dropdown for each tab
@@ -116,7 +115,6 @@ describe('Main', function() {
   // app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
   // app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); 
   app_edit.update_block();
-=======
   var app_edit = new Application_edit();
   app_edit.get();
   //Luke test first tab
@@ -207,7 +205,6 @@ it('should update the application', function() {
   //program of study here
   app_edit.update_text(3,'application.degree_programs.primary_program.program_specialization','Quantum Computing');
   app_edit.update_text(3,'application.degree_programs.primary_program.department_contact','Andrew Ryan');
->>>>>>> origin/master
   });
   
   it('should update the application', function() {

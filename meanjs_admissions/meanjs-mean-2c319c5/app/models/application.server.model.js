@@ -303,8 +303,13 @@ var ApplicationSchema = new Schema({
 				default: ''
 			}
         },
-        colleges: [ String ], /* opening another link*/ 
         self_reported_gpa: {
+
+        	GPA: {
+
+        		type: Number,
+        		default: 0
+        	},
 			A: {
 				type: Number,
 				default: 0

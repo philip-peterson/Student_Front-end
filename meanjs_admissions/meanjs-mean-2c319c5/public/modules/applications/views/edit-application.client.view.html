@@ -1,5 +1,5 @@
 <section data-ng-controller="ApplicationsController" data-ng-init="findOne()">
-    <center><h1><u>The Application</u></h1></center>
+    <center><h1>Application</h1></center>
     <div class="col-md-12">
         <form data-ng-submit="update()" novalidate>
             <fieldset>
@@ -22,10 +22,13 @@
 					<li ng-class="{active:tab===6}"> 
 						<a href ng-click="tab = 6" id = "tab6">Summary</a> 
 					</li>
-					<br><br>
 
 
 					<div ng-show="tab === 1"> 
+						<style type="text/css">
+   						body { background: aliceblue; }
+   						table {background-color:aliceblue;}
+						</style>
 					<br>
 					<table class="table">
 
@@ -39,11 +42,13 @@
 						<tr>
 							<td>
 							<table class="table table-bordered">
+								<th>
 
 							<h4><strong><u>Instructions for Completing the Application</u></strong></h4>
 
 						<p>You can work on any page of the application at any time and in any order, but the pages are presented on the legend above in a standard order of progression. As you complete a page, click Save on bottom right of every page to save your data. When there is a problem, such as an incomplete item on the page, you will receive an error alert. 
 						</p>
+					</th>
 								<tr>
 								<div class="form-group">
 
@@ -108,26 +113,29 @@
 
 										<br>
 
-										<center><form class="form-inline" role="form">
-
-										  <div class="form-group">
+										<form class="form-inline" role="form">
+											<div class="col-xs-3">
 											<input type="text" class="form-control" id="exampleInputEmail1" data-ng-model="application.personal_info.ssn" placeholder="Social Security Number">
 										  </div>
-
-										</form></center>
+										</form>
+										<br>
+										<br>
 										<br>
 
 										<p>If you already have a UFID, please provide it below as it will expedite the processing of your application. If you have previously submitted a UF application and do not remember your UFID, you may locate your number by referring to the application summary of your previously submitted application. If you are unable to retrieve your UFID; leave this field blank.</p>
+										<br>
 
-										<center><form class="form-inline" role="form">
+										<form class="form-inline" role="form">
 
-										  <div class="form-group">
+										  <div class="col-xs-3">
 											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.ufid" placeholder="UFID">
 										  </div>
 
-										</form></center>
+										</form>
 
-										<br><br>
+										<br>
+										<br>
+										<br>
 										
 										<label class="checkbox-inline">
 									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_application" value="option1"> Check if you have ever submitted an application to the University of Florida 
@@ -138,12 +146,14 @@
 										<label class="checkbox-inline">
 									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.previous_attendance" value="option1"> Check if you have ever attended the University of Florida 
 									</label>
-
 									<tr>
 									<td>
 									 <label class="control-label" for="name">Date of Birth:</label>
 
-									<center><label class="control-label" for="name" value = "January" >Month:</label>
+									 <br>
+									 <br>
+
+									<label class="control-label" for="name" value = "January" >Month:</label>
 										<select class="selectpicker" data-ng-model="application.personal_info.bd.month" placeholder = "January">
 											<option>January</option>
 											<option>February</option>
@@ -159,7 +169,7 @@
 											<option>December</option>
 										</select>
 
-									 <label class="control-label" data-ng-model="application.personal_info.bd.day" for="name">Day:</label>
+									 <label class="control-label" for="name">Day:</label>
 										<select class="selectpicker" data-ng-model="application.personal_info.bd.day" placeholder = "1">
 											<option>1</option>
 											<option>2</option>
@@ -195,31 +205,31 @@
 										</select>
 
 										<label class="control-label" for="name">Year:</label>
-										  <input id="date1" class="datepicker" data-date-format="yyyy" data-ng-model="application.personal_info.bd.year" placeholder="yyyy" required></center>
-
-										  <br>
+										  <input id="date1" class="datepicker" data-date-format="yyyy" data-ng-model="application.personal_info.bd.year" placeholder="yyyy" required>
+										
 									 </td>
 									</tr>
 
-
-
-									<br>
 									<tr>
 									<td>
+										<br>
 									<label class="control-label"  for="name">Gender:</label>
-										<center><select class="selectpicker" data-ng-model="application.personal_info.gender">
+										<select class="selectpicker" data-ng-model="application.personal_info.gender">
 											<option> </option>
 											<option>Male</option>
 											<option>Female</option>
-										</select></center>
+										</select>
+										<br>
 										<br>
 									</td>
 									</tr>
 
 									<tr>
 									<td>
+										<br>
 									<label class="control-label" for="name">Nation of Citizenship:</label>
-								<center><country-select data-ng-model="application.personal_info.nationality"></country-select></center>
+								<country-select data-ng-model="application.personal_info.nationality"></country-select>
+								<br>
 								<br>
 									</tr>
 									</td>
@@ -251,25 +261,25 @@
 									<label class="checkbox-inline">
 									  <input type="checkbox" id="inlineCheckbox3" data-ng-model="application.personal_info.ethnicity.white" value="option5"> White 
 									</label>
-									<br><br>
 
 
 									</tr>
 									</td>
-
+									<br>
 									<br>
 									<tr>
 									<td>
 
 
 									 <form class="form-inline" role="form">
+									 	<br>
 									<strong> Please enter your email to expediate the application process: </strong>
 
-										<center> <div class="form-group">
+										 <div class="form-group">
 										   <input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.email" placeholder="email address">
 										 </div>
 
-									</form></center>
+									</form>
 									<br>
 
 									</tr>
@@ -279,70 +289,72 @@
 									<br>
 									<tr>
 									<td>
-									
-									<strong>Telephone Number:</strong>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.phone.personal.us" value="option1"> U.S.
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" data-ng-model="application.personal_info.phone.personal.intl" value="option2"> Intl.
-									</label>
-																	<center><form class="form-inline" role="form">
+									<br>
+									<strong>Home Phone Number:</strong>
+										<select class="selectpicker" data-ng-model="application.personal_info.phone.personal.call">
+											<option>U.S.</option>
+											<option>Intl.</option>
+										</select>
+										<br>
+										<br>
+																	<form class="form-inline" role="form">
 
 										  <div class="form-group">
-											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.phone.personal.number" placeholder="Phone Number">
+											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.phone.personal.number" placeholder="Home Phone Number">
 										  </div>
-										  </form></center>
-									<br>
+										  </form>
+										<br>
 
-																<strong>Cell Phone Number:</strong>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.phone.cell.us" value="option1"> U.S.
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" data-ng-model="application.personal_info.phone.cell.intl" value="option2"> Intl.
-									</label>
-																	<center><form class="form-inline" role="form">
+																<strong>Cell Phone Number: </strong>
+									<select class="selectpicker" data-ng-model="application.personal_info.phone.cell.call">
+											<option>U.S.</option>
+											<option>Intl.</option>
+										</select>
+										<br>
+										<br>
+																	<form class="form-inline" role="form">
 
 										  <div class="form-group">
 											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.phone.cell.number" placeholder="Cell Phone Number">
 										  </div>
-										  </form></center>
-									<br>
+										  </form>
+										
+										<br>
 
 																<strong>Work Phone Number:</strong>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio1" data-ng-model="application.personal_info.phone.work.us" value="option1"> U.S.
-									</label>
-									<label class="radio-inline">
-									  <input type="radio" name="inlineRadioOptions3" id="inlineRadio2" data-ng-model="application.personal_info.phone.work.intl" value="option2"> Intl.
-									</label>
-																	<center><form class="form-inline" role="form">
+									<select class="selectpicker" data-ng-model="application.personal_info.phone.work.call">
+											<option>U.S.</option>
+											<option>Intl.</option>
+										</select>
+										<br>
+										<br>
+																	<form class="form-inline" role="form">
 
 										  <div class="form-group">
 											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.phone.work.number" placeholder="Work Phone Number">
 										  </div>
-										  </form></center>
-									<br>
+										  </form>
 
 
-									<br>
 									<tr>
 									<td>
 
 									 <form class="form-inline" role="form">
 									<strong> Permanent Address Information : </strong>
+									<br>
+									<br>
 
-										<center> <div class="form-group">
+										 <div class="form-group">
 										   <input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.address.permanent.street" placeholder="Number and street">
-										 </div></center>
+										 </div>
 										 <br>
-										 <center> <div class="form-group">
+										 <br>
+										  <div class="form-group">
 										   <input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.personal_info.address.permanent.city" placeholder="City">
-										 </div></center>
+										 </div>
 										 <br>
-
-										<center> <label class="control-label" for="name">State:</label>
+										 <br>
+										<label class="control-label" for="name">State:</label>
 										 <select data-ng-model="application.personal_info.address.permanent.state">
 												<option> </option>
 												<option>Alabama</option>
@@ -396,25 +408,41 @@
 												<option>West Virginia</option>
 												<option>Wisconsin</option>
 												<option>Wyoming</option>
-											</select></center>
+											</select>
 
 											<br>
+											<br>
 
-										<center> <label class="control-label"  for="name">Country:</label>
-										 <country-select data-ng-model="application.personal_info.address.permanent.country"></country-select></center>
+										<label class="control-label"  for="name">Country:</label>
+										 <country-select data-ng-model="application.personal_info.address.permanent.country"></country-select>
 
 
 									</form>
 
 
-								 <br> <!--luke's code start-->
+									<tr>
+									<td>
+								  <!--luke's code start-->
+								 <p><strong>Current Address Information:</strong></p>
 								 <br>
-								 <p><strong>Current Address Information</strong></p>
+								 <div class="col-xs-4">
 								 <input type="text" data-ng-model="application.personal_info.address.current.street" id="address" class="form-control" placeholder="Street Address" required>
+								</div>
+								 <br>
+								 <br>
 								 <br>
 								 <div class="col-xs-4">
 								 <input type="text" data-ng-model="application.personal_info.address.current.city" id="address" class="form-control" placeholder="City" required>
 								 </div>
+								 <br>
+								 <br>
+								 <br>
+								 <div class="col-xs-2">
+								 <input type="text" data-ng-model="application.personal_info.address.current.zip" id="address" class="form-control" placeholder="Zip Code" required>
+								 </div>
+								 <br>
+								 <br>
+								 <br>
 								 <label class="control-label" for="address">State:</label>
 								<select data-ng-model="application.personal_info.address.current.state">
 												<option> </option>
@@ -471,51 +499,59 @@
 												<option>Wyoming</option>
 											</select></center>
 
-
+							<br>
+							<br>
 							<label class="control-label" for="eci_country">Country:</label>
 								<country-select data-ng-model="application.personal_info.address.current.country"></country-select></center>
 
-							<br>
-							<br>
+							
 															
-							<div class="col-xs-2">
-								 <input type="text" data-ng-model="application.personal_info.address.current.zip" id="address" class="form-control" placeholder="Zip Code" required>
-								 </div>
 						</tr>
+					</td>
 						<tr>
 						<div class="form-group">
 
+									
 						<td>
-						<br>
-						<p><strong>Emergencry Contact Information</strong></p>
+						<p><strong>Emergencry Contact Information:</strong></p>
+								<br>
+									<label class="control-label"  for="eci">Relationship:</label>
+						        <select class="selectpicker" data-ng-model= "application.personal_info.emergency_contact.name.relationship">
+						         <option>Other</option>
+						         <option>Mother</option>
+						            <option>Father</option>
+						            <option>Wife</option>
+						            <option>Husband</option>
+						            <option>Legal Guardian</option>
+						        </select>
+						        <br>
+						        <br>
 								<div class="col-xs-3">
 								 <input type="text" data-ng-model="application.personal_info.emergency_contact.name.first" id="name" class="form-control" placeholder="First Name" required>
-								  <br>
 								  </div>
-
+								  <br>
+								  <br>
+								  <br>
 								  <div class="col-xs-3">
 								 <input type="text" data-ng-model="application.personal_info.emergency_contact.name.last" id="name" class="form-control" placeholder="Last Name" required>
-								  <br>
 								  </div>
-
-								 
-								           <label class="control-label"  for="eci">Relationship:</label>
-        <select class="selectpicker" data-ng-model= "application.personal_info.emergency_contact.name.relationship">
-         <option>Other</option>
-         <option>Mother</option>
-            <option>Father</option>
-            <option>Wife</option>
-            <option>Husband</option>
-            <option>Legal Guardian</option>
-        </select>
-
+								  <br>
+								  
+							
+						        <br>
 								<br>
+								<div class="col-xs-3">
 								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.street" id="address" class="form-control" placeholder="Street Address" required>
-
+								</div>
 								 <br>
-								 <div class="col-xs-4">
+								 <br>
+								 <br>
+								 <div class="col-xs-3">
 								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.city" id="eci_city" class="form-control" placeholder="City" required>
 								 </div>
+								 <br>
+								 <br>
+								 <br>
 								 <label class="control-label" for="ecit_state">State:</label>
 								<select data-ng-model="application.personal_info.emergency_contact.address.state">
 									<option> </option>
@@ -571,26 +607,36 @@
 												<option>Wisconsin</option>
 												<option>Wyoming</option>
 								</select>
-
+								<br>
+								<br>
 							<label class="control-label" for="eci_country">Country:</label>
 								<country-select data-ng-model="application.personal_info.emergency_contact.address.country"></country-select></center>
 
 							<br>
 							<br>
-							<div class="col-xs-2">
+							<div class="col-xs-3">
 								 <input type="text" data-ng-model="application.personal_info.emergency_contact.address.zip" id="eci_address" class="form-control" placeholder="Zip Code" required>
 								 </div>
-							
+							<br>
+							<br>
+							<br>
 							<div class="col-xs-3">
 								 <input type="number" data-ng-model="application.personal_info.emergency_contact.phone.personal.number" id="eci_number" class="form-control" placeholder="Telephone Number" required>
 								 </div>
+								 <br>
+								 <br>
+								 <br>
 							<div class="col-xs-3">
 								 <input type="number" data-ng-model="application.personal_info.emergency_contact.phone.cell.number" id="eci_number" class="form-control" placeholder="Cell Phone" required>
 								 </div>
+								 <br>
+								 <br>
+								 <br>
 							<div class="col-xs-3">
 								 <input type="number" data-ng-model="application.personal_info.emergency_contact.phone.work.number" id="eci_number" class="form-control" placeholder="Work Phone" required>
 								 </div>
-							<br>
+								 <br>
+								
 					</tr>
 						<tr>
 						<div class="form-group">
@@ -600,19 +646,19 @@
 						<br>
 							
 
-							<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.veteran_status.active_veteran" value="option1"> Check if you are a member or veteran of the U.S. military
+								<label class="checkbox-inline">
+									  <input type="checkbox" data-ng-model="application.personal_info.veteran_status.active_veteran" id="inlineCheckbox2"  value="option1"> Check if you are a member or veteran of the U.S. military
 									</label>
 
 							<br>
 								<label class="checkbox-inline">						  
-									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option2"> Check if you served on or after September , 2001
-								</label>
+									<input type="checkbox" data-ng-model="application.personal_info.veteran_status.post_sep11" id="inlineCheckbox2" value="option1"> Check if you served on or after September, 2001
+									</label>
 
 							<br>
 							
-							<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.veteran_status.eligible_va_benefits" value="option1"> Check if you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military
+								<label class="checkbox-inline">
+									  <input type="checkbox" data-ng-model="application.personal_info.veteran_status.eligible_va_benefits" id="inlineCheckbox2"  value="option1"> Check if you eligible to receive VA educational benefits as the spouse or dependent child of a veteran of the U.S. military
 									</label>
 					</tr>
 						<tr>
@@ -632,19 +678,20 @@
 						
 
 						<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_or_disciplined" value="option1"> Check if you have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.conduct_disclosure.charged_or_disciplined" value="option1"> Check if you have you ever been charged with or subject to disciplinary action for scholastic or any other type of misconduct at any educational institution
 									</label>
 						<br>
 						<br>
 
 						<p></p>
 									<label class="checkbox-inline">
-									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.conduct_disclosure.charged_law_violation" value="option1"> Check if you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?
+									  <input type="checkbox" id="inlineCheckbox1" data-ng-model="application.personal_info.conduct_disclosure.charged_law_violation" value="option1"> Check if you ever been charged with a violation of the law that resulted in, or if still pending, could result in probation, community service, a jail sentence or the revocation or suspension of your driver's license?
 									</label>
 					</table>
 					</td>
 				</tr>
 			</table>
+		</table>
 			</div>
 
 
@@ -812,7 +859,7 @@
 										</label>
 										<br>
 										<label class="checkbox-inline">
-										  <input type="checkbox" id="inlineCheckbox5" ng-model="application.special_programs_info.special_programs_application.check_following.joint_UF_degree"> 3/2 Program
+										  <input type="checkbox" id="inlineCheckbox5" ng-model="application.special_programs_info.special_programs_application.check_following.three_two_program"> 3/2 Program
 										</label>
 									</td>
 								</div>
@@ -907,6 +954,7 @@
 							</table>
 
 							</tr>
+
 							<tr>
 									<div class="form-group">
 									<td>
@@ -981,20 +1029,10 @@
 											<label class="control-label" for="name">Self Reported GPA Calculation:</label>
 										</td>
 										<td>
-											<p> Place the total amount of junior and senior-level semester or quarter hours earned for each letter grade into the appropriate box below and then click Calculate to compute your junior/senior undergraduate GPA. You should ONLY include courses attempted from the time that you earned 60 semester hours or 90 quarter hours through the awarding of your baccalaureate degree. </p>
-											<span>A </span> <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.A" placeholder="Text input">
-											A- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.A_minus" placeholder="Text input">
-											B+ <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B_plus" placeholder="Text input">
-											B <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B" placeholder="Text input">
-											B- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.B_minus" placeholder="Text input">
-											C+ <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.C_plus" placeholder="Text input">
-											C <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.C" placeholder="Text input">
-											C- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.C_minus" placeholder="Text input">
-											D+ <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.D_plus" placeholder="Text input">
-											D <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.D" placeholder="Text input">
-											D- <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.D_minus" placeholder="Text input">
-											F or I <input type="text-mini" ng-model="application.education_and_activities.self_reported_gpa.F" placeholder="Text input">
-											<button type="submit" class="btn">Calculate</button>
+											<p> Please enter your GPA from your junior/senior year. You should ONLY include courses attempted from the time that you earned 60 semester hours or 90 quarter hours through the awarding of your baccalaureate degree. </p>
+											<div class="col-xs-3">
+											<input type="text" class="form-control" id="exampleInputEmail2" data-ng-model="application.education_and_activities.self_reported_gpa.GPA" placeholder="GPA">
+										  </div>
 										</td>
 									</div>
 								</tr>
@@ -1240,12 +1278,22 @@
 								<div class="form-group">
 
 									<td>
-										<label class="control-label" for="name"> <p> Activity1 </p> (most recent) :</label>
+										<label class="control-label" for="name"> <p> Activity 1 </p> (most recent) :</label>
 									</td>
 									<td>
+										<div class="col-xs-3">
 										<input type="text" class="form-control" ng-model="application.education_and_activities.activities.activity" placeholder="Activity">
-										<input type="text" data-ng-model="application.education_and_activities.activities.city" placeholder="City"> 
-										Country: <country-select data-ng-model= "application.education_and_activities.activities.country"></country-select>
+										  </div>
+										  <br>
+										  <br>
+										  <br>
+										  <div class="col-xs-3">
+										<input type="text" class="form-control" data-ng-model="application.education_and_activities.activities.city" placeholder="City"> 
+										</div>
+										<br>
+										<br>
+										<br>
+
 												 <label class="control-label" for="address">State:</label>												 
 												 <select data-ng-model="application.education_and_activities.activities.state">
 												<option> </option>
@@ -1301,7 +1349,18 @@
 												<option>Wisconsin</option>
 												<option>Wyoming</option>
 											</select>
-										From Month: <select class="selectpicker" data-ng-model="application.education_and_activities.activities.from" placeholder = "January">
+
+											<br>
+											<br>
+
+											<strong>Country: </strong> <country-select data-ng-model= "application.education_and_activities.activities.country"></country-select>
+										
+
+											<br>
+											<br>
+
+											<strong>From Month: </strong><select class="selectpicker" data-ng-model="application.education_and_activities.activities.from" placeholder = "January">
+
 											<option>January</option>
 											<option>February</option>
 											<option>March</option>
@@ -1315,9 +1374,18 @@
 											<option>November</option>
 											<option>December</option>
 											</select> 
-										<input type="text-mini" data-ng-model="application.education_and_activities.activities.day1" placeholder="Day">
+											<br>
+											<br>
+
+										<div class="col-xs-3">
+										<input type="text" class="form-control" data-ng-model="application.education_and_activities.activities.day1" placeholder="Day">
+										</div>
+										
 										<br>
-										To Month: <select class="selectpicker" data-ng-model="application.education_and_activities.activities.to" placeholder = "January">
+										<br>
+										<br>
+
+										<strong>To Month: </strong> <select class="selectpicker" data-ng-model="application.education_and_activities.activities.to" placeholder = "January">
 											<option>January</option>
 											<option>February</option>
 											<option>March</option>
@@ -1331,7 +1399,11 @@
 											<option>November</option>
 											<option>December</option>
 											</select>
-											<input type="text-mini" data-ng-model="application.education_and_activities.activities.day2" placeholder="Day">
+											<br>
+											<br>
+										<div class="col-xs-3">
+										<input type="text" class="form-control" data-ng-model="application.education_and_activities.activities.day2" placeholder="Day">
+										</div>
 											</td>
 								</div>
 								</tr>
@@ -1389,7 +1461,7 @@
 						<tr>
 							<td>
 							<table class="table table-bordered">
-					
+					<td>
 						<br>		
 
 						<p><strong> If you are not eligible for any of the Florida residency categories listed below, click Save to continue to the Non-Florida resident certification page.</strong>
@@ -1405,7 +1477,8 @@
 
 						<p><strong> Living in or attending school in Florida will not, in itself, establish legal residence. Students who depend on out-of-state parents for support are presumed to be 	legal residents of the same state as their parents. </strong> Residence for tuition purposes requires the establishment of legal ties to the state of Florida. Students must 	 verify that they have broken ties to other states if the student or, in the case of dependent students, his or her parent, has moved from another state. 
 
-						</p>	
+						</p>
+						</td>	
 						</table>
 						<table class="table">	
 						<td>

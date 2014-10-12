@@ -35,30 +35,19 @@ var ApplicationSchema = new Schema({
 			default: false
 		},
         ssn: {
-			type: Number,
+			type: Number
 		},
         ufid: {
 			type: Number,
 		},
         previous_application: {
-			yes: { 
-				type: Boolean,
-				default: false
-			},
-			no: {
-				type: Boolean,
-				default: false
-			}
+			type: Boolean,
+			default: false
 		},
         previous_attendance: {
-			yes: { 
-				type: Boolean,
-				default: false
-			},
-			no: {
-				type: Boolean,
-				default: false
-			}
+			type: Boolean,
+			default: false
+
 		},
 		application_started: {
 			type: Boolean,
@@ -125,31 +114,28 @@ var ApplicationSchema = new Schema({
                 number: {
 					type: Number
 				},
-                us: {
+                call: {
 					type: String,
 					default: ''
 				},
-				intl: {
-					type: String,
-					default: ''
-				},
+			
             },
             work: {
                 number: {
 					type: Number,
 				},
-                us: {
-					type: Boolean,
-					default: false
+                call: {
+					type: String,
+					default: ''
 				},
             },
             cell: {
                 number: {
 					type: Number
 				},
-                us: {
-					type: Boolean,
-					default: false
+                call: {
+					type: String,
+					default: ''
 				},
             }
         },
@@ -200,41 +186,26 @@ var ApplicationSchema = new Schema({
             phone: {
                 personal: {
                     number: Number,
-                    us: {
-						type: Boolean,
-						default: false
+                    us: String,
+                    intl: String
 					},
-					intl: {
-						type: Boolean,
-						default: false
-					},
-                },
+					
                 work: {
                     number: Number,
-                    us: {
-						type: Boolean,
-						default: false
+                    us: String,
+                    intl: String
 					},
-					intl: {
-						type: Boolean,
-						default: false
-					}
-                },
+
                 cell: {
                     number: Number,
-                    us: {
-						type: Boolean,
-						default: false
-					},
-					intl: {
-						type: Boolean,
-						default: false
-					}
+                    us: String,
+                    intl: String
                 }
             }
         },
         veteran_status: {
-            active_veteran_: Boolean,
+
+            active_veteran: Boolean,
             post_sep11: Boolean,
             eligible_va_benefits: Boolean
         },
@@ -332,8 +303,13 @@ var ApplicationSchema = new Schema({
 				default: ''
 			}
         },
-        colleges: [ String ], /* opening another link*/ 
         self_reported_gpa: {
+
+        	GPA: {
+
+        		type: Number,
+        		default: 0
+        	},
 			A: {
 				type: Number,
 				default: 0

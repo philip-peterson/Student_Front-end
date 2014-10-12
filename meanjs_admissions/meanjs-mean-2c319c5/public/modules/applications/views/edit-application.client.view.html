@@ -77,6 +77,7 @@
 
 										<label class="control-label"  for="name">Suffix:</label>
 										<select class="select" data-ng-model="application.personal_info.name.suffix" placeholder = "None">
+											<option> </option>
 											<option>None</option>
 											<option>Jr.</option>
 											<option>Sr.</option>
@@ -155,6 +156,7 @@
 
 									<label class="control-label" for="name" value = "January" >Month:</label>
 										<select class="selectpicker" data-ng-model="application.personal_info.bd.month" placeholder = "January">
+											<option> </option>
 											<option>January</option>
 											<option>February</option>
 											<option>March</option>
@@ -171,6 +173,7 @@
 
 									 <label class="control-label" for="name">Day:</label>
 										<select class="selectpicker" data-ng-model="application.personal_info.bd.day" placeholder = "1">
+											<option> </option>
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
@@ -517,6 +520,7 @@
 								<br>
 									<label class="control-label"  for="eci">Relationship:</label>
 						        <select class="selectpicker" data-ng-model= "application.personal_info.emergency_contact.name.relationship">
+						        	<option> </option>
 						         <option>Other</option>
 						         <option>Mother</option>
 						            <option>Father</option>
@@ -712,9 +716,9 @@
 									<td>
 									 <div class="controls">
 										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.famu_feeder">
+											<option> </option>
 										  <option>Applied for funding</option>
 										  <option>Funding approved</option>
-										  <option></option>
 										</select>
 										</div>
 									</td>
@@ -728,9 +732,9 @@
 									<td>
 										<div class="controls">
 										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.fullbright_scholar">
+											<option></option>
 										  <option>Applied for funding</option>
 										  <option>Funding approved</option>
-										  <option></option>
 										</select>
 										</div>
 									</td>
@@ -744,11 +748,11 @@
 										<td>
 											<div class="controls">
 										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.please_identify_program">
+										  <option></option>
 										  <option>IIE</option>
 										  <option>LASPAU</option>
 										  <option>AMIDEAST</option>
 										  <option>KOMMISSION</option>
-										  <option></option>
 										</select>
 										</div>
 										</td>
@@ -764,9 +768,9 @@
 									<td>
 										<div class="controls">
 										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.mcnair_scholar">
+										  <option></option>
 										  <option>Applied for funding</option>
 										  <option>Funding approved</option>
-										  <option></option>
 										</select>
 										</div>
 									</td>
@@ -780,9 +784,9 @@
 									<td>
 										<div class="controls">
 										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.mcknight_scholar">
+											<option></option>
 										  <option>Applied for funding</option>
 										  <option>Funding approved</option>
-										  <option></option>
 										</select>
 										</div>
 									</td>
@@ -812,9 +816,9 @@
 									<td>
 										<div class="controls">
 										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.national_institutes_of_health_fellowship">
+										  <option></option>
 										  <option>Applied for funding</option>
 										  <option>Funding approved</option>
-										  <option></option>
 										</select>
 										</div>
 									</td>
@@ -827,9 +831,9 @@
 									</td>
 									<td>
 										<select class="form-control" data-ng-model="application.special_programs_info.special_programs_application.other.scholarship">
+											<option></option>
 										  <option>Applied for funding</option>
 										  <option>Funding approved</option>
-										  <option></option>
 										</select>
 										<br><br>
 										 <input type="text" id="name" class="form-control"  data-ng-model="application.special_programs_info.special_programs_application.other.explain" placeholder="Please Explain" required>
@@ -908,6 +912,7 @@
 
 						<div class="controls">
 						Inteded term and year:	<select class="form-control" data-ng-model="application.degree_programs.primary_program.intended_year_and_term">
+							<option></option>
 							<OPTION>Summer A/C (May) 2014</option>
 							<OPTION>Summer B (June) 2014 </option>
 							<OPTION>Fall (August) 2014</option>
@@ -921,6 +926,7 @@
 
 						<div class="controls">
 						Degree Goal:	<select class="form-control" data-ng-model="application.degree_programs.primary_program.degree_goal">
+							<option></option>
 							<OPTION>Master's</option>
 							<OPTION>Specialist</option>
 							<OPTION>PhD</option>
@@ -1360,7 +1366,7 @@
 											<br>
 
 											<strong>From Month: </strong><select class="selectpicker" data-ng-model="application.education_and_activities.activities.from" placeholder = "January">
-
+											<option></option>
 											<option>January</option>
 											<option>February</option>
 											<option>March</option>
@@ -1386,6 +1392,7 @@
 										<br>
 
 										<strong>To Month: </strong> <select class="selectpicker" data-ng-model="application.education_and_activities.activities.to" placeholder = "January">
+											<option></option>
 											<option>January</option>
 											<option>February</option>
 											<option>March</option>

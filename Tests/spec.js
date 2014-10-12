@@ -27,16 +27,22 @@ var Application_edit = function() {
   };
   this.click_tab = function(tab) {
     switch(tab){
-		case 1: element(by.id('tab1')).click(); break;
-		case 2: element(by.id('tab2')).click(); break;
-		case 3: element(by.id('tab3')).click(); break;
-		case 4: element(by.id('tab4')).click(); break;
-	}
+  		case 1: element(by.id('tab1')).click(); break;
+  		case 2: element(by.id('tab2')).click(); break;
+  		case 3: element(by.id('tab3')).click(); break;
+  		case 4: element(by.id('tab4')).click(); break;
+  	}
   };
+  this.getRandomNumber = function (numberLength) {
+    var randomNumber = "";
+    var possible = "123456789";
+    for (var i = 0; i < numberLength; i++)
+        randomNumber += possible.charAt(Math.floor(Math.random() * possible.length));
+    return randomNumber;
+};
   this.refresh = function(tab) {
     this.get();
 	this.click_tab(tab);
-	
   };
   this.update_dropdown = function(tab,form,value) {
 	this.click_tab(tab);
@@ -69,17 +75,86 @@ var Application_edit = function() {
 	}
 };
 	this.update_block = function() {
-	this.click_tab(2);
-	var elm = element(by.model('application.special_programs_info.special_programs_application.famu_feeder'));
-	elm.element(by.cssContainingText('option', 'Applied for funding')).click();
-	elm = element(by.model('application.special_programs_info.special_programs_application.fullbright_scholar'));
-	elm.element(by.cssContainingText('option', 'Applied for funding')).click();
-	this.updatebtn.click();
-	this.refresh(2);
-	elm = element(by.model('application.special_programs_info.special_programs_application.famu_feeder'));
-	expect(elm.getAttribute('value')).toBe('Applied for funding');
-	elm = element(by.model('application.special_programs_info.special_programs_application.fullbright_scholar'));
-	expect(elm.getAttribute('value')).toBe('Applied for funding');
+  	this.click_tab(4);
+    var elm = element(by.model('application.education_and_activities.undergraduate.major'));
+    elm.element(by.cssContainingText('option', 'Computer Science Engineering')).click();
+    elm = element(by.model('application.education_and_activities.undergraduate.specialization'));
+    elm.clear();
+    elm.sendKeys('Software Development');
+  	elm = element(by.model('application.education_and_activities.test_scores.gre.taken'));
+  	elm.click();
+  	elm = element(by.model('application.education_and_activities.test_scores.gre.date'));
+  	elm.clear();
+    elm.sendKeys('15-October-2014');
+    elm = element(by.model('application.education_and_activities.test_scores.gre.verbal'));
+    elm.clear();
+    var num1 = this.getRandomNumber(3);
+    elm.sendKeys(num1);
+    elm = element(by.model('application.education_and_activities.test_scores.gre.quantitative'));
+    elm.clear();
+    var num2 = this.getRandomNumber(3);
+    elm.sendKeys(num2);
+    elm = element(by.model('application.education_and_activities.test_scores.gre.analytical_writing'));
+    elm.clear();
+    var num3 = this.getRandomNumber(3);
+    elm.sendKeys(num3);
+    elm = element(by.model('application.education_and_activities.test_scores.gre.total'));
+    elm.clear();
+    var num4 = this.getRandomNumber(3);
+    elm.sendKeys(num4);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.taken'));
+    elm.click();
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.date'));
+    elm.clear();
+    elm.sendKeys('10-December-2000');
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.verbal'));
+    elm.clear();
+    var num5 = this.getRandomNumber(3);
+    elm.sendKeys(num5);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.quantitative'));
+    elm.clear();
+    var num6 = this.getRandomNumber(3);
+    elm.sendKeys(num6);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.integrated_reasoning'));
+    elm.clear();
+    var num7 = this.getRandomNumber(3);
+    elm.sendKeys(num7);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.analytical_writing'));
+    elm.clear();
+    var num8 = this.getRandomNumber(3);
+    elm.sendKeys(num8);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.total'));
+    elm.clear();
+    var num9 = this.getRandomNumber(3);
+    elm.sendKeys(num9);
+  	this.updatebtn.click();
+  	this.refresh(4);
+  	elm = element(by.model('application.education_and_activities.undergraduate.major'));
+  	expect(elm.getAttribute('value')).toBe('Computer Science Engineering');
+    elm = element(by.model('application.education_and_activities.undergraduate.specialization'));
+    expect(elm.getAttribute('value')).toBe('Software Development');
+  	elm = element(by.model('application.education_and_activities.test_scores.gre.date'));
+  	expect(elm.getAttribute('value')).toBe('15-October-2014');
+    elm = element(by.model('application.education_and_activities.test_scores.gre.verbal'));
+    expect(elm.getAttribute('value')).toBe(num1);
+    elm = element(by.model('application.education_and_activities.test_scores.gre.quantitative'));
+    expect(elm.getAttribute('value')).toBe(num2);
+    elm = element(by.model('application.education_and_activities.test_scores.gre.analytical_writing'));
+    expect(elm.getAttribute('value')).toBe(num3);
+    elm = element(by.model('application.education_and_activities.test_scores.gre.total'));
+    expect(elm.getAttribute('value')).toBe(num4);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.date'));
+    expect(elm.getAttribute('value')).toBe('10-December-2000');
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.verbal'));
+    expect(elm.getAttribute('value')).toBe(num5);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.quantitative'));
+    expect(elm.getAttribute('value')).toBe(num6);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.integrated_reasoning'));
+    expect(elm.getAttribute('value')).toBe(num7);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.analytical_writing'));
+    expect(elm.getAttribute('value')).toBe(num8);
+    elm = element(by.model('application.education_and_activities.test_scores.gmat.total'));
+    expect(elm.getAttribute('value')).toBe(num9);
   };
 };
 
@@ -96,31 +171,19 @@ describe('Main', function() {
     });
 	
 	var signin_page = new Signin_page();
-	signin_page.login('test','testtest','test test');
-	
-	
-	
+	signin_page.login('test','testtest','test test');	
+  });
+
+  it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get(); 
+  app_edit.update_block();
   });
 
 
   it('should update the application', function() {
-<<<<<<< HEAD
 	var app_edit = new Application_edit();
-	app_edit.get();
-  //Luke test one dropdown for each tab
-  //app_edit.update_check(4,'application.education_and_activities.test_scores.gre.taken',1);
-  //app_edit.update_text(4,'application.education_and_activities.test_scores.gre.date','15-October-2014');
-  // app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','We are clever.');
-  // app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
-  // app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-  // app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
-  // app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); 
-  app_edit.update_block();
-=======
-  var app_edit = new Application_edit();
   app_edit.get();
-  //Luke test first tab
-  
   app_edit.update_text(1,'application.personal_info.name.first','James');
   app_edit.update_text(1,'application.personal_info.name.middle','Edward');
   app_edit.update_text(1,'application.personal_info.name.last','Franco');
@@ -207,7 +270,6 @@ it('should update the application', function() {
   //program of study here
   app_edit.update_text(3,'application.degree_programs.primary_program.program_specialization','Quantum Computing');
   app_edit.update_text(3,'application.degree_programs.primary_program.department_contact','Andrew Ryan');
->>>>>>> origin/master
   });
   
   it('should update the application', function() {
@@ -242,5 +304,4 @@ it('should update the application', function() {
   //state test here
   //app_edit.update_text(4,'application.education_and_activities.activities.from','5');
   });
-
 });

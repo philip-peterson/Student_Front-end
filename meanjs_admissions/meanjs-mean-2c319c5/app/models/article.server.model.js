@@ -23,7 +23,8 @@ var ArticleSchema = new Schema({
 	content: {
 		type: String,
 		default: '',
-		trim: true
+		trim: true,
+		required: 'Title cannot be blank'
 	},
 	code: {
 		type: Number,

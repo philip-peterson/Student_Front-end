@@ -31,6 +31,8 @@ var Application_edit = function() {
 		case 2: element(by.id('tab2')).click(); break;
 		case 3: element(by.id('tab3')).click(); break;
 		case 4: element(by.id('tab4')).click(); break;
+    case 5: element(by.id('tab5')).click(); break;
+
 	}
   };
   this.refresh = function(tab) {
@@ -103,9 +105,11 @@ describe('Main', function() {
   });
 
 
+
+
   it('should update the application', function() {
-	var app_edit = new Application_edit();
-	app_edit.get();
+  var app_edit = new Application_edit();
+  app_edit.get();
   //Luke test one dropdown for each tab
   //app_edit.update_check(4,'application.education_and_activities.test_scores.gre.taken',1);
   //app_edit.update_text(4,'application.education_and_activities.test_scores.gre.date','15-October-2014');
@@ -176,8 +180,8 @@ app_edit.update_text(1,'application.personal_info.emergency_contact.address.city
 
   
   it('should update the application', function() {
-	var app_edit = new Application_edit();
-	app_edit.get();
+  var app_edit = new Application_edit();
+  app_edit.get();
   //Luke test second tab
   app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
   app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.fullbright_scholar','Funding approved');
@@ -189,8 +193,8 @@ app_edit.update_text(1,'application.personal_info.emergency_contact.address.city
   });
 
 it('should update the application', function() {
-	var app_edit = new Application_edit();
-	app_edit.get();
+  var app_edit = new Application_edit();
+  app_edit.get();
   //Luke test second tab
   app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.other.scholarship','Funding approved');
   app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','Would you kindly.');
@@ -238,6 +242,108 @@ it('should update the application', function() {
   //app_edit.update_text(4,'application.education_and_activities.activities.country','United States');
   //state test here
   //app_edit.update_text(4,'application.education_and_activities.activities.from','5');
+  });
+
+
+  
+
+it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get();
+  //Omeed test first tab
+  app_edit.update_check(1,'application.personal_info.has_ssn',1);
+  app_edit.update_check(1,'application.personal_info.previous_application',1);
+  app_edit.update_check(1,'application.personal_info.previous_attendance',1);
+  app_edit.update_check(1,'application.personal_info.ethnicity.hispanic',1);
+  app_edit.update_check(1,'application.personal_info.ethnicity.american_indian',1);
+  app_edit.update_check(1,'application.personal_info.ethnicity.asian',1);
+  app_edit.update_check(1,'application.personal_info.ethnicity.black',1);
+
+
+
+  });
+
+it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get();
+  //Omeed test first tab continued
+
+  app_edit.update_check(1,'application.personal_info.ethnicity.pacific_islander',1);
+  app_edit.update_check(1,'application.personal_info.ethnicity.white',1);
+  app_edit.update_check(1,'application.personal_info.veteran_status.active_veteran',1);
+  app_edit.update_check(1,'application.personal_info.veteran_status.post_sep11',1);
+  app_edit.update_check(1,'application.personal_info.veteran_status.eligible_va_benefits',1);
+  app_edit.update_check(1,'application.personal_info.conduct_disclosure.charged_or_disciplined',1);
+  app_edit.update_check(1,'application.personal_info.conduct_disclosure.charged_law_violation',1);
+  });
+
+
+
+it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get();
+  //Omeed test second tab 
+
+  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',1);
+  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.distance_learning',1);
+  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.fellowship',1);
+  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.joint_UF_degree',1);
+  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.three_two_program',1);
+
+  });
+
+
+
+it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get();
+  //Omeed test fifth tab p1 
+
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.A',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.B',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.C',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.D',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.E',1);
+
+  });
+
+
+it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get();
+  //Omeed test fifth tab p2 
+
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.F',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.G',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.H',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.I',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.J',1);
+
+  });*/
+
+it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get();
+  //Omeed test fifth tab p3 
+
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.K',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.L',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.M',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.N',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.O',1);
+
+  });
+
+it('should update the application', function() {
+  var app_edit = new Application_edit();
+  app_edit.get();
+  //Omeed test fifth tab p4 
+
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.P',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.Q',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.R',1);
+  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.S',1);
+
   });
 
 });

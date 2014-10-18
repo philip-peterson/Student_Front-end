@@ -252,13 +252,14 @@ for(j = 0; j < user1.length; j+=6){
   //app_edit.update_block();
  /* var app_edit = new Application_edit();
   app_edit.get();
+
   app_edit.update_text(1,'application.personal_info.name.first','James');
-  app_edit.update_text(1,'application.personal_info.name.middle','Edward');
-  app_edit.update_text(1,'application.personal_info.name.last','Franco');
+  //app_edit.update_text(1,'application.personal_info.name.middle','Edward');
+  //app_edit.update_text(1,'application.personal_info.name.last','Franco');
   app_edit.update_dropdown(1,'application.personal_info.name.suffix','IV');
-  app_edit.update_text(1,'application.personal_info.ssn','374186987');
-  app_edit.update_text(1,'application.personal_info.ufid','57416952');
-  app_edit.update_dropdown(1,'application.personal_info.bd.month','April');
+  //app_edit.update_text(1,'application.personal_info.ssn','374186987');
+  //app_edit.update_text(1,'application.personal_info.ufid','57416952');
+  //app_edit.update_dropdown(1,'application.personal_info.bd.month','April');
   //app_edit.update_dropdown(1,'application.personal_info.bd.day','19');
   app_edit.update_text(1,'application.personal_info.bd.year','1978');*/
 
@@ -313,19 +314,19 @@ app_edit.update_text(1,'application.personal_info.emergency_contact.address.city
   app_edit.get();
   //Luke test second tab
   app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.famu_feeder','Applied for funding');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.fullbright_scholar','Funding approved');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.please_identify_program','IIE');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.mcnair_scholar','Funding approved');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.mcknight_scholar','Funding approved');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.national_science_foundation_fellowship','Funding approved');
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.national_institutes_of_health_fellowship','Funding approved');
+  //app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.fullbright_scholar','Funding approved');
+ // app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.please_identify_program','IIE');
+ // app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.mcnair_scholar','Funding approved');
+ // app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.mcknight_scholar','Funding approved');
+ // app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.national_science_foundation_fellowship','Funding approved');
+ // app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.national_institutes_of_health_fellowship','Funding approved');
   });
 
 it('should update the application', function() {
   var app_edit = new Application_edit();
   app_edit.get();
   //Luke test second tab
-  app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.other.scholarship','Funding approved');
+  //app_edit.update_dropdown(2,'application.special_programs_info.special_programs_application.other.scholarship','Funding approved');
   app_edit.update_text(2,'application.special_programs_info.special_programs_application.other.explain','Would you kindly.');
   });
   
@@ -334,10 +335,10 @@ it('should update the application', function() {
   app_edit.get();
   //Luke test third tab
   app_edit.update_dropdown(3,'application.degree_programs.primary_program.intended_year_and_term','Fall (August) 2014');
-  app_edit.update_dropdown(3,'application.degree_programs.primary_program.degree_goal','PhD');
+ // app_edit.update_dropdown(3,'application.degree_programs.primary_program.degree_goal','PhD');
   //program of study here
   app_edit.update_text(3,'application.degree_programs.primary_program.program_specialization','Quantum Computing');
-  app_edit.update_text(3,'application.degree_programs.primary_program.department_contact','Andrew Ryan');
+  //app_edit.update_text(3,'application.degree_programs.primary_program.department_contact','Andrew Ryan');
   });
   
   it('should update the application', function() {
@@ -346,12 +347,12 @@ it('should update the application', function() {
   //Luke test fourth tab
   app_edit.update_dropdown(4,'application.education_and_activities.undergraduate.major','Computer Engineering'); 
   app_edit.update_text(4,'application.education_and_activities.undergraduate.specialization','Yup');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.A','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.A_minus','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.B_plus','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.B','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.B_minus','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.C_plus','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.A','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.A_minus','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.B_plus','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.B','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.B_minus','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.C_plus','2');
 
   });
 
@@ -359,12 +360,12 @@ it('should update the application', function() {
   var app_edit = new Application_edit();
   app_edit.get();
   //Luke test fourth tab
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.C','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.C_minus','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.D_plus','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.D','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.D_minus','2');
-  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.F','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.C','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.C_minus','2');
+ // app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.D_plus','2');
+//  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.D','2');
+//  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.D_minus','2');
+//  app_edit.update_text(4,'application.education_and_activities.self_reported_gpa.F','2');
   //Dale fix your code so I can test
   //app_edit.update_text(4,'application.education_and_activities.activities.activity','Gambling');
 // app_edit.update_text(4,'application.education_and_activities.activities.city','Gainesville');
@@ -381,12 +382,12 @@ it('should update the application', function() {
   app_edit.get();
   //Omeed test first tab
   app_edit.update_check(1,'application.personal_info.has_ssn',1);
-  app_edit.update_check(1,'application.personal_info.previous_application',1);
-  app_edit.update_check(1,'application.personal_info.previous_attendance',1);
-  app_edit.update_check(1,'application.personal_info.ethnicity.hispanic',1);
-  app_edit.update_check(1,'application.personal_info.ethnicity.american_indian',1);
-  app_edit.update_check(1,'application.personal_info.ethnicity.asian',1);
-  app_edit.update_check(1,'application.personal_info.ethnicity.black',1);
+  //app_edit.update_check(1,'application.personal_info.previous_application',1);
+ // app_edit.update_check(1,'application.personal_info.previous_attendance',1);
+ // app_edit.update_check(1,'application.personal_info.ethnicity.hispanic',1);
+ // app_edit.update_check(1,'application.personal_info.ethnicity.american_indian',1);
+ // app_edit.update_check(1,'application.personal_info.ethnicity.asian',1);
+ // app_edit.update_check(1,'application.personal_info.ethnicity.black',1);
 
 
 
@@ -414,10 +415,10 @@ it('should update the application', function() {
   //Omeed test second tab 
 
   app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.assistantship',1);
-  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.distance_learning',1);
-  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.fellowship',1);
-  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.joint_UF_degree',1);
-  app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.three_two_program',1);
+ // app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.distance_learning',1);
+ // app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.fellowship',1);
+ // app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.joint_UF_degree',1);
+ // app_edit.update_check(2,'application.special_programs_info.special_programs_application.check_following.three_two_program',1);
 
   });
 
@@ -429,14 +430,14 @@ it('should update the application', function() {
   //Omeed test fifth tab p1 
 
   app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.A',1);
-  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.B',1);
-  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.C',1);
-  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.D',1);
-  app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.E',1);
+ // app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.B',1);
+ // app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.C',1);
+ // app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.D',1);
+ // app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.E',1);
 
   });
 
-
+/*
 it('should update the application', function() {
   var app_edit = new Application_edit();
   app_edit.get();
@@ -474,5 +475,6 @@ it('should update the application', function() {
   app_edit.update_check(5,'application.residency_affadivit.florida_residence_categories.S',1);
 
   });
-  */
+*/
+
 });

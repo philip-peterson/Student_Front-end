@@ -561,7 +561,7 @@ var ApplicationSchema = new Schema({
     user: {
         type: Schema.ObjectId,
         ref: 'User'
-    }
+    },
     //Planning on using the $set operator with db.collection.update() command for these -Josh
     completion: {
     	filled: {			//No Booleans will have an associated filled Boolean

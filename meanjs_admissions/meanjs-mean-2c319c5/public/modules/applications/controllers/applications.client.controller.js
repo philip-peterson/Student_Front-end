@@ -2,7 +2,7 @@
 
 // Applications controller
 angular.module('applications').controller('ApplicationsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Applications',
-	function($scope, $stateParams, $location, Authentication, Applications ) {
+	function($scope, $stateParams, $location, Authentication, Applications) {
 		$scope.authentication = Authentication;
 
 		// Create new Application

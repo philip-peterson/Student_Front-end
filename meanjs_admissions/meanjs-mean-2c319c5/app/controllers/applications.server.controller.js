@@ -98,7 +98,7 @@ exports.applicationByID = function(req, res, next, id) { Application.findById(id
  * Application authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-	if (req.application.user.id !== req.user.id) {
+	if (req.application.user.id !== req.user.id && req.user.roles[0] !== 'admin') { //The admin check here is temporary. Reimplmenet at a later date.
 		return res.status(403).send('User is not authorized');
 	}
 	next();

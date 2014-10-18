@@ -6,10 +6,10 @@
 				Graduate Admissions: The Student Edition
 			</p>
 		</div>
-		<div class="row" data-ng-show="authentication.user">
+		<div class="row" data-ng-show="authentication.user.roles == 'user'">
 			<section  data-ng-controller="ApplicationsController" data-ng-init="find()">
-			<div data-ng-repeat="application in applications" data-ng-show="authentication.user._id == application.user._id">
-				<a class="btn btn-primary btn-lg" href="/#!/applications/{{application._id}}/edit">Your Application</a>
+			<div data-ng-repeat="application in applications | filter:authentication.user._id" data-ng-show="authentication.user._id == application.user._id">
+				<a class="btn btn-primary btn-lg" id = "bt2" href="/#!/applications/{{application._id}}/edit">Your Application</a>
 			</div>
 			</section>
 		</div>
@@ -18,5 +18,35 @@
 				<a class="btn btn-primary btn-lg" id = "bt1" href="/#!/signin">Apply now</a>
 			</p>
 		</div>
+		<div class="row" data-ng-show="authentication.user.roles == 'admin'">
+			<label class="control-label">Search:</label><input class="form-control" ng-model="searchText" />
+			<label class="control-label">Sort by:</label>
+			<select class="form-control" ng-model="queryBy">
+		                    <option value="$"></option>
+		                    <option value="personal_info.name.last">Last Name</option>
+		                    <option value="personal_info.ufid">UFID</option>
+		                    <option value="created">date</option>
+		     </select> 		  
+		</div>
 	</div>
+	<div class="row" data-ng-show="authentication.user.roles == 'admin'">
+			<section  data-ng-controller="ApplicationsController" data-ng-init="find()">
+		     <table class="table">
+		     	<tr>
+					<td>First Name:</td>
+					<td>Last Name:</td>
+					<td>UFID:</td>
+					<td>Date Created:</td>
+					<td>Edit:</td>
+				</tr>
+				<tr data-ng-repeat="application in applications | filter:searchText:strict | limitTo:10 | orderBy:queryBy">
+					<td><span data-ng-bind="application.personal_info.name.first"></span></td>
+					<td><span data-ng-bind="application.personal_info.name.last"></span></td>
+					<td><span data-ng-bind="application.personal_info.ufid"></span></td>
+					<td><span data-ng-bind="application.created | date:'mediumDate'"></span></td>
+					<td><a class="btn btn-primary" href="/#!/applications/{{application._id}}/edit">Edit</a></td>
+				</tr>
+		     </table>
+		     </section>	     
+		</div>
 </section>

@@ -1,0 +1,15 @@
+To make a new Admin:
+
+1. Open: Student_Front-end\meanjs_admissions\meanjs-mean-2c319c5\app\models\user.server.model.js
+2. search for the following fragment(currently lines 71-77):
+	roles: {
+		type: [{
+			type: String,
+			enum: ['user', 'admin']
+		}],
+		default: ['user']
+	},
+3. Change "default: ['user']" to "default: ['admin']"
+4. Make a new user. This user will be an admin.
+5. Change "default: ['admin']" back to "default: ['user']" *************
+IF YOU SKIP #5 ALL NEW USERS HENCEFORTH SHALL BE ADMINS!!!

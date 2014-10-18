@@ -25,7 +25,7 @@ module.exports = {
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/angularjs-country-select/angular.country-select.js',
-				'public/lib/angular-ui-select/dist/select.min.js',
+				'public/lib/angular-ui-select/dist/select.min.js'
 			]
 		},
 		css: [

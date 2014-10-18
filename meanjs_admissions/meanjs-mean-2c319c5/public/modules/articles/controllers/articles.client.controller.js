@@ -3,7 +3,8 @@
 angular.module('articles').controller('ArticlesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Articles',
 	function($scope, $stateParams, $location, Authentication, Articles) {
 		$scope.authentication = Authentication;
-
+		 $scope.query = {};
+		 $scope.queryBy = '$';
 		$scope.create = function() {
 			var article = new Articles({
 				title: this.title,

@@ -569,19 +569,19 @@ var ApplicationSchema = new Schema({
     //Planning on using the $set operator with db.collection.update() command for these -Josh
     completion: {
     	filled: {				//No Booleans will have an associated filled Boolean
-    		f_name: Boolean,	//Some have an _ALL to simplify/speed some checks
+    		f_name: Boolean,	//Some info-sets have an _ALL to simplify/speed some checks
     		m_name: Boolean,	//Some boolean-sets have an _ANY for optional-but-suggested sections
     		l_name: Boolean,
-    		s_ffix: Boolean,
+    		suffix: Boolean,
     		o_name: Boolean,
-    		ssn_f: Boolean,
-    		uf_id: Boolean,
+    		ssn: Boolean,
+    		ufid: Boolean,
     		b_month: Boolean,
     		b_day: Boolean,
     		b_year: Boolean,
     		b_day_ALL: Boolean,
-    		gend: Boolean,
-    		natnlity: Boolean,
+    		gender: Boolean,
+    		nationality: Boolean,
     		email_addr: Boolean,
     		pers_phone: Boolean,
     		work_phone: Boolean,
@@ -615,6 +615,7 @@ var ApplicationSchema = new Schema({
     		e_phone_pers: Boolean,
     		e_phone_work: Boolean,
     		e_phone_cell: Boolean,
+    		e_phone_ANY: Boolean,
     		e_contact_ALL: Boolean,
     		scholar_famu: Boolean,
     		scholar_fullbright: Boolean,
@@ -694,53 +695,56 @@ var ApplicationSchema = new Schema({
     		sub_trnscr: Boolean,
     		resident_aff_ANY: Boolean
     	},
-    	complete: {
-    		f_name: Boolean,
-    		m_name: Boolean,
+    	complete: {		//for percentage completion, favor _ALL over individuals
+    		f_name: Boolean,		//anything with CHECK is used in percentage completion
+    		m_name: Boolean,		//some bools exist only in filled{} like residency, as it is always "complete"
     		l_name: Boolean,
-    		s_ffix: Boolean,
+    		suffix: Boolean,
     		o_name: Boolean,
-    		ssn_f: Boolean,
-    		uf_id: Boolean,
+    		name_req: Boolean,				//CHECK
+    		ssn: Boolean,
+    		ufid: Boolean,					//OPTIONAL CHECK
     		b_month: Boolean,
     		b_day: Boolean,
     		b_year: Boolean,
-    		b_day_ALL: Boolean,
-    		gend: Boolean,
-    		natnlity: Boolean,
-    		email_addr: Boolean,
+    		b_day_ALL: Boolean,				//CHECK
+    		gender: Boolean,				//CHECK
+    		nationality: Boolean,			//CHECK
+    		email_addr: Boolean,			//CHECK
     		pers_phone: Boolean,
     		work_phone: Boolean,
     		cell_phone: Boolean,
-    		phone_ANY: Boolean,
+    		phone_ANY: Boolean,				//CHECK
     		perm_addr_str: Boolean,
     		perm_addr_cit: Boolean,
     		perm_addr_sta: Boolean,
     		perm_addr_cnt: Boolean,
     		perm_addr_zip: Boolean,
-    		perm_addr_ALL: Boolean,
+    		perm_addr_ALL: Boolean,			//CHECK
     		curr_addr_str: Boolean,
     		curr_addr_cit: Boolean,
     		curr_addr_sta: Boolean,
     		curr_addr_cnt: Boolean,
     		curr_addr_zip: Boolean,
     		curr_addr_val: Boolean,
-    		curr_addr_ALL: Boolean,
+    		curr_addr_ALL: Boolean,			//CHECK
     		e_f_name: Boolean,
     		e_m_name: Boolean,
     		e_l_name: Boolean,
     		e_suffix: Boolean,
     		e_o_name: Boolean,
     		e_relate: Boolean,
+    		e_name_req: Boolean,			//CHECK
     		e_addr_str: Boolean,
     		e_addr_cit: Boolean,
     		e_addr_sta: Boolean,
     		e_addr_cnt: Boolean,
     		e_addr_zip: Boolean,
-    		e_addr_ALL: Boolean,
+    		e_addr_ALL: Boolean,			//CHECK
     		e_phone_pers: Boolean,
     		e_phone_work: Boolean,
     		e_phone_cell: Boolean,
+    		e_phone_ANY: Boolean,			//CHECK
     		e_contact_ALL: Boolean,
     		scholar_famu: Boolean,
     		scholar_fullbright: Boolean,
@@ -751,7 +755,7 @@ var ApplicationSchema = new Schema({
     		scholar_natl_hlth: Boolean,
     		scholar_other_schol: Boolean,
     		scholar_other_expln: Boolean,
-    		scholar_ANY: Boolean,
+    		scholar_ANY: Boolean,			//OPTIONAL CHECK
     		supporting_doc: Boolean,
     		degree_prog_term: Boolean,
     		degree_prog_goal: Boolean,
@@ -759,29 +763,29 @@ var ApplicationSchema = new Schema({
     		degree_prog_special: Boolean,
     		degree_prog_contact: Boolean,
     		degree_prog_purpose: Boolean,
-    		degree_prog_ALL: Boolean,
-    		ugrad_major: Boolean,
+    		degree_prog_ALL: Boolean,		//CHECK
+    		ugrad_major: Boolean,			//CHECK
     		ugrad_special: Boolean,
-    		gpa_calculated: Boolean,
+    		gpa_calculated: Boolean,		//CHECK
     		test_gre_date: Boolean,
     		test_gre_verb: Boolean,
     		test_gre_qunt: Boolean,
     		test_gre_anal: Boolean,
     		test_gre_totl: Boolean,
-    		test_gre_ALL: Boolean,
+    		test_gre_ALL: Boolean,			//OPTIONAL CHECK
     		test_gmat_date: Boolean,
     		test_gmat_verb: Boolean,
     		test_gmat_qunt: Boolean,
     		test_gmat_anal: Boolean,
     		test_gmat_reas: Boolean,
     		test_gmat_totl: Boolean,
-    		test_gmat_ALL: Boolean,
+    		test_gmat_ALL: Boolean,			//OPTIONAL CHECK
     		test_mat_date: Boolean,
     		test_mat_scor: Boolean,
-    		test_mat_ALL: Boolean,
+    		test_mat_ALL: Boolean,			//OPTIONAL CHECK
     		test_fe_date: Boolean,
     		test_fe_scor: Boolean,
-    		test_fe_ALL: Boolean,
+    		test_fe_ALL: Boolean,			//OPTIONAL CHECK
     		test_toefl_pdate: Boolean,
     		test_toefl_list: Boolean,
     		test_toefl_writ: Boolean,
@@ -793,20 +797,20 @@ var ApplicationSchema = new Schema({
     		test_toefl_ispek: Boolean,
     		test_toefl_iwrit: Boolean,
     		test_toefl_itotl: Boolean,
-    		test_toefl_ALL: Boolean,
+    		test_toefl_ALL: Boolean,		//OPTIONAL CHECK
     		test_ielts_date: Boolean,
     		test_ielts_list: Boolean,
     		test_ielts_writ: Boolean,
     		test_ielts_read: Boolean,
     		test_ielts_spek: Boolean,
     		test_ielts_totl: Boolean,
-    		test_ielts_ALL: Boolean,
+    		test_ielts_ALL: Boolean,		//OPTIONAL CHECK
     		test_melab_date: Boolean,
     		test_melab_comp: Boolean,
     		test_melab_list: Boolean,
     		test_melab_gcvr: Boolean,
     		test_melab_totl: Boolean,
-    		test_melab_ALL: Boolean,
+    		test_melab_ALL: Boolean,		//OPTIONAL CHECK
     		active_type: Boolean,
     		active_city: Boolean,
     		active_stat: Boolean,
@@ -815,10 +819,9 @@ var ApplicationSchema = new Schema({
     		active_day1: Boolean,
     		active_to: Boolean,
     		active_day2: Boolean,
-    		active_ALL: Boolean,
-    		sub_resume: Boolean,
-    		sub_trnscr: Boolean,
-    		resident_aff_ANY: Boolean
+    		active_ALL: Boolean,			//OPTIONAL CHECK
+    		sub_resume: Boolean,			//CHECK
+    		sub_trnscr: Boolean,			//CHECK
     	}
     }
 });

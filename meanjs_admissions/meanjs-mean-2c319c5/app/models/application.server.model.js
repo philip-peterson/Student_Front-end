@@ -565,86 +565,55 @@ var ApplicationSchema = new Schema({
     //Planning on using the $set operator with db.collection.update() command for these -Josh
     completion: {
     	filled: {			//No Booleans will have an associated filled Boolean
-    		f_name: {
-    			type: Boolean,
-    			default: false
-    		}
-    		m_name: {
-    			type: Boolean,
-    			default: false
-    		}
-    		l_name: {
-    			type: Boolean,
-    			default: false
-    		}
-    		suff: {
-    			type: Boolean,
-    			default: false
-    		}
-    		o_name: {
-    			type: Boolean,
-    			default: false
-    		}
-    		ssn_: {
-    			type: Boolean,
-    			default: false
-    		}
-    		uf_id: {
-    			type: Boolean,
-    			default: false
-    		}
-    		b_month: {
-    			type: Boolean,
-    			default: false
-    		}
-    		b_day: {
-    			type: Boolean,
-    			default: false
-    		}
-    		b_year: {
-    			type: Boolean,
-    			default: false
-    		}
-    		gend: {
-    			type: Boolean,
-    			default: false
-    		}
-    		natnlity: {
-    			type: Boolean,
-    			default: false
-    		}
-    		ethnicies: {		//at least one ethnicity must be chosen
-    			type: Boolean,
-    			default: false
-    		}
-    		email_addr: {
-    			type: Boolean,
-    			default: false
-    		}
-    		phone_nums: {		//at least one phone number must be filled (I think?)
-    			type: Boolean,
-    			default: false
-    		}
-    		perm_addr: {		//will have to check all needed lines of addr (street, city, etc)
-    			type: Boolean,
-    			default: false
-    		}
-    		curr_addr: {
-    			type: Boolean,
-    			default: false
-    		}
-    		emer_name: {		//will have to check first and last names simultaneously
-    			type: Boolean,
-    			default: false
-    		}
-    		emer_addr: {
-    			type: Boolean,
-    			default: false
-    		}
-    		emer_phone: {		//only one required (I think?)
-    			type: Boolean,
-    			default: false
-    		}
+    		f_name: Boolean
+    		m_name: Boolean
+    		l_name: Boolean
+    		s_ffix: Boolean
+    		o_name: Boolean
+    		ssn_f: Boolean
+    		uf_id: Boolean
+    		b_month: Boolean
+    		b_day: Boolean
+    		b_year: Boolean
+    		gend: Boolean
+    		natnlity: Boolean
+    		email_addr: Boolean
+    		pers_phone: Boolean
+    		work_phone: Boolean
+    		cell_phone: Boolean
+    		perm_addr_str: Boolean
+    		perm_addr_cit: Boolean
+    		perm_addr_sta: Boolean
+    		perm_addr_cnt: Boolean
+    		perm_addr_zip: Boolean
+    		curr_addr_str: Boolean
+    		curr_addr_cit: Boolean
+    		curr_addr_sta: Boolean
+    		curr_addr_cnt: Boolean
+    		curr_addr_zip: Boolean
+    		curr_addr_val: Boolean
+    		e_f_name: Boolean
+    		e_m_name: Boolean
+    		e_l_name: Boolean
+    		e_suffix: Boolean
+    		e_o_name: Boolean
+    		e_relate: Boolean
+    		e_addr_str: Boolean
+    		e_addr_cit: Boolean
+    		e_addr_sta: Boolean
+    		e_addr_cnt: Boolean
+    		e_addr_zip: Boolean
+    		e_phone_pers: Boolean
+    		e_phone_work: Boolean
+    		e_phone_cell: Boolean
+    		scholar_famu: Boolean
+    		scholar_fullbright: Boolean
+    		scholar_identify: Boolean
+    		scholar_mcnair: Boolean
+    		scholar_mcknight: Boolean
+    		scholar_natl_sci: Boolean
+    		scholar_natl_hlth: Boolean
+    		scholar_other: Boolean
     	}
     }
 });

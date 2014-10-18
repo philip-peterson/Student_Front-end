@@ -562,7 +562,91 @@ var ApplicationSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User'
     }
-
+    //Planning on using the $set operator with db.collection.update() command for these -Josh
+    completion: {
+    	filled: {			//No Booleans will have an associated filled Boolean
+    		f_name: {
+    			type: Boolean,
+    			default: false
+    		}
+    		m_name: {
+    			type: Boolean,
+    			default: false
+    		}
+    		l_name: {
+    			type: Boolean,
+    			default: false
+    		}
+    		suff: {
+    			type: Boolean,
+    			default: false
+    		}
+    		o_name: {
+    			type: Boolean,
+    			default: false
+    		}
+    		ssn_: {
+    			type: Boolean,
+    			default: false
+    		}
+    		uf_id: {
+    			type: Boolean,
+    			default: false
+    		}
+    		b_month: {
+    			type: Boolean,
+    			default: false
+    		}
+    		b_day: {
+    			type: Boolean,
+    			default: false
+    		}
+    		b_year: {
+    			type: Boolean,
+    			default: false
+    		}
+    		gend: {
+    			type: Boolean,
+    			default: false
+    		}
+    		natnlity: {
+    			type: Boolean,
+    			default: false
+    		}
+    		ethnicies: {		//at least one ethnicity must be chosen
+    			type: Boolean,
+    			default: false
+    		}
+    		email_addr: {
+    			type: Boolean,
+    			default: false
+    		}
+    		phone_nums: {		//at least one phone number must be filled (I think?)
+    			type: Boolean,
+    			default: false
+    		}
+    		perm_addr: {		//will have to check all needed lines of addr (street, city, etc)
+    			type: Boolean,
+    			default: false
+    		}
+    		curr_addr: {
+    			type: Boolean,
+    			default: false
+    		}
+    		emer_name: {		//will have to check first and last names simultaneously
+    			type: Boolean,
+    			default: false
+    		}
+    		emer_addr: {
+    			type: Boolean,
+    			default: false
+    		}
+    		emer_phone: {		//only one required (I think?)
+    			type: Boolean,
+    			default: false
+    		}
+    	}
+    }
 });
 
 mongoose.model('Application', ApplicationSchema);

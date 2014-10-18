@@ -6,30 +6,38 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
+var simpleStringValidator = function(property) {
+	return property.length > 0;
+};
+var nameValidate = [simpleStringValidator, 'Put your name in, yo'];
+
 var ApplicationSchema = new Schema({
-    personal_info: {
-        name: {
-            first: {
+	personal_info: {
+		name: {
+			first: {
 				type: String,
-				default: ''
+				default: '',
+				validate: nameValidate
 			},
-            middle: {
+			middle: {
 				type: String,
-				default: ''
+				default: '',
+				validate: nameValidate
 			},
-            last: {
+			last: {
 				type: String,
-				default: ''
+				default: '',
+				validate: nameValidate
 			},
-            suffix: {
+			suffix: {
 				type: String,
-				default: ''
+				default: '',
 			},
-            other_names: {
+			other_names: {
 				type: String,
-				default: ''
-			}
-        },
+				default: '',
+			},
+		},
 		has_ssn: {
 			type: Boolean,
 			default: false
@@ -38,8 +46,10 @@ var ApplicationSchema = new Schema({
 			type: Number
 		},
         ufid: {
-			type: Number,
-		},
+		type: Number,
+		unique: true,//'For now, the name will uniquely id things',
+		required: true//'Required'
+	},
         previous_application: {
 			type: Boolean,
 			default: false

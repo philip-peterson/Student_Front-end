@@ -11,6 +11,10 @@ var simpleStringValidator = function(property) {
 };
 var nameValidate = [simpleStringValidator, 'Put your name in, yo'];
 
+var suffixValid = function(string) {}
+
+
+
 var ApplicationSchema = new Schema({
 	personal_info: {
 		name: {
@@ -32,6 +36,15 @@ var ApplicationSchema = new Schema({
 			suffix: {
 				type: String,
 				default: '',
+                enum: [
+                    '',
+                    'Jr.',
+                    'Sr.',
+                    'II',
+                    'III',
+                    'IV',
+                    'V'
+                ]
 			},
 			other_names: {
 				type: String,
@@ -43,16 +56,22 @@ var ApplicationSchema = new Schema({
 			default: false
 		},
         ssn: {
-			type: Number
+			type: Number,
+            min: 0,
+            max: 999999999      //SSN is 9 digits
 		},
         ufid: {
 			type: Number,
 			unique: true,//'For now, the name will uniquely id things',
-			required: true//'Required'
+			required: true,//'Required'
+            min: 0,
+            max: 99999999       //UFID is 8 digits max, right?
 		},
 		completion_percent: {
 			type: Number,
-			default: 0
+			default: 0,
+            //min: 0,
+            //max: 100 //this shouldn't require validation
 		},
         previous_application: {
 			type: Boolean,
@@ -75,19 +94,23 @@ var ApplicationSchema = new Schema({
 		bd: {
 			month: {
 				type: String,
-				default: ''
+				default: '',
+                enum: ['', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
 			},
 			day: {
 				type: String,
 				default: ''
 			},
 			year: {
-				type: Number
+				type: Number,
+                min: 1920,
+                max: 2020  //needs dynamic max
 			},
 		},
         gender: {
 			type: String,
-			default: ''
+			default: '',
+            enum['', 'Male', 'Female']
 		},
         nationality: {
 			type: String,

@@ -53,7 +53,7 @@ var ApplicationSchema = new Schema({
 		completion_percent: {
 			type: Number,
 			default: 0
-		}
+		},
         previous_application: {
 			type: Boolean,
 			default: false

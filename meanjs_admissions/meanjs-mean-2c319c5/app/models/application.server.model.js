@@ -4,6 +4,9 @@
 * Module dependencies.
 */
 var mongoose = require('mongoose'),
+    //countryCodes = require('../../public/config.js').ApplicationConfiguration.countryCodes,
+    //countryCodes currently located in Fac-Front, might import later (used for enum in nationality)
+    countryList = '../../public/lib/angularjs-country-select/angular.country-select.js'.countries,
 	Schema = mongoose.Schema;
 
 var simpleStringValidator = function(property) {
@@ -33,8 +36,9 @@ var ApplicationSchema = new Schema({
 			suffix: {
 				type: String,
 				default: '',
-                enum: [
+                enum: [         //NOTE: ALL DROPDOWN LISTS GET ENUMS for security reasons
                     '',
+                    'None',
                     'Jr.',
                     'Sr.',
                     'II',
@@ -92,11 +96,12 @@ var ApplicationSchema = new Schema({
 			month: {
 				type: String,
 				default: '',
-                enum: ['', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+                enum: ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 			},
 			day: {
-				type: String,
-				default: ''
+				type: String,  //String? Really guys?
+				default: '',
+                enum: ['', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
 			},
 			year: {
 				type: Number,
@@ -111,7 +116,9 @@ var ApplicationSchema = new Schema({
 		},
         nationality: {
 			type: String,
-			default: ''
+			default: '',
+            //enum: countryCodes
+            enum: countryList
 		},
         ethnicity: {
             hispanic: {

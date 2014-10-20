@@ -11,9 +11,6 @@ var simpleStringValidator = function(property) {
 };
 var nameValidate = [simpleStringValidator, 'Put your name in, yo'];
 
-var suffixValid = function(string) {}
-
-
 
 var ApplicationSchema = new Schema({
 	personal_info: {
@@ -110,7 +107,7 @@ var ApplicationSchema = new Schema({
         gender: {
 			type: String,
 			default: '',
-            enum['', 'Male', 'Female']
+            enum: ['', 'Male', 'Female']
 		},
         nationality: {
 			type: String,

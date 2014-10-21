@@ -595,7 +595,7 @@ var ApplicationSchema = new Schema({
         ref: 'User'
     },
     //Planning on using the $set operator with db.collection.update() command for these -Josh
-    completion: {
+    complete: {
     	filled: {				//No Booleans will have an associated filled Boolean
     		f_name: Boolean,	//Some info-sets have an _ALL to simplify/speed some checks
     		m_name: Boolean,	//Some boolean-sets have an _ANY for optional-but-suggested sections
@@ -723,7 +723,7 @@ var ApplicationSchema = new Schema({
     		sub_trnscr: Boolean,
     		resident_aff_ANY: Boolean
     	},
-    	complete: {		//for percentage completion, favor _ALL over individuals
+    	valid: {		//for percentage completion, favor _ALL over individuals
     		f_name: Boolean,		//anything with CHECK is used in percentage completion
     		m_name: Boolean,		//some bools exist only in filled{} like residency, as it is always "complete"
     		l_name: Boolean,
@@ -854,9 +854,150 @@ var ApplicationSchema = new Schema({
     }
 });
 
-ApplicationSchema.pre('save', function(next) {
-this.personal_info.name.middle = this.personal_info.name.first + this.personal_info.name.last;
-next();
-});
+//		UNDER CONSTRUCTION
+//		HOLY SHIT GUYS
+//		JUST A FEW MORE HOURS
 
+/*
+ApplicationSchema.pre('save', function(next) {
+	var filler = this.complete.filled;
+	filler.f_name = () ? false:true;
+	filler.m_name = () ? false:true;
+	filler.l_name = () ? false:true;
+	filler.o_name = () ? false:true;
+	filler.suffix = () ? false:true;
+	filler.ssn = () ? false:true;
+	filler.ufid = () ? false:true;
+	filler.b_month = () ? false:true;
+	filler.b_day = () ? false:true;
+	filler.b_year = () ? false:true;
+	filler.b_day_ALL = () ? false:true;
+	filler.gender = () ? false:true;
+	filler.nationality = () ? false:true;
+	filler.email_addr = () ? false:true;
+	filler.pers_phone = () ? false:true;
+	filler.work_phone = () ? false:true;
+	filler.cell_phone = () ? false:true;
+	filler.phone_ANY = () ? false:true;
+	filler.perm_addr_str = () ? false:true;
+	filler.perm_addr_cit = () ? false:true;
+	filler.perm_addr_sta = () ? false:true;
+	filler.perm_addr_cnt = () ? false:true;
+	filler.perm_addr_zip = () ? false:true;
+	filler.perm_addr_ALL = () ? false:true;
+	filler.curr_addr_str = () ? false:true;
+	filler.curr_addr_cit = () ? false:true;
+	filler.curr_addr_sta = () ? false:true;
+	filler.curr_addr_cnt = () ? false:true;
+	filler.curr_addr_zip = () ? false:true;
+	filler.curr_addr_ALL = () ? false:true;
+	filler.curr_addr_val = () ? false:true;
+	filler.e_f_name = () ? false:true;
+	filler.e_m_name = () ? false:true;
+	filler.e_l_name = () ? false:true;
+	filler.e_suffix = () ? false:true;
+	filler.e_o_name = () ? false:true;
+	filler.e_relate = () ? false:true;
+	filler.e_addr_str = () ? false:true;
+	filler.e_addr_cit = () ? false:true;
+	filler.e_addr_sta = () ? false:true;
+	filler.e_addr_cnt = () ? false:true;
+	filler.e_addr_zip = () ? false:true;
+	filler.e_addr_ALL = () ? false:true;
+	filler.e_phone_pers = () ? false:true;
+	filler.e_phone_work = () ? false:true;
+	filler.e_phone_cell = () ? false:true;
+	filler.e_phone_ANY = () ? false:true;
+	filler.e_contact_ALL = () ? false:true;
+	filler.scholar_famu = () ? false:true;
+	filler.scholar_fullbright = () ? false:true;
+	filler.scholar_identify = () ? false:true;
+	filler.scholar_mcnair = () ? false:true;
+	filler.scholar_mcknight = () ? false:true;
+	filler.scholar_natl_sci = () ? false:true;
+	filler.scholar_natl_hlth = () ? false:true;
+	filler.scholar_other_schol = () ? false:true;
+	filler.scholar_other_expln = () ? false:true;
+	filler.scholar_ANY = () ? false:true;
+	filler.supporting_doc = () ? false:true;
+	filler.degree_prog_term = () ? false:true;
+	filler.degree_prog_goal = () ? false:true;
+	filler.degree_prog_study = () ? false:true;
+	filler.degree_prog_special = () ? false:true;
+	filler.degree_prog_contact = () ? false:true;
+	filler.degree_prog_purpose = () ? false:true;
+	filler.degree_prog_ALL = () ? false:true;
+	filler. = () ? false:true;
+	filler. = () ? false:true;
+	filler. = () ? false:true;
+	filler. = () ? false:true;
+	filler. = () ? false:true;
+	filler. = () ? false:true;
+	filler. = () ? false:true;
+	filler. = () ? false:true;
+
+	next();
+});
+*/
+
+/*    		ugrad_major: Boolean,
+    		ugrad_special: Boolean,
+    		gpa_calculated: Boolean,
+    		test_gre_date: Boolean,
+    		test_gre_verb: Boolean,
+    		test_gre_qunt: Boolean,
+    		test_gre_anal: Boolean,
+    		test_gre_totl: Boolean,
+    		test_gre_ALL: Boolean,
+    		test_gmat_date: Boolean,
+    		test_gmat_verb: Boolean,
+    		test_gmat_qunt: Boolean,
+    		test_gmat_anal: Boolean,
+    		test_gmat_reas: Boolean,
+    		test_gmat_totl: Boolean,
+    		test_gmat_ALL: Boolean,
+    		test_mat_date: Boolean,
+    		test_mat_scor: Boolean,
+    		test_mat_ALL: Boolean,
+    		test_fe_date: Boolean,
+    		test_fe_scor: Boolean,
+    		test_fe_ALL: Boolean,
+    		test_toefl_pdate: Boolean,
+    		test_toefl_list: Boolean,
+    		test_toefl_writ: Boolean,
+    		test_toefl_read: Boolean,
+    		test_toefl_totl: Boolean,
+    		test_toefl_idate: Boolean,
+    		test_toefl_iread: Boolean,
+    		test_toefl_ilist: Boolean,
+    		test_toefl_ispek: Boolean,
+    		test_toefl_iwrit: Boolean,
+    		test_toefl_itotl: Boolean,
+    		test_toefl_ALL: Boolean,
+    		test_ielts_date: Boolean,
+    		test_ielts_list: Boolean,
+    		test_ielts_writ: Boolean,
+    		test_ielts_read: Boolean,
+    		test_ielts_spek: Boolean,
+    		test_ielts_totl: Boolean,
+    		test_ielts_ALL: Boolean,
+    		test_melab_date: Boolean,
+    		test_melab_comp: Boolean,
+    		test_melab_list: Boolean,
+    		test_melab_gcvr: Boolean,
+    		test_melab_totl: Boolean,
+    		test_melab_ALL: Boolean,
+    		active_type: Boolean,
+    		active_city: Boolean,
+    		active_stat: Boolean,
+    		active_ctry: Boolean,
+    		active_from: Boolean,
+    		active_day1: Boolean,
+    		active_to: Boolean,
+    		active_day2: Boolean,
+    		active_ALL: Boolean,
+    		sub_resume: Boolean,
+    		sub_trnscr: Boolean,
+    		resident_aff_ANY: Boolean
+*/
 mongoose.model('Application', ApplicationSchema);

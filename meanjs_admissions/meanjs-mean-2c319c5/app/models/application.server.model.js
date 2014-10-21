@@ -4,15 +4,16 @@
 * Module dependencies.
 */
 var mongoose = require('mongoose'),
-    //countryCodes = require('../../public/config.js').ApplicationConfiguration.countryCodes,
-    //countryCodes currently located in Fac-Front, might import later (used for enum in nationality)
     countryList = '../../public/lib/angularjs-country-select/angular.country-select.js'.countries,
+    //email = 'user.server.model.js'.UserSchema.email,	Trying to get default email to be already filled
 	Schema = mongoose.Schema;
 
 var simpleStringValidator = function(property) {
 	return property.length > 0;
 };
 var nameValidate = [simpleStringValidator, 'Put your name in, yo'];
+
+//var this_year = {type: Number, default: Date.prototype.getFullYear().cast};	(trying to) use in min/max of dob year
 
 
 var ApplicationSchema = new Schema({
@@ -26,7 +27,6 @@ var ApplicationSchema = new Schema({
 			middle: {
 				type: String,
 				default: '',
-				validate: nameValidate
 			},
 			last: {
 				type: String,
@@ -58,15 +58,13 @@ var ApplicationSchema = new Schema({
 		},
         ssn: {
 			type: Number,
-            min: 0,
+            min: 0,				//ASSUMPTION: SSN does not start with a 0
             max: 999999999      //SSN is 9 digits
 		},
         ufid: {
-			type: Number,
-			unique: true,//'For now, the name will uniquely id things',
-			required: true,//'Required'
-            min: 0,
-            max: 99999999       //UFID is 8 digits max, right?
+			type: String,		//Changed Number to String because it needs to be 8 digits
+			unique: true,		//'For now, the name will uniquely id things',
+			required: true,		//'Required'
 		},
 		completion_percent: {
 			type: Number,
@@ -99,14 +97,17 @@ var ApplicationSchema = new Schema({
                 enum: ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 			},
 			day: {
-				type: String,  //String? Really guys?
+				type: Number,  //String? Really guys?
 				default: '',
-                enum: ['', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+                min: 1,
+                max: 30 
 			},
 			year: {
 				type: Number,
-                min: 1920,
-                max: 2020  //needs dynamic max
+				/* keeps returning "NaN" for min/max values, having trouble subtracting from correctly cast this_year
+                min: (this_year - 100),	//ASSUMPTIONS: Applicants can never be
+                max: (this_year - 10) 	//older than 100 or younger than 10 years
+                */
 			},
 		},
         gender: {
@@ -117,7 +118,6 @@ var ApplicationSchema = new Schema({
         nationality: {
 			type: String,
 			default: '',
-            //enum: countryCodes
             enum: countryList
 		},
         ethnicity: {
@@ -149,6 +149,7 @@ var ApplicationSchema = new Schema({
         email: {
 			type: String,
 			default: ''
+			//default: 'user.server.model.js'.email
 		},
         phone: {
             personal: {
@@ -851,6 +852,11 @@ var ApplicationSchema = new Schema({
     		sub_trnscr: Boolean,			//CHECK
     	}
     }
+});
+
+ApplicationSchema.pre('save', function(next) {
+this.personal_info.name.middle = this.personal_info.name.first + this.personal_info.name.last;
+next();
 });
 
 mongoose.model('Application', ApplicationSchema);

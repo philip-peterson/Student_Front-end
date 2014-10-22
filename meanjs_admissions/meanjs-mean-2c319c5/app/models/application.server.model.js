@@ -489,83 +489,26 @@ var ApplicationSchema = new Schema({
         }
     },
     residency_affadivit: {
-            florida_residence_categories: {
-            A: {
-				type: Boolean,
-				default: false
-			},
-            B: {
-				type: Boolean,
-				default: false
-			},
-			C: {
-				type: Boolean,
-				default: false
-			},
-			D: {
-				type: Boolean,
-				default: false
-			},
-			E: {
-				type: Boolean,
-				default: false
-			},
-			F: {
-				type: Boolean,
-				default: false
-			},
-			G: {
-				type: Boolean,
-				default: false
-			},
-			H: {
-				type: Boolean,
-				default: false
-			},
-			I: {
-				type: Boolean,
-				default: false
-			},
-			J: {
-				type: Boolean,
-				default: false
-			},
-			K: {
-				type: Boolean,
-				default: false
-			},
-			L: {
-				type: Boolean,
-				default: false
-			},
-			M: {
-				type: Boolean,
-				default: false
-			},
-			N: {
-				type: Boolean,
-				default: false
-			},
-			O: {
-				type: Boolean,
-				default: false
-			},
-			P: {
-				type: Boolean,
-				default: false
-			},
-			Q: {
-				type: Boolean,
-				default: false
-			},
-			R: {
-				type: Boolean,
-				default: false
-			},
-			S: {
-				type: Boolean,
-				default: false
-			}
+        florida_residence_categories: {
+    	    A: {type: Boolean, default: false},
+       	 	B: {type: Boolean, default: false},
+			C: {type: Boolean, default: false},
+			D: {type: Boolean, default: false},
+			E: {type: Boolean, default: false},
+			F: {type: Boolean, default: false},
+			G: {type: Boolean, default: false},
+			H: {type: Boolean, default: false},
+			I: {type: Boolean, default: false},
+			J: {type: Boolean, default: false},
+			K: {type: Boolean, default: false},
+			L: {type: Boolean, default: false},
+			M: {type: Boolean, default: false},
+			N: {type: Boolean, default: false},
+			O: {type: Boolean, default: false},
+			P: {type: Boolean, default: false},
+			Q: {type: Boolean, default: false},
+			R: {type: Boolean, default: false},
+			S: {type: Boolean, default: false},
         }
     },
     created: {
@@ -841,7 +784,11 @@ var ApplicationSchema = new Schema({
 //		JUST A FEW MORE HOURS
 
 ApplicationSchema.pre('save', function(next) {
-    var pi = this.personal_info;
+    var pi = this.personal_info;				//these are all to shorten path calls used hundreds of times below
+    var si = this.special_programs_info;
+    var ea = this.education_and_activities;
+    var eat = ea.test_scores;
+    var frc = this.residency_affadivit.florida_residence_categories;
 	var filler = this.complete.filled;
 
 	filler.f_name = !pi.name.first;					//none of compared values are booleans
@@ -891,84 +838,84 @@ ApplicationSchema.pre('save', function(next) {
 	filler.e_phone_work = !pi.emergency_contact.phone.work.number;
 	filler.e_phone_cell = !pi.emergency_contact.phone.cell.number;
 	filler.e_phone_ANY = filler.e_phone_pers && filler.e_phone_work && filler.e_phone_cell;
-	filler.e_contact_ALL = filler.e_f_name && filler.e_l_name && filler.e_relate && filler.e_addr_ALL &&
-	filler.scholar_famu = 
-	filler.scholar_fullbright = 
-	filler.scholar_identify = 
-	filler.scholar_mcnair = 
-	filler.scholar_mcknight = 
-	filler.scholar_natl_sci = 
-	filler.scholar_natl_hlth = 
-	filler.scholar_other_schol = 
-	filler.scholar_other_expln = 
-	filler.scholar_ANY = 
-	filler.supporting_doc = 
-	filler.degree_prog_term = 
-	filler.degree_prog_goal = 
-	filler.degree_prog_study = 
-	filler.degree_prog_special = 
-	filler.degree_prog_contact = 
-	filler.degree_prog_purpose = 
-	filler.degree_prog_ALL = 
-	filler.ugrad_major = 
-	filler.ugrad_special = 
-	filler.gpa_calculated = 
-	filler.test_gre_date = 
-    filler.test_gre_verb = 
-    filler.test_gre_qunt = 
-    filler.test_gre_anal = 
-    filler.test_gre_totl = 
-    filler.test_gre_ALL = 
-    filler.test_gmat_date = 
-    filler.test_gmat_verb = 
-    filler.test_gmat_qunt = 
-    filler.test_gmat_anal = 
-    filler.test_gmat_reas = 
-    filler.test_gmat_totl = 
-    filler.test_gmat_ALL = 
-    filler.test_mat_date = 
-    filler.test_mat_scor = 
-    filler.test_mat_ALL = 
-    filler.test_fe_date = 
-    filler.test_fe_scor = 
-    filler.test_fe_ALL = 
-    filler.test_toefl_pdate = 
-    filler.test_toefl_list = 
-    filler.test_toefl_writ = 
-    filler.test_toefl_read = 
-    filler.test_toefl_totl = 
-    filler.test_toefl_idate = 
-    filler.test_toefl_iread = 
-    filler.test_toefl_ilist = 
-    filler.test_toefl_ispek = 
-    filler.test_toefl_iwrit = 
-    filler.test_toefl_itotl = 
-    filler.test_toefl_ALL = 
-    filler.test_ielts_date = 
-    filler.test_ielts_list = 
-    filler.test_ielts_writ = 
-    filler.test_ielts_read = 
-    filler.test_ielts_spek = 
-    filler.test_ielts_totl = 
-    filler.test_ielts_ALL = 
-    filler.test_melab_date = 
-    filler.test_melab_comp = 
-    filler.test_melab_list = 
-    filler.test_melab_gcvr = 
-    filler.test_melab_totl = 
-    filler.test_melab_ALL = 
-    filler.active_type = 
-    filler.active_city = 
-    filler.active_stat = 
-    filler.active_ctry = 
-    filler.active_from = 
-    filler.active_day1 = 
-    filler.active_to = 
-    filler.active_day2 = 
-    filler.active_ALL = 
-    filler.sub_resume = 
-    filler.sub_trnscr = 
-    filler.resident_aff_ANY = 
+	filler.e_contact_ALL = filler.e_f_name && filler.e_l_name && filler.e_relate && filler.e_addr_ALL && filler.e_phone_ANY;
+	filler.scholar_famu = !si.special_programs_application.famu_feeder;
+	filler.scholar_fullbright = !si.special_programs_application.fullbright_scholar;
+	filler.scholar_identify = !si.special_programs_application.please_identify_program;
+	filler.scholar_mcnair = !si.special_programs_application.mcnair_scholar;
+	filler.scholar_mcknight = !si.special_programs_application.mcknight_scholar;
+	filler.scholar_natl_sci = !si.special_programs_application.national_science_foundation_fellowship;
+	filler.scholar_natl_hlth = !si.special_programs_application.national_institutes_of_health_fellowship;
+	filler.scholar_other_schol = !si.special_programs_application.other.scholarship;
+	filler.scholar_other_expln = !si.special_programs_application.other.explain;
+	filler.scholar_ANY = filler.scholar_fullbright || filler.scholar_famu || filler.scholar_mcnair || filler.scholar_mcknight || filler.scholar_identify || filler.scholar_other_schol || filler.scholar_natl_sci || filler.scholar_natl_hlth;
+	//filler.supporting_doc = false   implement once document uploading is implemented
+	filler.degree_prog_term = !this.degree_programs.primary_program.intended_year_and_term;
+	filler.degree_prog_goal = !this.degree_programs.primary_program.degree_goal;
+	filler.degree_prog_study = !this.degree_programs.primary_program.program_of_study;
+	filler.degree_prog_special = !this.degree_programs.primary_program.program_specialization;
+	filler.degree_prog_contact = !this.degree_programs.primary_program.department_contact;
+	filler.degree_prog_purpose = !this.degree_programs.primary_program.statement_of_purpose;
+	filler.degree_prog_ALL = filler.degree_prog_term && filler.degree_prog_goal && filler.degree_prog_study && filler.degree_prog_special && filler.degree_prog_contact && filler.degree_prog_purpose;
+	filler.ugrad_major = !ea.undergraduate.major;
+	filler.ugrad_special = !ea.undergraduate.specialization;
+	filler.gpa_calculated = !ea.self_reported_gpa.GPA;
+	filler.test_gre_date = eat.gre.taken && !eat.gre.date;
+    filler.test_gre_verb = eat.gre.taken && !eat.gre.verbal;
+    filler.test_gre_qunt = eat.gre.taken && !eat.gre.quantitative;
+    filler.test_gre_anal = eat.gre.taken && !eat.gre.analytical_writing;
+    filler.test_gre_totl = eat.gre.taken && !eat.gre.total;
+    filler.test_gre_ALL = eat.gre.taken && filler.test_gre_date && filler.test_gre_verb && filler.test_gre_qunt && filler.test_gre_anal && filler.test_gre_totl;
+    filler.test_gmat_date = eat.gmat.taken && !eat.gmat.date;
+    filler.test_gmat_verb = eat.gmat.taken && !eat.gmat.verbal;
+    filler.test_gmat_qunt = eat.gmat.taken && !eat.gmat.quantitative;
+    filler.test_gmat_anal = eat.gmat.taken && !eat.gmat.analytical_writing;
+    filler.test_gmat_reas = eat.gmat.taken && !eat.gmat.integrated_reasoning;
+    filler.test_gmat_totl = eat.gmat.taken && !eat.gmat.total;
+    filler.test_gmat_ALL = eat.gmat.taken && filler.test_gmat_date && filler.test_gmat_verb && filler.test_gmat_qunt && filler.test_gmat_anal && filler.test_gmat_reas && filler.test_gmat_totl;
+    filler.test_mat_date = eat.mat.taken && !eat.mat.date;
+    filler.test_mat_scor = eat.mat.taken && !eat.mat.score;
+    filler.test_mat_ALL = eat.mat.taken && filler.test_mat_date && filler.test_mat.scor;
+    filler.test_fe_date = eat.fe.taken && !eat.fe.date;
+    filler.test_fe_scor = eat.fe.taken && !eat.fe.score;
+    filler.test_fe_ALL = eat.fe.taken && filler.test_fe_date && filler.test_fe_scor;
+    filler.test_toefl_pdate = eat.toefl.taken && !eat.toefl.paper_date;
+    filler.test_toefl_list = eat.toefl.taken && !eat.toefl.listening;
+    filler.test_toefl_writ = eat.toefl.taken && !eat.toefl.writing;
+    filler.test_toefl_read = eat.toefl.taken && !eat.toefl.reading;
+    filler.test_toefl_totl = eat.toefl.taken && !eat.toefl.total;
+    filler.test_toefl_idate = eat.toefl.taken && !eat.toefl.internet_date;
+    filler.test_toefl_iread = eat.toefl.taken && !eat.toefl.readingi;
+    filler.test_toefl_ilist = eat.toefl.taken && !eat.toefl.listeningi;
+    filler.test_toefl_ispek = eat.toefl.taken && !eat.toefl.speakingi;
+    filler.test_toefl_iwrit = eat.toefl.taken && !eat.toefl.writingi;
+    filler.test_toefl_itotl = eat.toefl.taken && !eat.toefl.totali;
+    filler.test_toefl_ALL = eat.toefl.taken && filler.test_toefl_pdate && filler.test_toefl_list && filler.test_toefl_writ && filler.test_toefl_read && filler.test_toefl_totl && filler.test_toefl_idate && filler.test_toefl_iread && filler.test_toefl_ilist && filler.test_toefl_iwrit && filler.test_toefl_ispek && filler.test_toefl_itotl;
+    filler.test_ielts_date = eat.ielts.taken && !eat.ielts.date;
+    filler.test_ielts_list = eat.ielts.taken && !eat.ielts.listening;
+    filler.test_ielts_writ = eat.ielts.taken && !eat.ielts.writing;
+    filler.test_ielts_read = eat.ielts.taken && !eat.ielts.reading;
+    filler.test_ielts_spek = eat.ielts.taken && !eat.ielts.speaking;
+    filler.test_ielts_totl = eat.ielts.taken && !eat.ielts.total;
+    filler.test_ielts_ALL = eat.ielts.taken && filler.test_ielts_date && filler.test_ielts_list && filler.test_ielts_writ && filler.test_ielts_read && filler.test_ielts_spek && filler.test_ielts_totl;
+    filler.test_melab_date = eat.melab.taken && !eat.melab.date;
+    filler.test_melab_comp = eat.melab.taken && !eat.melab.composition;
+    filler.test_melab_list = eat.melab.taken && !eat.melab.listening;
+    filler.test_melab_gcvr = eat.melab.taken && !eat.melab.gcvr;
+    filler.test_melab_totl = eat.melab.taken && !eat.melab.total;
+    filler.test_melab_ALL = eat.melab.taken && filler.test_melab_date && filler.test_melab_comp && filler.test_melab_list && filler.test_melab_gcvr && filler.test_melab_totl;
+    filler.active_type = !ea.activities.activity;
+    filler.active_city = !ea.activities.city;
+    filler.active_stat = !ea.activities.state;
+    filler.active_ctry = !ea.activities.country;
+    filler.active_from = !ea.activities.from;
+    filler.active_day1 = !ea.activities.day1;
+    filler.active_to = !ea.activities.to;
+    filler.active_day2 = !ea.activities.day2;
+    filler.active_ALL = filler.active_type && filler.active_city && filler.active_stat && filler.active_ctry && filler.active_from && filler.active_day1 && filler.active_to && filler.active_day2;
+    //filler.sub_resume = false; //implement when file uploading is implemented
+    //filler.sub_trnscr =  false; //implement when file uploading is implemented
+    filler.resident_aff_ANY = frc.A || frc.B || frc.C || frc.D || frc.E || frc.F || frc.G || frc.H || frc.I || frc.J || frc.K || frc.L || frc.M || frc.N || frc.O || frc.P || frc.Q || frc.R || frc.S;
 
 	next();
 });

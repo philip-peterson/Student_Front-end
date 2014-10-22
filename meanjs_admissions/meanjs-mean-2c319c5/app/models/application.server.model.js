@@ -121,30 +121,12 @@ var ApplicationSchema = new Schema({
             enum: countryList
 		},
         ethnicity: {
-            hispanic: {
-				type: Boolean,
-				default: false
-			},
-            american_indian: {
-				type: Boolean,
-				default: false
-			},
-			asian: {
-				type: Boolean,
-				default: false
-			},
-			black: {
-				type: Boolean,
-				default: false
-			},
-			pacific_islander: {
-				type: Boolean,
-				default: false
-			},
-			white: {
-				type: Boolean,
-				default: false
-			}
+            hispanic: {type: Boolean, default: true},
+            american_indian: {type: Boolean, default: true},
+			asian: {type: Boolean, default: true},
+			black: {type: Boolean, default: true},
+			pacific_islander: {type: Boolean, default: true},
+			white: {type: Boolean, default: true}
         },
         email: {
 			type: String,
@@ -721,7 +703,7 @@ var ApplicationSchema = new Schema({
     		active_ALL: Boolean,
     		sub_resume: Boolean,
     		sub_trnscr: Boolean,
-    		resident_aff_ANY: Boolean
+    		resident_aff_ANY: Boolean,
     	},
     	valid: {		//for percentage completion, favor _ALL over individuals
     		f_name: Boolean,		//anything with CHECK is used in percentage completion
@@ -858,146 +840,137 @@ var ApplicationSchema = new Schema({
 //		HOLY SHIT GUYS
 //		JUST A FEW MORE HOURS
 
-/*
 ApplicationSchema.pre('save', function(next) {
+    var pi = this.personal_info;
 	var filler = this.complete.filled;
-	filler.f_name = () ? false:true;
-	filler.m_name = () ? false:true;
-	filler.l_name = () ? false:true;
-	filler.o_name = () ? false:true;
-	filler.suffix = () ? false:true;
-	filler.ssn = () ? false:true;
-	filler.ufid = () ? false:true;
-	filler.b_month = () ? false:true;
-	filler.b_day = () ? false:true;
-	filler.b_year = () ? false:true;
-	filler.b_day_ALL = () ? false:true;
-	filler.gender = () ? false:true;
-	filler.nationality = () ? false:true;
-	filler.email_addr = () ? false:true;
-	filler.pers_phone = () ? false:true;
-	filler.work_phone = () ? false:true;
-	filler.cell_phone = () ? false:true;
-	filler.phone_ANY = () ? false:true;
-	filler.perm_addr_str = () ? false:true;
-	filler.perm_addr_cit = () ? false:true;
-	filler.perm_addr_sta = () ? false:true;
-	filler.perm_addr_cnt = () ? false:true;
-	filler.perm_addr_zip = () ? false:true;
-	filler.perm_addr_ALL = () ? false:true;
-	filler.curr_addr_str = () ? false:true;
-	filler.curr_addr_cit = () ? false:true;
-	filler.curr_addr_sta = () ? false:true;
-	filler.curr_addr_cnt = () ? false:true;
-	filler.curr_addr_zip = () ? false:true;
-	filler.curr_addr_ALL = () ? false:true;
-	filler.curr_addr_val = () ? false:true;
-	filler.e_f_name = () ? false:true;
-	filler.e_m_name = () ? false:true;
-	filler.e_l_name = () ? false:true;
-	filler.e_suffix = () ? false:true;
-	filler.e_o_name = () ? false:true;
-	filler.e_relate = () ? false:true;
-	filler.e_addr_str = () ? false:true;
-	filler.e_addr_cit = () ? false:true;
-	filler.e_addr_sta = () ? false:true;
-	filler.e_addr_cnt = () ? false:true;
-	filler.e_addr_zip = () ? false:true;
-	filler.e_addr_ALL = () ? false:true;
-	filler.e_phone_pers = () ? false:true;
-	filler.e_phone_work = () ? false:true;
-	filler.e_phone_cell = () ? false:true;
-	filler.e_phone_ANY = () ? false:true;
-	filler.e_contact_ALL = () ? false:true;
-	filler.scholar_famu = () ? false:true;
-	filler.scholar_fullbright = () ? false:true;
-	filler.scholar_identify = () ? false:true;
-	filler.scholar_mcnair = () ? false:true;
-	filler.scholar_mcknight = () ? false:true;
-	filler.scholar_natl_sci = () ? false:true;
-	filler.scholar_natl_hlth = () ? false:true;
-	filler.scholar_other_schol = () ? false:true;
-	filler.scholar_other_expln = () ? false:true;
-	filler.scholar_ANY = () ? false:true;
-	filler.supporting_doc = () ? false:true;
-	filler.degree_prog_term = () ? false:true;
-	filler.degree_prog_goal = () ? false:true;
-	filler.degree_prog_study = () ? false:true;
-	filler.degree_prog_special = () ? false:true;
-	filler.degree_prog_contact = () ? false:true;
-	filler.degree_prog_purpose = () ? false:true;
-	filler.degree_prog_ALL = () ? false:true;
-	filler. = () ? false:true;
-	filler. = () ? false:true;
-	filler. = () ? false:true;
-	filler. = () ? false:true;
-	filler. = () ? false:true;
-	filler. = () ? false:true;
-	filler. = () ? false:true;
-	filler. = () ? false:true;
+
+	filler.f_name = !pi.name.first;					//none of compared values are booleans
+	filler.m_name = !pi.name.middle;			//but, supposedly, !(value) checks to see if it is
+	filler.l_name = !pi.name.last;				//null, "" (empty string), false, or 0 (for numbers)
+	filler.o_name = !pi.name.other_names;
+	filler.suffix = !pi.name.suffix;
+	filler.ssn = !pi.has_ssn && pi.ssn;
+	filler.ufid = !pi.ufid;
+	filler.b_month = !pi.bd.month;
+	filler.b_day = !pi.bd.day;
+	filler.b_year = !pi.bd.year;
+	filler.b_day_ALL = filler.b_month && filler.b_day && filler.b_year;
+	filler.gender = !pi.gender;
+	filler.nationality = !pi.nationality;
+	filler.email_addr = !pi.email;
+	filler.pers_phone = !pi.phone.personal.number;
+	filler.work_phone = !pi.phone.work.number;
+	filler.cell_phone = !pi.phone.cell.number;
+	filler.phone_ANY = filler.pers_phone || filler.work_phone || filler.cell_phone;
+	filler.perm_addr_str = !pi.address.permanent.street;
+	filler.perm_addr_cit = !pi.address.permanent.city;
+	filler.perm_addr_sta = !pi.address.permanent.state;
+	filler.perm_addr_cnt = !pi.address.permanent.country;
+	filler.perm_addr_zip = !pi.address.permanent.zip;
+	filler.perm_addr_ALL = filler.perm_addr_zip && filler.perm_addr_cnt && filler.perm_addr_sta && filler.perm_addr_cit && filler.perm_addr_str;
+	filler.curr_addr_str = !pi.address.current.street;
+	filler.curr_addr_cit = !pi.address.current.city;
+	filler.curr_addr_sta = !pi.address.current.state;
+	filler.curr_addr_cnt = !pi.address.current.country;
+	filler.curr_addr_zip = !pi.address.current.zip;
+	filler.curr_addr_ALL = filler.perm_addr_zip && filler.perm_addr_cnt && filler.perm_addr_sta && filler.perm_addr_cit && filler.perm_addr_str;
+	//filler.curr_addr_val = false;  not sure how to compare dates yet
+	filler.e_f_name = !pi.emergency_contact.name.first;
+	filler.e_m_name = !pi.emergency_contact.name.middle;
+	filler.e_l_name = !pi.emergency_contact.name.last;
+	filler.e_suffix = !pi.emergency_contact.name.suffix;
+	filler.e_o_name = !pi.emergency_contact.name.other_names;
+	filler.e_relate = !pi.emergency_contact.name.relationship;
+	filler.e_addr_str = !pi.emergency_contact.address.street;
+	filler.e_addr_cit = !pi.emergency_contact.address.city;
+	filler.e_addr_sta = !pi.emergency_contact.address.state;
+	filler.e_addr_cnt = !pi.emergency_contact.address.country;
+	filler.e_addr_zip = !pi.emergency_contact.address.zip;
+	filler.e_addr_ALL = filler.e_addr_str && filler.e_addr_cit && filler.e_addr_sta && filler.e_addr_cnt && filler.e_addr_zip;
+	filler.e_phone_pers = !pi.emergency_contact.phone.personal.number;
+	filler.e_phone_work = !pi.emergency_contact.phone.work.number;
+	filler.e_phone_cell = !pi.emergency_contact.phone.cell.number;
+	filler.e_phone_ANY = filler.e_phone_pers && filler.e_phone_work && filler.e_phone_cell;
+	filler.e_contact_ALL = filler.e_f_name && filler.e_l_name && filler.e_relate && filler.e_addr_ALL &&
+	filler.scholar_famu = 
+	filler.scholar_fullbright = 
+	filler.scholar_identify = 
+	filler.scholar_mcnair = 
+	filler.scholar_mcknight = 
+	filler.scholar_natl_sci = 
+	filler.scholar_natl_hlth = 
+	filler.scholar_other_schol = 
+	filler.scholar_other_expln = 
+	filler.scholar_ANY = 
+	filler.supporting_doc = 
+	filler.degree_prog_term = 
+	filler.degree_prog_goal = 
+	filler.degree_prog_study = 
+	filler.degree_prog_special = 
+	filler.degree_prog_contact = 
+	filler.degree_prog_purpose = 
+	filler.degree_prog_ALL = 
+	filler.ugrad_major = 
+	filler.ugrad_special = 
+	filler.gpa_calculated = 
+	filler.test_gre_date = 
+    filler.test_gre_verb = 
+    filler.test_gre_qunt = 
+    filler.test_gre_anal = 
+    filler.test_gre_totl = 
+    filler.test_gre_ALL = 
+    filler.test_gmat_date = 
+    filler.test_gmat_verb = 
+    filler.test_gmat_qunt = 
+    filler.test_gmat_anal = 
+    filler.test_gmat_reas = 
+    filler.test_gmat_totl = 
+    filler.test_gmat_ALL = 
+    filler.test_mat_date = 
+    filler.test_mat_scor = 
+    filler.test_mat_ALL = 
+    filler.test_fe_date = 
+    filler.test_fe_scor = 
+    filler.test_fe_ALL = 
+    filler.test_toefl_pdate = 
+    filler.test_toefl_list = 
+    filler.test_toefl_writ = 
+    filler.test_toefl_read = 
+    filler.test_toefl_totl = 
+    filler.test_toefl_idate = 
+    filler.test_toefl_iread = 
+    filler.test_toefl_ilist = 
+    filler.test_toefl_ispek = 
+    filler.test_toefl_iwrit = 
+    filler.test_toefl_itotl = 
+    filler.test_toefl_ALL = 
+    filler.test_ielts_date = 
+    filler.test_ielts_list = 
+    filler.test_ielts_writ = 
+    filler.test_ielts_read = 
+    filler.test_ielts_spek = 
+    filler.test_ielts_totl = 
+    filler.test_ielts_ALL = 
+    filler.test_melab_date = 
+    filler.test_melab_comp = 
+    filler.test_melab_list = 
+    filler.test_melab_gcvr = 
+    filler.test_melab_totl = 
+    filler.test_melab_ALL = 
+    filler.active_type = 
+    filler.active_city = 
+    filler.active_stat = 
+    filler.active_ctry = 
+    filler.active_from = 
+    filler.active_day1 = 
+    filler.active_to = 
+    filler.active_day2 = 
+    filler.active_ALL = 
+    filler.sub_resume = 
+    filler.sub_trnscr = 
+    filler.resident_aff_ANY = 
 
 	next();
 });
-*/
 
-/*    		ugrad_major: Boolean,
-    		ugrad_special: Boolean,
-    		gpa_calculated: Boolean,
-    		test_gre_date: Boolean,
-    		test_gre_verb: Boolean,
-    		test_gre_qunt: Boolean,
-    		test_gre_anal: Boolean,
-    		test_gre_totl: Boolean,
-    		test_gre_ALL: Boolean,
-    		test_gmat_date: Boolean,
-    		test_gmat_verb: Boolean,
-    		test_gmat_qunt: Boolean,
-    		test_gmat_anal: Boolean,
-    		test_gmat_reas: Boolean,
-    		test_gmat_totl: Boolean,
-    		test_gmat_ALL: Boolean,
-    		test_mat_date: Boolean,
-    		test_mat_scor: Boolean,
-    		test_mat_ALL: Boolean,
-    		test_fe_date: Boolean,
-    		test_fe_scor: Boolean,
-    		test_fe_ALL: Boolean,
-    		test_toefl_pdate: Boolean,
-    		test_toefl_list: Boolean,
-    		test_toefl_writ: Boolean,
-    		test_toefl_read: Boolean,
-    		test_toefl_totl: Boolean,
-    		test_toefl_idate: Boolean,
-    		test_toefl_iread: Boolean,
-    		test_toefl_ilist: Boolean,
-    		test_toefl_ispek: Boolean,
-    		test_toefl_iwrit: Boolean,
-    		test_toefl_itotl: Boolean,
-    		test_toefl_ALL: Boolean,
-    		test_ielts_date: Boolean,
-    		test_ielts_list: Boolean,
-    		test_ielts_writ: Boolean,
-    		test_ielts_read: Boolean,
-    		test_ielts_spek: Boolean,
-    		test_ielts_totl: Boolean,
-    		test_ielts_ALL: Boolean,
-    		test_melab_date: Boolean,
-    		test_melab_comp: Boolean,
-    		test_melab_list: Boolean,
-    		test_melab_gcvr: Boolean,
-    		test_melab_totl: Boolean,
-    		test_melab_ALL: Boolean,
-    		active_type: Boolean,
-    		active_city: Boolean,
-    		active_stat: Boolean,
-    		active_ctry: Boolean,
-    		active_from: Boolean,
-    		active_day1: Boolean,
-    		active_to: Boolean,
-    		active_day2: Boolean,
-    		active_ALL: Boolean,
-    		sub_resume: Boolean,
-    		sub_trnscr: Boolean,
-    		resident_aff_ANY: Boolean
-*/
 mongoose.model('Application', ApplicationSchema);
